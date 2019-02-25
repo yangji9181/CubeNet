@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "name": "bbbb",
+      "type": "t1",
+      "id": "id1",
+      "size": 500
+    },
+    {
+      "name": "kkkk",
+      "type": "t2",
+      "id": "id2",
+      "size": 100
+    }
+  ],
+  "links": [
+    {
+      "source": "id1",
+      "target": "id2",
+      "weight": 123,
+      "type": "aaa"
+    }
+  ]
+}
