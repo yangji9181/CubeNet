@@ -259,8 +259,8 @@ $ ->
     d3.json "data/#{networkFile}", (json) ->
       myNetwork.updateData(json)
 
-  d3.json "data/new_network1.json", (json) ->
-    myNetwork("#vis", json)
-  # d3.json "data/test_data.json", (json) ->
-  #   myNetwork("#vis", json)
+  #d3.json "data/new_network1.json", (json) ->
+  #  myNetwork("#vis", json)
+   d3.json "data/test_data.json", (json) ->
+     myNetwork("#vis", json)
   console.log("hello")

@@ -1,0 +1,253 @@
+data mining	0	2
+similarity search	0	2
+frequent pattern	0	1
+information retrieval	0	2
+data structure	0	1
+empirical study	0	0
+extensive experiment	0	0
+memory bandwidth	0	3
+feature selection	0	1
+social network	0	0
+probabilistic model	0	1
+data management	0	2
+feature extraction	0	2
+web pages	0	2
+data streams	0	2
+uncertain data	0	2
+data analysis	0	2
+computational complexity	0	3
+tree structure	0	1
+relational database	0	2
+support vector machine	0	1
+search engine	0	2
+information network	0	1
+web object	0	2
+skyline object	0	1
+hierarchical clustering	0	1
+face recognition	0	2
+high dimensional data	0	2
+dimension reduction	0	1
+graph query	0	2
+graph theory	0	1
+pattern recognition	0	2
+database management system	0	2
+query performance	0	3
+graph databases	0	2
+database system	0	2
+knowledge discovery	0	2
+efficient algorithm	0	1
+new approach	0	0
+statistical analysis	0	1
+novel algorithm	0	0
+lower bound	0	3
+edit distance	0	3
+social networks	0	2
+object data	0	2
+mining result	0	3
+recommender system	0	2
+rule based	0	1
+sequential pattern mining	0	1
+distance metric	0	3
+laplacian eigenmap	0	1
+log data	0	1
+generative model	0	1
+small number	0	0
+large graph	0	2
+data retrieval	0	2
+manifold learning	0	1
+vector space model	0	1
+relational databases	0	2
+learning to rank	0	1
+load balance	0	3
+covariance matrix	0	3
+skyline query	0	2
+essential data mining task	0	0
+query optimization	0	2
+active learning	0	1
+divide and conquer	0	1
+search space	0	3
+social tagging	0	2
+tagging domain	0	0
+tag semantics	0	3
+collaborative tagging	0	1
+social classification	0	2
+tagging process	0	2
+people tag	0	0
+right tag	0	0
+tagging usage	0	0
+folk classification	0	2
+web search engine	0	2
+information extraction	0	1
+image retrieval	0	2
+database community	0	0
+text mining	0	2
+heuristic algorithm	0	1
+web data	0	2
+web search	0	2
+online advertising	0	2
+log mining	0	2
+process large scale log	0	1
+image collection	0	1
+web page	0	2
+network structure	0	1
+graph structure	0	1
+unified framework	0	1
+user experience	0	3
+random walk	0	1
+synthetic data	0	1
+world wide web	0	2
+web mining	0	2
+recommender systems	0	2
+Manish Gupta	1	1
+Chen Li	1	0
+Nick Koudas	1	0
+Yongtai Zhu	1	0
+Thien Nguyen	1	0
+Bolin Ding	1	1
+Qiming Chen	1	0
+Ajinkya Kale	1	0
+Melania Degerattu	1	0
+Andrey Del Pozo	1	0
+Kyu-Young Whang	1	0
+Susan T. Dumais	1	0
+Wei Han	1	0
+Bhavesh Shah	1	0
+Lu An Tang	1	1
+Dong Xin	1	1
+Cuiping Li	1	0
+Yun-Fang Juan	1	0
+Lakshmanan Velusamy	1	0
+Ning An	1	0
+Suresh Anthony	1	0
+Ravi Janardan	1	0
+Chen Chen	1	1
+Arnd Christian König	1	0
+Meichun Hsu	1	0
+Jae-Gil Lee	1	1
+Panos Kalnis	1	0
+Nan Zhang	1	0
+Jia Xu	1	0
+Ryen W. White	1	0
+Deng Cai	1	1
+Xiaoxin Yin	1	1
+Calton Pu	1	0
+Rui Li	1	0
+Thomas S. Huang	1	0
+Mohammad M. Masud	1	0
+Yu Zhang	1	1
+Jisheng Liang	1	0
+Jing Gao	1	1
+Thomas Burris	1	0
+Aidong Zhang	1	0
+Bin Cui	1	0
+Lidan Wang	1	1
+Ding Zhou	1	0
+Yu He	1	0
+Bhavani M. Thuraisingham	1	0
+Daxin Jiang	1	0
+Jinsong Lu	1	0
+Venkatesh Ganti	1	0
+Namit Jain	1	0
+Zhenhui Li	1	0
+Wei Wang	1	0
+Xin Jin	1	1
+Xifeng Yan	1	1
+Raghotham Murthy	1	0
+Min-Soo Kim	1	1
+Tim Weninger	1	1
+Surajit Chaudhuri	1	0
+Jieping Ye	1	0
+Hector Gonzalez	1	1
+Latifur Khan	1	0
+Yintao Yu	1	1
+Wei Tang	1	0
+Xin Xu	1	0
+Roland Kays	1	0
+Zhenhua Lin	1	0
+Jian Pei	1	1
+Quan Yuan	1	1
+Yufei Tao	1	0
+Sanjay Agrawal	1	0
+Ke Wang	1	0
+Cindy Xide Lin	1	1
+David Buttler	1	0
+Xiaofei He	1	0
+Behzad Mortazavi-Asl	1	0
+Bin Jiang	1	0
+Hong Chen	1	1
+Min-Jae Lee	1	0
+T L Prasanna Venkatesan	1	0
+Eamonn J. Keogh	1	0
+Jianyong Wang	1	1
+Jie Yu	1	0
+Z. Zhao	1	0
+Lise Getoor	1	0
+Beng Chin Ooi	1	0
+Ander de Keijzer	1	0
+Qi Li	1	1
+Ling Liu	1	1
+Hong Cheng	1	1
+Bamshad Mobasher	1	0
+Krzysztof Koperski	1	1
+Joydeep Sen Sarma	1	0
+Kun-Lung Wu	1	0
+Ming Ji	1	1
+Feng Zhao	1	0
+Hao Liu	1	0
+Philip S. Yu	1	0
+Chi Wang	1	1
+Ge Yu	1	0
+Bo Zhao	1	1
+Wei Chen	1	0
+Dhruba Borthakur	1	0
+Hang Li	1	0
+Ashish Thusoo	1	0
+Kian-Lee Tan	1	0
+Rui Yang	1	0
+Honglei Zhuang	1	1
+Baile Shi	1	0
+Gao Cong	1	0
+Zheng Shao	1	1
+Liang Jin	1	0
+Gautam Das	1	0
+Chao Liu	1	1
+Lili Jiang	1	0
+Jun Wang	1	0
+Anthony K. H. Tung	1	1
+Liangliang Cao	1	0
+Giovanni B. Marchisio	1	0
+Henrique Paques	1	0
+Ce Zhang	1	0
+Zhenjie Zhang	1	0
+Tianyi Wu	1	1
+Peixiang Zhao	1	1
+Yajun Wang	1	0
+Zhijun Yin	1	1
+Charu C. Aggarwal	1	0
+Jialu Liu	1	1
+Chen Wang	1	0
+Arijit Khan	1	0
+Jiebo Luo	1	0
+Bing Liu	1	0
+Jiawei Han	1	1
+Wen Jin	1	1
+Yanzan Zhou	1	0
+Umeshwar Dayal	1	0
+Kaushik Chakrabarti	1	0
+Wei Shen	1	0
+Yizhou Sun	1	1
+Zhengzheng Xing	1	0
+Dell Zhang	1	0
+Hwanjo Yu	1	1
+knowledge discovery and data mining	2	0
+international world wide web conferences	2	0
+international conference on management of data	2	2
+neural information processing systems	2	1
+international acm sigir conference on research and development in information retrieval	2	3
+very large data bases	2	2
+web search and data mining	2	3
+international conference on machine learning	2	1
+2010	3	2
+2005	3	1
+2000	3	0
+2015	3	3

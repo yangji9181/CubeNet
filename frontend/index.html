@@ -25,17 +25,18 @@
 
   <div id="container" class="container">
     <header>
-      <h1>Heterogeneous Network Embedding Visualization</h1>
+      <h1>Cube Network Demo</h1>
     </header>
 
       <div id="song_selection" class="control">
         <h3>Networks</h3>
         <select id="network_select">
-          <option value="new_network1.json">network1</option>
-          <option value="new_network2.json">network2</option>
-          <option value="new_network3.json">network3</option>
-          <option value="new_network4.json">network4</option>
           <option value="test_data.json">test_data</option>
+          <option value="network1.json">nodes: all; filters: none</option>
+          <option value="network2.json">nodes: all; filters: venue: data mining, year: 2010's</option>
+          <option value="network3.json">nodes: phrase, author; filters: phrase: app, venue: data mining, year: 2010's</option>
+          <option value="network4.json">nodes: author, filters: phrase: app, venue: data mining, year: 2010's</option>
+          <option value="network5.json">nodes: author, filters: author: han, phrase: app, venue: data mining, year: 2010's</option>          
         </select>
       </div>
 
