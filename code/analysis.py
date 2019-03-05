@@ -7,8 +7,9 @@ from dataset import Dataset
 def analysis(data, args):
 	network = {}
 	query = json.load(open(args.query_file, 'r'))
+	
 	nodes = {}
-
+	supernode = {}
 	#initialize node sets of each type
 	for t in data.meta['node'].keys():
 		nodes[t] = set()
@@ -17,6 +18,14 @@ def analysis(data, args):
 				nodes[t] |= set(data.labels[t][label])
 		else:
 			nodes[t] = set(data.nodes[t].keys())
+
+		for n in nodes[t]:
+			supernode[n] = n
+		if t in query['merges'].keys():
+			for label in query['merges'][t]:
+				for n in data.labels[t][label]:
+					supernode[n] = 's/'+t+'/'+label
+
 
 	#compute filters by intersection
 	for t in nodes.keys():
@@ -28,24 +37,40 @@ def analysis(data, args):
 						tmp |= set(data.links[link_t][n].keys())
 				nodes[data.meta['link'][link_t][1]] &= tmp
 
+
 	#extract links
-	network['links'] = []
+	links = defaultdict(int)
 	node_size = defaultdict(int)
 	for link_t in data.meta['link'].keys():
 		if data.meta['link'][link_t][0] in query['nodes'] and data.meta['link'][link_t][1] in query['nodes']:
 			for n1 in nodes[data.meta['link'][link_t][0]]:
 				if n1 in data.links[link_t].keys():
 					n2set = set(data.links[link_t][n1].keys()) & nodes[data.meta['link'][link_t][1]]
-					node_size[n1] += len(n2set)
+					node_size[supernode[n1]] += len(n2set)
 					for n2 in n2set:
-						network['links'].append({'source': n1, 'target': n2, 'weight': int(data.links[link_t][n1][n2])})
+						links[supernode[n1]+'_'+supernode[n2]] += int(data.links[link_t][n1][n2])
+		
+	
+	#collect links
+	network['links'] = []
+	for k in links.keys():
+		n1 = k.split('_')[0]
+		n2 = k.split('_')[1]
+		network['links'].append({'source': n1, 'target': n2, 'weight': links[k]})
 
-	#aggregate nodes of different types
+	#collect nodes
 	network['nodes'] = []
 	for t in nodes.keys():
 		if t in query['nodes']:
+			sup = set()
 			for n in nodes[t]:
-				network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.nodes[t][n], 'size': node_size[n]})
+				if supernode[n] == n:
+					network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.nodes[t][n], 'size': node_size[n]})
+				else:
+					sup.add(supernode[n])
+			for n in sup:
+				network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.meta['label'][t][n.split('/')[2]], 'size': node_size[n]})
+
 
 	
 	json.dump(
@@ -57,13 +82,14 @@ def analysis(data, args):
 
 	 
 def test(args):
+	q0 = {"nodes": ["0", "1", "2", "3"], "filters": {"0": ["3"], "1": ["1"]}, "merges": {"2": ["0", "1"]}}
 	q1 = {"nodes": ["0", "1", "2", "3"], "filters": {}}
 	q2 = {"nodes": ["0", "1", "2", "3"], "filters": {"2": ["0"], "3": ["2", "3"]}}
 	q3 = {"nodes": ["0", "1"], "filters": {"0": ["3"], "2": ["0"], "3": ["2", "3"]}}
 	q4 = {"nodes": ["1"], "filters": {"2": ["0"], "3": ["2", "3"]}}
 	q5 = {"nodes": ["1"], "filters": {"1": ["1"], "2": ["0"], "3": ["2", "3"]}}
 
-	json.dump(q5, open(args.query_file, 'w'))
+	json.dump(q0, open(args.query_file, 'w'))
 	data = Dataset(args)
 	analysis(data, args)
 
