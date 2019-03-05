@@ -31,6 +31,8 @@ Network = () ->
   # tooltip used to display details
   tooltip = Tooltip("vis-tooltip", 230)
 
+  # max weight of links, for link width calculation
+  maxLinkWeight = 0.0
   # Starting point for network visualization
   # Initializes visualization and starts force layout
   network = (selection, data) ->
@@ -48,7 +50,7 @@ Network = () ->
     force.size([width, height])
 
     setLayout("force")
-    setFilter("all")
+    # setFilter("all")
 
     # perform rendering and start force layout
     update()
@@ -61,8 +63,8 @@ Network = () ->
   # and the network needs to be reset.
   update = () ->
     # filter data to show based on current filter settings.
-    curNodesData = filterNodes(allData.nodes)
-    curLinksData = filterLinks(allData.links, curNodesData)
+    curNodesData = allData.nodes
+    curLinksData = allData.links
 
     # reset nodes in force layout
     force.nodes(curNodesData)
@@ -87,6 +89,7 @@ Network = () ->
   # point to node instances
   # Returns modified data
   setupData = (data) ->
+    console.log("setupData()")
     # initialize circle radius scale
     countExtent = d3.extent(data.nodes, (d) -> d.size)
     circleRadius = d3.scale.sqrt().range([3, 12]).domain(countExtent)
@@ -110,6 +113,10 @@ Network = () ->
       # linkedByIndex is used for link sorting
       linkedByIndex["#{l.source.id},#{l.target.id}"] = 1
 
+    # uodate the max weight of links
+    weights = data.links.map (l) -> l.weight
+    maxLinkWeight = weights.reduce (a,b) -> Math.max a, b
+    console.log("max link weight" + maxLinkWeight)
     data
 
   # Helper function to map node id's to node objects.
@@ -127,24 +134,9 @@ Network = () ->
     linkedByIndex[a.id + "," + b.id] or
       linkedByIndex[b.id + "," + a.id]
 
-  # Removes nodes from input array
-  # based on current filter setting.
-  # Returns array of nodes
-  filterNodes = (allNodes) ->
-    filteredNodes = allNodes
-    filteredNodes
-
-
-  # Removes links from allLinks whose
-  # source or target is not present in curNodes
-  # Returns array of links
-  filterLinks = (allLinks, curNodes) ->
-    curNodes = mapNodes(curNodes)
-    allLinks.filter (l) ->
-      curNodes.get(l.source.id) and curNodes.get(l.target.id)
-
   # enter/exit display for nodes
   updateNodes = () ->
+    console.log("updateNodes()")
     node = nodesG.selectAll("circle.node")
       .data(curNodesData, (d) -> d.id)
 
@@ -164,6 +156,7 @@ Network = () ->
 
   # enter/exit display for links
   updateLinks = () ->
+    console.log("updateLinks()")
     link = linksG.selectAll("line.link")
       .data(curLinksData, (d) -> "#{d.source.id}_#{d.target.id}")
     link.enter().append("line")
@@ -174,6 +167,7 @@ Network = () ->
       .attr("y1", (d) -> d.source.y)
       .attr("x2", (d) -> d.target.x)
       .attr("y2", (d) -> d.target.y)
+      .style("stroke-width", (d) -> d.weight / maxLinkWeight * 10.0)
 
     link.exit().remove()
 
@@ -188,9 +182,6 @@ Network = () ->
       force.on("tick", radialTick)
         .charge(charge)
 
-  # switches filter option to new filter
-  setFilter = (newFilter) ->
-    filter = newFilter
 
   # tick function for force directed layout
   forceTick = (e) ->
@@ -226,6 +217,9 @@ Network = () ->
         .attr("stroke-opacity", (l) ->
           if l.source == d or l.target == d then 1.0 else 0.5
         )
+          # .style("stroke-width", (l) -> 
+          #   if l.source == d or l.target == d then (l) -> l.weight / maxLinkWeight * 3.0  else (l) -> l.weight / maxLinkWeight * 5.0
+          # )
 
     # highlight neighboring nodes
     # watch out - don't mess with node if search is currently matching
@@ -247,6 +241,7 @@ Network = () ->
     if link
       link.attr("stroke", "#ddd")
         .attr("stroke-opacity", 0.8)
+        # .style("stroke-width", (l) -> l.weight / maxLinkWeight * 3.0 )
 
   # Final act of Network() function is to return the inner 'network()' function.
   return network

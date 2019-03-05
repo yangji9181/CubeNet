@@ -11,13 +11,25 @@
       "type": "t2",
       "id": "id2",
       "size": 100
+    },
+    {
+      "name": "aaa",
+      "type": "t2",
+      "id": "id3",
+      "size": 100
     }
   ],
   "links": [
     {
       "source": "id1",
       "target": "id2",
-      "weight": 123,
+      "weight": 1,
+      "type": "aaa"
+    },
+    {
+      "source": "id3",
+      "target": "id2",
+      "weight": 5,
       "type": "aaa"
     }
   ]
