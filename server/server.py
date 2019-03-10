@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/query', methods=['POST'])
 def post():
     req_data = request.get_json()
-    json.dump(req_data, open(os.path.join('../intermediate/', 'query.json'), 'w'))
+    json.dump(req_data['query'], open(os.path.join('../intermediate/', 'query.json'), 'w'))
     from process.dataset import Dataset
     from process.config import args
     data = Dataset(args)
