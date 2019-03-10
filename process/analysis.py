@@ -7,7 +7,7 @@ from dataset import Dataset
 def analysis(data, args):
 	network = {}
 	query = json.load(open(args.query_file, 'r'))
-	
+
 	nodes = {}
 	supernode = {}
 	#initialize node sets of each type
@@ -49,8 +49,8 @@ def analysis(data, args):
 					node_size[supernode[n1]] += len(n2set)
 					for n2 in n2set:
 						links[supernode[n1]+'_'+supernode[n2]] += int(data.links[link_t][n1][n2])
-		
-	
+
+
 	#collect links
 	network['links'] = []
 	for k in links.keys():
@@ -72,15 +72,15 @@ def analysis(data, args):
 				network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.meta['label'][t][n.split('/')[2]], 'size': node_size[n]})
 
 
-	
+
 	json.dump(
-		network, 
+		network,
 		open(args.network_file, 'w'),
-		indent=4, 
+		indent=4,
 		separators=(',', ': ')
 		)
 
-	 
+
 def test(args):
 	q0 = {"nodes": ["0", "1", "2", "3"], "filters": {"0": ["3"], "1": ["1"]}, "merges": {"2": ["0", "1"]}}
 	q1 = {"nodes": ["0", "1", "2", "3"], "filters": {}}

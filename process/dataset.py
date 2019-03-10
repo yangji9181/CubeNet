@@ -80,16 +80,16 @@ class Dataset(object):
 		else:
 			return False
 
-	def save(self): 
+	def save(self):
 		pickle.dump(self.__dict__, open(args.pickle_file, 'w'))
 
 
 def test(args):
 	data = Dataset(args)
 	json.dump(
-		data.meta, 
+		data.meta,
 		open(args.meta_json, 'w'),
-		indent=4, 
+		indent=4,
 		separators=(',', ': ')
 		)
 	print data.meta

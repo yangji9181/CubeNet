@@ -25,10 +25,10 @@ def parse_args():
 
 def init(args):
 	args.meta_file = args.data_dir + args.data_name + '/' + 'meta.dat'
-	args.node_file = args.data_dir + args.data_name + '/' + args.data_sub + '.node.dat' 
+	args.node_file = args.data_dir + args.data_name + '/' + args.data_sub + '.node.dat'
 	args.link_file = args.data_dir + args.data_name + '/' + args.data_sub + '.link.dat'
 	args.label_file = args.data_dir + args.data_name + '/' + args.data_sub + '.label.dat'
-	args.pickle_file = args.data_dir + args.data_name + '/' + args.data_sub + '.pickle' 
+	args.pickle_file = args.data_dir + args.data_name + '/' + args.data_sub + '.pickle'
 
 args = parse_args()
 init(args)
