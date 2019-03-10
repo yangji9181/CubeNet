@@ -1,0 +1,476 @@
+{
+    "nodes": [
+        {
+            "size": 0,
+            "type": "author",
+            "id": "217",
+            "name": "Tianyi Wu"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "152",
+            "name": "Chi Wang"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "212",
+            "name": "Tim Weninger"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "157",
+            "name": "Yintao Yu"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "159",
+            "name": "Xin Jin"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "102",
+            "name": "Zhijun Yin"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "130",
+            "name": "Jian Pei"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "113",
+            "name": "Dong Xin"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "234",
+            "name": "Bolin Ding"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "235",
+            "name": "Xiaoxin Yin"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "237",
+            "name": "Quan Yuan"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "230",
+            "name": "Hong Chen"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "170",
+            "name": "Jianyong Wang"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "182",
+            "name": "Deng Cai"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "187",
+            "name": "Hong Cheng"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "202",
+            "name": "Jing Gao"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "141",
+            "name": "Ling Liu"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "209",
+            "name": "Chao Liu"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "124",
+            "name": "Xifeng Yan"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "227",
+            "name": "Yu Zhang"
+        },
+        {
+            "size": 16,
+            "type": "author",
+            "id": "103",
+            "name": "Jiawei Han"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "100",
+            "name": "Manish Gupta"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "223",
+            "name": "Bo Zhao"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "222",
+            "name": "Cindy Xide Lin"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "220",
+            "name": "Yizhou Sun"
+        }
+    ],
+    "links": [
+        {
+            "source": "152",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "152",
+            "target": "202",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "102",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "212",
+            "target": "100",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "223",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "222",
+            "weight": 1
+        },
+        {
+            "source": "157",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "157",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "157",
+            "target": "222",
+            "weight": 1
+        },
+        {
+            "source": "159",
+            "target": "103",
+            "weight": 4
+        },
+        {
+            "source": "102",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "102",
+            "target": "100",
+            "weight": 2
+        },
+        {
+            "source": "102",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "103",
+            "weight": 4
+        },
+        {
+            "source": "130",
+            "target": "124",
+            "weight": 1
+        },
+        {
+            "source": "113",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "113",
+            "target": "124",
+            "weight": 2
+        },
+        {
+            "source": "113",
+            "target": "187",
+            "weight": 2
+        },
+        {
+            "source": "234",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "235",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "187",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "187",
+            "target": "124",
+            "weight": 2
+        },
+        {
+            "source": "187",
+            "target": "113",
+            "weight": 2
+        },
+        {
+            "source": "202",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "202",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "202",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "124",
+            "target": "103",
+            "weight": 7
+        },
+        {
+            "source": "124",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "124",
+            "target": "187",
+            "weight": 2
+        },
+        {
+            "source": "124",
+            "target": "113",
+            "weight": 2
+        },
+        {
+            "source": "124",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "152",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "212",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "157",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "159",
+            "weight": 4
+        },
+        {
+            "source": "103",
+            "target": "234",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "130",
+            "weight": 4
+        },
+        {
+            "source": "103",
+            "target": "124",
+            "weight": 7
+        },
+        {
+            "source": "103",
+            "target": "187",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "113",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "102",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "235",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "100",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "223",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "222",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "202",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "220",
+            "weight": 2
+        },
+        {
+            "source": "100",
+            "target": "102",
+            "weight": 2
+        },
+        {
+            "source": "100",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "100",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "223",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "223",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "223",
+            "target": "222",
+            "weight": 2
+        },
+        {
+            "source": "222",
+            "target": "223",
+            "weight": 2
+        },
+        {
+            "source": "222",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "222",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "222",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "220",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "220",
+            "target": "202",
+            "weight": 1
+        },
+        {
+            "source": "220",
+            "target": "124",
+            "weight": 1
+        },
+        {
+            "source": "220",
+            "target": "152",
+            "weight": 1
+        }
+    ]
+}

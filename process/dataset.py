@@ -2,7 +2,7 @@ import pickle
 import os.path
 import json
 from collections import defaultdict
-from config import *
+from process.config import *
 
 class Dataset(object):
 	def __init__(self, args):
@@ -92,7 +92,7 @@ def test(args):
 		indent=4,
 		separators=(',', ': ')
 		)
-	print data.meta
+	print (data.meta)
 
 if __name__ == '__main__':
 	test(args)

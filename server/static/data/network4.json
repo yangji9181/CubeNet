@@ -1,0 +1,1396 @@
+{
+    "nodes": [
+        {
+            "size": 3,
+            "type": "author",
+            "id": "216",
+            "name": "Bin Jiang"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "217",
+            "name": "Tianyi Wu"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "153",
+            "name": "Yajun Wang"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "215",
+            "name": "Zhenhua Lin"
+        },
+        {
+            "size": 6,
+            "type": "author",
+            "id": "212",
+            "name": "Tim Weninger"
+        },
+        {
+            "size": 6,
+            "type": "author",
+            "id": "154",
+            "name": "Zhenhui Li"
+        },
+        {
+            "size": 6,
+            "type": "author",
+            "id": "157",
+            "name": "Yintao Yu"
+        },
+        {
+            "size": 8,
+            "type": "author",
+            "id": "159",
+            "name": "Xin Jin"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "158",
+            "name": "Roland Kays"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "113",
+            "name": "Dong Xin"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "133",
+            "name": "Wei Wang"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "132",
+            "name": "Ander de Keijzer"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "131",
+            "name": "Lise Getoor"
+        },
+        {
+            "size": 12,
+            "type": "author",
+            "id": "130",
+            "name": "Jian Pei"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "179",
+            "name": "Yun-Fang Juan"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "178",
+            "name": "Ding Zhou"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "234",
+            "name": "Bolin Ding"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "235",
+            "name": "Xiaoxin Yin"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "237",
+            "name": "Quan Yuan"
+        },
+        {
+            "size": 6,
+            "type": "author",
+            "id": "152",
+            "name": "Chi Wang"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "102",
+            "name": "Zhijun Yin"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "171",
+            "name": "Ning An"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "170",
+            "name": "Jianyong Wang"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "101",
+            "name": "Rui Li"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "100",
+            "name": "Manish Gupta"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "230",
+            "name": "Hong Chen"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "141",
+            "name": "Ling Liu"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "182",
+            "name": "Deng Cai"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "186",
+            "name": "Hang Li"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "187",
+            "name": "Hong Cheng"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "184",
+            "name": "Zhengzheng Xing"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "185",
+            "name": "Eamonn J. Keogh"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "220",
+            "name": "Yizhou Sun"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "147",
+            "name": "Daxin Jiang"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "151",
+            "name": "Wei Chen"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "202",
+            "name": "Jing Gao"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "205",
+            "name": "Liangliang Cao"
+        },
+        {
+            "size": 6,
+            "type": "author",
+            "id": "207",
+            "name": "Jiebo Luo"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "206",
+            "name": "Andrey Del Pozo"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "209",
+            "name": "Chao Liu"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "208",
+            "name": "Thomas S. Huang"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "168",
+            "name": "Lili Jiang"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "169",
+            "name": "Wei Shen"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "229",
+            "name": "Cuiping Li"
+        },
+        {
+            "size": 0,
+            "type": "author",
+            "id": "227",
+            "name": "Yu Zhang"
+        },
+        {
+            "size": 29,
+            "type": "author",
+            "id": "103",
+            "name": "Jiawei Han"
+        },
+        {
+            "size": 3,
+            "type": "author",
+            "id": "225",
+            "name": "Jie Yu"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "224",
+            "name": "Bing Liu"
+        },
+        {
+            "size": 4,
+            "type": "author",
+            "id": "223",
+            "name": "Bo Zhao"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "222",
+            "name": "Cindy Xide Lin"
+        },
+        {
+            "size": 1,
+            "type": "author",
+            "id": "221",
+            "name": "Xiaofei He"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "105",
+            "name": "Gautam Das"
+        },
+        {
+            "size": 2,
+            "type": "author",
+            "id": "233",
+            "name": "Nan Zhang"
+        },
+        {
+            "size": 7,
+            "type": "author",
+            "id": "124",
+            "name": "Xifeng Yan"
+        },
+        {
+            "size": 5,
+            "type": "author",
+            "id": "125",
+            "name": "Philip S. Yu"
+        }
+    ],
+    "links": [
+        {
+            "source": "216",
+            "target": "215",
+            "weight": 1
+        },
+        {
+            "source": "216",
+            "target": "147",
+            "weight": 1
+        },
+        {
+            "source": "216",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "217",
+            "target": "133",
+            "weight": 1
+        },
+        {
+            "source": "153",
+            "target": "151",
+            "weight": 1
+        },
+        {
+            "source": "153",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "215",
+            "target": "216",
+            "weight": 1
+        },
+        {
+            "source": "215",
+            "target": "147",
+            "weight": 1
+        },
+        {
+            "source": "215",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "102",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "212",
+            "target": "100",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "224",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "223",
+            "weight": 1
+        },
+        {
+            "source": "212",
+            "target": "222",
+            "weight": 1
+        },
+        {
+            "source": "154",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "154",
+            "target": "158",
+            "weight": 2
+        },
+        {
+            "source": "154",
+            "target": "179",
+            "weight": 1
+        },
+        {
+            "source": "154",
+            "target": "178",
+            "weight": 1
+        },
+        {
+            "source": "154",
+            "target": "234",
+            "weight": 1
+        },
+        {
+            "source": "154",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "157",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "157",
+            "target": "154",
+            "weight": 1
+        },
+        {
+            "source": "157",
+            "target": "158",
+            "weight": 1
+        },
+        {
+            "source": "157",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "157",
+            "target": "224",
+            "weight": 1
+        },
+        {
+            "source": "157",
+            "target": "222",
+            "weight": 1
+        },
+        {
+            "source": "159",
+            "target": "205",
+            "weight": 1
+        },
+        {
+            "source": "159",
+            "target": "207",
+            "weight": 3
+        },
+        {
+            "source": "159",
+            "target": "206",
+            "weight": 1
+        },
+        {
+            "source": "159",
+            "target": "208",
+            "weight": 1
+        },
+        {
+            "source": "159",
+            "target": "103",
+            "weight": 4
+        },
+        {
+            "source": "159",
+            "target": "225",
+            "weight": 2
+        },
+        {
+            "source": "159",
+            "target": "233",
+            "weight": 2
+        },
+        {
+            "source": "159",
+            "target": "105",
+            "weight": 2
+        },
+        {
+            "source": "158",
+            "target": "234",
+            "weight": 2
+        },
+        {
+            "source": "158",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "158",
+            "target": "154",
+            "weight": 2
+        },
+        {
+            "source": "158",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "113",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "113",
+            "target": "124",
+            "weight": 2
+        },
+        {
+            "source": "113",
+            "target": "187",
+            "weight": 2
+        },
+        {
+            "source": "133",
+            "target": "217",
+            "weight": 1
+        },
+        {
+            "source": "133",
+            "target": "130",
+            "weight": 2
+        },
+        {
+            "source": "133",
+            "target": "124",
+            "weight": 1
+        },
+        {
+            "source": "133",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "132",
+            "target": "131",
+            "weight": 1
+        },
+        {
+            "source": "132",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "131",
+            "target": "132",
+            "weight": 1
+        },
+        {
+            "source": "131",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "216",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "147",
+            "weight": 5
+        },
+        {
+            "source": "130",
+            "target": "215",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "133",
+            "weight": 2
+        },
+        {
+            "source": "130",
+            "target": "132",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "131",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "186",
+            "weight": 3
+        },
+        {
+            "source": "130",
+            "target": "125",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "184",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "185",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "124",
+            "weight": 1
+        },
+        {
+            "source": "130",
+            "target": "103",
+            "weight": 4
+        },
+        {
+            "source": "179",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "179",
+            "target": "154",
+            "weight": 1
+        },
+        {
+            "source": "179",
+            "target": "178",
+            "weight": 1
+        },
+        {
+            "source": "178",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "178",
+            "target": "154",
+            "weight": 1
+        },
+        {
+            "source": "178",
+            "target": "179",
+            "weight": 1
+        },
+        {
+            "source": "234",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "234",
+            "target": "154",
+            "weight": 1
+        },
+        {
+            "source": "234",
+            "target": "158",
+            "weight": 2
+        },
+        {
+            "source": "235",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "235",
+            "target": "125",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "151",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "153",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "202",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "152",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "152",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "102",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "102",
+            "target": "100",
+            "weight": 2
+        },
+        {
+            "source": "102",
+            "target": "101",
+            "weight": 1
+        },
+        {
+            "source": "102",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "171",
+            "target": "168",
+            "weight": 1
+        },
+        {
+            "source": "171",
+            "target": "169",
+            "weight": 1
+        },
+        {
+            "source": "171",
+            "target": "170",
+            "weight": 1
+        },
+        {
+            "source": "170",
+            "target": "168",
+            "weight": 1
+        },
+        {
+            "source": "170",
+            "target": "169",
+            "weight": 1
+        },
+        {
+            "source": "170",
+            "target": "171",
+            "weight": 1
+        },
+        {
+            "source": "101",
+            "target": "102",
+            "weight": 1
+        },
+        {
+            "source": "101",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "101",
+            "target": "100",
+            "weight": 1
+        },
+        {
+            "source": "100",
+            "target": "102",
+            "weight": 2
+        },
+        {
+            "source": "100",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "100",
+            "target": "101",
+            "weight": 1
+        },
+        {
+            "source": "100",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "230",
+            "target": "229",
+            "weight": 2
+        },
+        {
+            "source": "182",
+            "target": "221",
+            "weight": 4
+        },
+        {
+            "source": "186",
+            "target": "147",
+            "weight": 3
+        },
+        {
+            "source": "186",
+            "target": "130",
+            "weight": 3
+        },
+        {
+            "source": "187",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "187",
+            "target": "124",
+            "weight": 2
+        },
+        {
+            "source": "187",
+            "target": "113",
+            "weight": 2
+        },
+        {
+            "source": "184",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "184",
+            "target": "185",
+            "weight": 1
+        },
+        {
+            "source": "185",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "185",
+            "target": "184",
+            "weight": 1
+        },
+        {
+            "source": "220",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "220",
+            "target": "202",
+            "weight": 1
+        },
+        {
+            "source": "220",
+            "target": "124",
+            "weight": 1
+        },
+        {
+            "source": "220",
+            "target": "125",
+            "weight": 1
+        },
+        {
+            "source": "220",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "147",
+            "target": "216",
+            "weight": 1
+        },
+        {
+            "source": "147",
+            "target": "215",
+            "weight": 1
+        },
+        {
+            "source": "147",
+            "target": "186",
+            "weight": 3
+        },
+        {
+            "source": "147",
+            "target": "130",
+            "weight": 5
+        },
+        {
+            "source": "151",
+            "target": "153",
+            "weight": 1
+        },
+        {
+            "source": "151",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "202",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "202",
+            "target": "152",
+            "weight": 1
+        },
+        {
+            "source": "202",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "205",
+            "target": "159",
+            "weight": 1
+        },
+        {
+            "source": "205",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "205",
+            "target": "206",
+            "weight": 1
+        },
+        {
+            "source": "205",
+            "target": "207",
+            "weight": 1
+        },
+        {
+            "source": "205",
+            "target": "208",
+            "weight": 1
+        },
+        {
+            "source": "207",
+            "target": "205",
+            "weight": 1
+        },
+        {
+            "source": "207",
+            "target": "206",
+            "weight": 1
+        },
+        {
+            "source": "207",
+            "target": "159",
+            "weight": 3
+        },
+        {
+            "source": "207",
+            "target": "208",
+            "weight": 1
+        },
+        {
+            "source": "207",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "207",
+            "target": "225",
+            "weight": 2
+        },
+        {
+            "source": "206",
+            "target": "159",
+            "weight": 1
+        },
+        {
+            "source": "206",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "206",
+            "target": "205",
+            "weight": 1
+        },
+        {
+            "source": "206",
+            "target": "207",
+            "weight": 1
+        },
+        {
+            "source": "206",
+            "target": "208",
+            "weight": 1
+        },
+        {
+            "source": "208",
+            "target": "159",
+            "weight": 1
+        },
+        {
+            "source": "208",
+            "target": "103",
+            "weight": 1
+        },
+        {
+            "source": "208",
+            "target": "205",
+            "weight": 1
+        },
+        {
+            "source": "208",
+            "target": "207",
+            "weight": 1
+        },
+        {
+            "source": "208",
+            "target": "206",
+            "weight": 1
+        },
+        {
+            "source": "168",
+            "target": "169",
+            "weight": 1
+        },
+        {
+            "source": "168",
+            "target": "171",
+            "weight": 1
+        },
+        {
+            "source": "168",
+            "target": "170",
+            "weight": 1
+        },
+        {
+            "source": "169",
+            "target": "168",
+            "weight": 1
+        },
+        {
+            "source": "169",
+            "target": "171",
+            "weight": 1
+        },
+        {
+            "source": "169",
+            "target": "170",
+            "weight": 1
+        },
+        {
+            "source": "229",
+            "target": "230",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "152",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "212",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "154",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "157",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "159",
+            "weight": 4
+        },
+        {
+            "source": "103",
+            "target": "158",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "113",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "133",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "130",
+            "weight": 4
+        },
+        {
+            "source": "103",
+            "target": "179",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "178",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "234",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "235",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "100",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "224",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "187",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "202",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "205",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "207",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "206",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "208",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "124",
+            "weight": 7
+        },
+        {
+            "source": "103",
+            "target": "125",
+            "weight": 4
+        },
+        {
+            "source": "103",
+            "target": "102",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "225",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "101",
+            "weight": 1
+        },
+        {
+            "source": "103",
+            "target": "223",
+            "weight": 2
+        },
+        {
+            "source": "103",
+            "target": "222",
+            "weight": 3
+        },
+        {
+            "source": "103",
+            "target": "220",
+            "weight": 2
+        },
+        {
+            "source": "225",
+            "target": "159",
+            "weight": 2
+        },
+        {
+            "source": "225",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "225",
+            "target": "207",
+            "weight": 2
+        },
+        {
+            "source": "224",
+            "target": "223",
+            "weight": 1
+        },
+        {
+            "source": "224",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "224",
+            "target": "222",
+            "weight": 2
+        },
+        {
+            "source": "224",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "224",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "223",
+            "target": "103",
+            "weight": 2
+        },
+        {
+            "source": "223",
+            "target": "224",
+            "weight": 1
+        },
+        {
+            "source": "223",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "223",
+            "target": "222",
+            "weight": 2
+        },
+        {
+            "source": "222",
+            "target": "223",
+            "weight": 2
+        },
+        {
+            "source": "222",
+            "target": "224",
+            "weight": 2
+        },
+        {
+            "source": "222",
+            "target": "212",
+            "weight": 1
+        },
+        {
+            "source": "222",
+            "target": "157",
+            "weight": 1
+        },
+        {
+            "source": "222",
+            "target": "103",
+            "weight": 3
+        },
+        {
+            "source": "221",
+            "target": "182",
+            "weight": 4
+        },
+        {
+            "source": "105",
+            "target": "159",
+            "weight": 2
+        },
+        {
+            "source": "105",
+            "target": "233",
+            "weight": 2
+        },
+        {
+            "source": "233",
+            "target": "159",
+            "weight": 2
+        },
+        {
+            "source": "233",
+            "target": "105",
+            "weight": 2
+        },
+        {
+            "source": "124",
+            "target": "133",
+            "weight": 1
+        },
+        {
+            "source": "124",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "124",
+            "target": "125",
+            "weight": 3
+        },
+        {
+            "source": "124",
+            "target": "113",
+            "weight": 2
+        },
+        {
+            "source": "124",
+            "target": "103",
+            "weight": 7
+        },
+        {
+            "source": "124",
+            "target": "187",
+            "weight": 2
+        },
+        {
+            "source": "124",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "125",
+            "target": "235",
+            "weight": 1
+        },
+        {
+            "source": "125",
+            "target": "220",
+            "weight": 1
+        },
+        {
+            "source": "125",
+            "target": "130",
+            "weight": 1
+        },
+        {
+            "source": "125",
+            "target": "124",
+            "weight": 3
+        },
+        {
+            "source": "125",
+            "target": "103",
+            "weight": 4
+        }
+    ]
+}
