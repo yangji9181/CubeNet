@@ -252,39 +252,11 @@ $ ->
 
   $("#network_select").on "change", (e) ->
     networkFile = $(this).val()
-    d3.json "data/#{networkFile}", (json) ->
+    d3.json "../static/data/#{networkFile}", (json) ->
       myNetwork.updateData(json)
 
-  #d3.json "data/new_network1.json", (json) ->
-  #  myNetwork("#vis", json)
-  d3.json "data/test_data.json", (json) ->
-     myNetwork("#vis", json)
   console.log("hello")
 
-
-  # create and send query
-  $("#query_btn").on "click", (e) ->
-    query = {"merges": {"2": ["0", "1"]}, "nodes": ["0", "1", "2", "3"], "filters": {"1": ["1"], "0": ["3"]}} 
-
-    $.post '/query',
-      query: query
-      (data) -> 
-        console.log("query success: ")
-        console.log(data)
-        networkFile = data.network_file
-        d3.json "data/#{networkFile}", (json) ->
-          myNetwork.updateData(json)
-
-  # # test
-  # $("#query_btn").on "click", (e) ->
-  #   query = {}
-  #   $.get '/sample_response.json',
-  #     query: query
-  #     (data) -> 
-  #       console.log("query success: ")
-  #       console.log(data)
-
-  #       networkFile = data.network_file
-  #       d3.json "data/#{networkFile}", (json) ->
-  #         myNetwork.updateData(json)
+  d3.json "../static/data/test_data.json", (json) ->
+    myNetwork("#vis", json)
 

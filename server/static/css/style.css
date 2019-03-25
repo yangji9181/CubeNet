@@ -2,6 +2,68 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/*
+.checkbox {
+  display:inline-block;
+  width:20px;
+}
+
+label { margin-bottom: 25px;
+  display:inline-block;
+  width:235px;
+}*/
+
+
+fieldset.group  { 
+  margin: 0; 
+  padding-left: 20px; 
+  margin-bottom: 1.25em; 
+  float:left;
+  display: inline-block;
+} 
+
+fieldset.group legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  margin-left: 20px;
+  margin-left: 0; 
+
+  font-size: 100%; 
+  color: black; 
+} 
+
+/*input{
+  margin-left: 18px;
+}*/
+
+ul.checkbox  { 
+  margin: 0; 
+  padding: 0; 
+  margin-left: 20px; 
+  list-style: none; 
+} 
+
+ul.checkbox li input { 
+  margin-right: .25em;
+  margin-left: 0; 
+} 
+
+ul.checkbox li { 
+  border: 1px transparent solid; 
+  /*display:inline-block;*/
+  width:12em;
+} 
+
+ul.checkbox li label { 
+  margin-left: ; 
+} 
+
+
+control {
+  display: block;
+}
+
 a, a:visited {
   color: #4d4d4d;
   text-decoration: underline;
@@ -15,16 +77,17 @@ a, a:visited {
 
 #main {
   clear: both;
+  display: inline-block;
 }
 
 #controls {
   width: 100%;
-  float: left;
+  /*float: left;*/
   margin-bottom: 10px;
 }
 
 .control {
-  float: left;
+  /*float: left;*/
   padding-left: 20px;
 }
 
@@ -47,7 +110,7 @@ a, a:visited {
   background: #555;
 }
 
-p.search_title {
+/*p.search_title {
   display: inline;
   text-align: left;  
   font-weight: normal;
@@ -61,12 +124,12 @@ p.search_title {
 
 #search_form #search {
   margin-left: 10px;
-}
+}*/
 
 footer p {
   text-align: center;
 }
-
+/*
 .tooltip {
   position: absolute;
   top: 100px;
@@ -103,7 +166,7 @@ hr.tooltip-hr {
 .tooltip .name {
   font-weight:bold;
 }
-
+*/
 
 line.link {
   fill: none;
