@@ -57,7 +57,13 @@ ul.checkbox li {
 
 ul.checkbox li label { 
   margin-left: ; 
-} 
+}
+
+.ctr_group {
+  border: 1px solid black;
+  margin: 3px;
+  padding: 3px;
+}
 
 
 control {

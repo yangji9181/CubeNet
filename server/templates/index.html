@@ -41,66 +41,119 @@
       </select>
     </div>
 
-    
-    <!-- <div class="custom-controls-stacked custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="authorBox">
-      <label class="custom-control-label" for="authorBox">Author</label>
-      <input type="checkbox" class="custom-control-input" id="phraseBox">
-      <label class="custom-control-label" for="phraseBox">Phrase</label>
-      <input type="checkbox" class="custom-control-input" id="yearBox">
-      <label class="custom-control-label" for="yearBox">Year</label>
-      <input type="checkbox" class="custom-control-input" id="venueBox">
-      <label class="custom-control-label" for="venueBox">Venue</label>
-    </div> -->
-
-    <!-- <fieldset class="group"> 
-      <legend>Select standard pizza toppings</legend> 
-        <ul class="checkbox"> 
-          <li>
-            <input type="checkbox" id="authorBox">
-            <label for="authorBox">Author</label>
-          </li> 
-          <li>
-            <input type="checkbox" id="phraseBox">
-            <label for="phraseBox">Phrase</label>
-          </li> 
-          <li>
-            <input type="checkbox" id="yearBox">
-            <label for="yearBox">Year</label>
-          </li> 
-          <li>
-            <input type="checkbox" id="venueBox">
-            <label for="venueBox">venueBox</label>
-          </li> 
-          <li><input type="checkbox" id="cb5" value="gpeppers" /><label for="cb5">Green Peppers</label></li> 
-          <li><input type="checkbox" id="cb6" value="xcheese" /><label for="cb6>">Extra Cheese</label></li> 
-        </ul> 
-    </fieldset>  -->
-
     <fieldset class="group"> 
+      <div class="ctr_group node_group">
+      
       <legend>Select node types</legend> 
-      <ul class="custom-controls-stacked checkbox" class=""> 
+      <ul class="custom-controls-stacked checkbox"> 
         <li>
-          <input type="checkbox" id="authorBox">
-          <label for="authorBox">Author</label>
+          <label>Phrase<input type="checkbox" class="node"></label>
         </li> 
         <li>
-          <input type="checkbox" id="phraseBox">
-          <label for="phraseBox">Phrase</label>
+          <label>Author<input type="checkbox" class="node"></label>
         </li> 
         <li>
-          <input type="checkbox" id="yearBox">
-          <label for="yearBox">Year</label>
+          <label>Year<input type="checkbox" class="node"></label>
         </li> 
         <li>
-          <input type="checkbox" id="venueBox">
-          <label for="venueBox">venue</label>
+          <label>Venue<input type="checkbox" class="node"></label>
         </li> 
       </ul> 
+      </div>
+    <!-- </fieldset>  -->
+
+    <!-- <fieldset class="group">  -->
+      <div class="ctr_group filter_group">
+      <legend>Filter</legend> 
+      <ul class="custom-controls-stacked checkbox"> 
+        <li>
+          <label>Phrase</label>
+          <ul class="checkbox">
+          
+            <li><label class="Phrase"><input type="checkbox" class="filter">Method</label></li>
+            <li><label class="Phrase"><input type="checkbox" class="filter">Metric</label></li>
+            <li><label class="Phrase"><input type="checkbox" class="filter">Application</label></li>
+          </ul>
+        </li> 
+
+        <li>
+          <label>Author</label>
+          <ul class="checkbox Author">
+          
+            <li><label class="Author"><input type="checkbox" class="filter">Han</label></li>
+            <li><label class="Author"><input type="checkbox" class="filter">Non-Han</label></li>
+          </ul>
+        </li> 
+        <li>
+          <label>Year</label>
+          <ul class="checkbox year">
+          
+            <li><label class="Year"><input type="checkbox" class="filter">2000</label></li>
+            <li><label class="Year"><input type="checkbox" class="filter">2005</label></li>
+            <li><label class="Year"><input type="checkbox" class="filter">2010</label></li>
+            <li><label class="Year"><input type="checkbox" class="filter">2015</label></li>
+          </ul>
+        </li> 
+        <li>
+          <label>Venue</label>
+          <ul class="checkbox Venue">
+          
+            <li><label class="Venue"><input type="checkbox" class="filter">Data Mining</label></li>
+            <li><label class="Venue"><input type="checkbox" class="filter">Machine Learning</label></li>
+            <li><label class="Venue"><input type="checkbox" class="filter">Database</label></li>
+            <li><label class="Venue"><input type="checkbox" class="filter">Information Retrieval</label></li>
+          </ul>
+        </li> 
+      </ul> 
+      </div>
+    <!-- </fieldset>  -->
+
+    <!-- <fieldset class="group">  -->
+      <div class="ctr_group merge_group">
+      <legend>Merge</legend> 
+      <ul class="custom-controls-stacked checkbox"> 
+        <li>
+          <label>Phrase</label>
+          <ul class="checkbox">
+          
+            <li><label class="Phrase"><input type="checkbox" class="merge">Method</label></li>
+            <li><label class="Phrase"><input type="checkbox" class="merge">Metric</label></li>
+            <li><label class="Phrase"><input type="checkbox" class="merge">Application</label></li>
+          </ul>
+        </li> 
+
+        <li>
+          <label>Author</label>
+          <ul class="checkbox Author">
+          
+            <li><label class="Author"><input type="checkbox" class="merge">Han</label></li>
+            <li><label class="Author"><input type="checkbox" class="merge">Non-Han</label></li>
+          </ul>
+        </li> 
+        <li>
+          <label>Year</label>
+          <ul class="checkbox year">
+          
+            <li><label class="Year"><input type="checkbox" class="merge">2000</label></li>
+            <li><label class="Year"><input type="checkbox" class="merge">2005</label></li>
+            <li><label class="Year"><input type="checkbox" class="merge">2010</label></li>
+            <li><label class="Year"><input type="checkbox" class="merge">2015</label></li>
+          </ul>
+        </li> 
+        <li>
+          <label>Venue</label>
+          <ul class="checkbox Venue">
+          
+            <li><label class="Venue"><input type="checkbox" class="merge">Data Mining</label></li>
+            <li><label class="Venue"><input type="checkbox" class="merge">Machine Learning</label></li>
+            <li><label class="Venue"><input type="checkbox" class="merge">Database</label></li>
+            <li><label class="Venue"><input type="checkbox" class="merge">Information Retrieval</label></li>
+          </ul>
+        </li> 
+      </ul> 
+      </div>
       <button class="btn" id="query_btn">query</button>
     </fieldset> 
-
-    
 
     <div id="main" role="main">
       <div id="vis"></div>
