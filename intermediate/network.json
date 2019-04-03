@@ -1,0 +1,29 @@
+{
+    "nodes": [
+        {
+            "size": 0,
+            "type": "year",
+            "id": "252",
+            "name": "2015"
+        },
+        {
+            "size": 0,
+            "type": "year",
+            "id": "250",
+            "name": "2005"
+        },
+        {
+            "size": 0,
+            "type": "year",
+            "id": "249",
+            "name": "2010"
+        },
+        {
+            "size": 0,
+            "type": "year",
+            "id": "s/3/0",
+            "name": "2000"
+        }
+    ],
+    "links": []
+}

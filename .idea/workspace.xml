@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="19578dbe-856d-465b-9295-dd4a35ff4498" name="Default Changelist" comment="" />
+=======
     <list default="true" id="19578dbe-856d-465b-9295-dd4a35ff4498" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
@@ -29,19 +32,75 @@
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/static/coffee/vis.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/server/static/coffee/vis.coffee" afterDir="false" />
     </list>
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="FUSProjectUsageTrigger">
+    <session id="543311409">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="coffee" value="3" />
+          <entry key="css" value="1" />
+          <entry key="html" value="4" />
+          <entry key="json" value="18" />
+          <entry key="py" value="40" />
+          <entry key="ru" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="4" />
+          <entry key="JSON" value="18" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="40" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="coffee" value="26" />
+          <entry key="html" value="50" />
+          <entry key="py" value="780" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="50" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Python" value="780" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+=======
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="300">
+              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+=======
             <state relative-caret-position="240">
               <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -158,6 +217,8 @@
               <item name="CubeNet" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="CubeNet" type="b2602c69:ProjectViewProjectNode" />
               <item name="CubeNet" type="462c0819:PsiDirectoryNode" />
@@ -171,6 +232,7 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="coffee" type="462c0819:PsiDirectoryNode" />
             </path>
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
           </expand>
           <select />
         </subPane>
@@ -185,9 +247,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
+=======
       <recent name="$PROJECT_DIR$/server/static" />
       <recent name="$PROJECT_DIR$/server" />
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
       <recent name="$PROJECT_DIR$/server/templates" />
+      <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$/server/static" />
       <recent name="$PROJECT_DIR$/process" />
       <recent name="$PROJECT_DIR$/code" />
     </key>
@@ -362,7 +429,11 @@
       <window_info id="Job Explorer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
+<<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2639485" />
+=======
       <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.26752505" />
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -522,8 +593,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="300">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+=======
         <state relative-caret-position="240">
           <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+>>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
