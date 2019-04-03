@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="19578dbe-856d-465b-9295-dd4a35ff4498" name="Default Changelist" comment="" />
-=======
     <list default="true" id="19578dbe-856d-465b-9295-dd4a35ff4498" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/coffee/vis.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/coffee/vis.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config.ru" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/bootstrap.css" afterDir="false" />
@@ -29,17 +23,13 @@
       <change beforePath="$PROJECT_DIR$/frontend/js/libs/coffee-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/libs/coffee-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/js/libs/jquery-1.7.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/libs/jquery-1.7.2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/js/libs/jquery-1.7.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/libs/jquery-1.7.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/coffee/vis.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/server/static/coffee/vis.coffee" afterDir="false" />
     </list>
->>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="543311409">
       <usages-collector id="statistics.lifecycle.project">
@@ -91,7 +81,7 @@
 >>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.py">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -99,8 +89,16 @@
               <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
 =======
             <state relative-caret-position="240">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
               <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
 >>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
+=======
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+>>>>>>> Stashed changes
+=======
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -111,17 +109,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
+            <state relative-caret-position="300">
               <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/static/coffee/vis.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="269" column="28" lean-forward="true" selection-start-line="269" selection-start-column="28" selection-end-line="269" selection-end-column="28" />
+            <state relative-caret-position="541">
+              <caret line="267" selection-start-line="267" selection-end-line="267" />
             </state>
           </provider>
         </entry>
@@ -190,6 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,7 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,11 +413,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551987780464</updated>
       <workItem from="1552457482755" duration="903000" />
+      <workItem from="1554329211905" duration="272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="903000" />
+    <option name="totallyTimeSpent" value="1175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -429,14 +428,20 @@
       <window_info id="Job Explorer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2639485" />
 =======
       <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.26752505" />
 >>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
+=======
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.27110156" />
+>>>>>>> Stashed changes
+=======
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.27110156" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Console" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
@@ -444,20 +449,22 @@
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.3298153" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="DB Execution Console" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.3298153" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.3298153" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="Remote Host" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="R Packages" order="2" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
     </layout>
     <layout-to-restore>
       <window_info id="DB Browser" order="0" />
@@ -577,22 +584,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/intermediate/query.json" />
+    <entry file="file://$PROJECT_DIR$/server/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
+        <state relative-caret-position="300">
           <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/static/coffee/vis.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="269" column="28" lean-forward="true" selection-start-line="269" selection-start-column="28" selection-end-line="269" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.py">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         <state relative-caret-position="300">
           <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
@@ -603,6 +615,14 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="541">
+          <caret line="267" selection-start-line="267" selection-end-line="267" />
+>>>>>>> Stashed changes
+=======
+        <state relative-caret-position="541">
+          <caret line="267" selection-start-line="267" selection-end-line="267" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
