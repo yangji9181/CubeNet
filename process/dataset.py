@@ -61,11 +61,12 @@ class Dataset(object):
 			if tokens[1] in self.meta['label'] and tokens[2] in self.meta['label'][tokens[1]]:
 				if tokens[2] not in self.labels[tokens[1]]:
 					self.labels[tokens[1]][tokens[2]] = []
-				if tokens[0] in unlabeled:
+				if tokens[0] in self.nodes_tmp:
 					indices = [i for i, x in enumerate(self.nodes_tmp) if x == tokens[0]]
 					for ind in indices:
 						self.labels[tokens[1]][tokens[2]].append(str(ind))
-						unlabeled.remove(tokens[0])
+						if tokens[0] in unlabeled:
+							unlabeled.remove(tokens[0])
 				else:
 					unused.append(tokens[0])
 			else:
