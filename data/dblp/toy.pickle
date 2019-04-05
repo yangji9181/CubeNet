@@ -13267,1067 +13267,1095 @@ Rp5171
 g6
 (dp5172
 g6
-S'han'
+(S'han'
 p5173
+g6
+tp5174
 sg50
-S'non-han'
-p5174
+(S'non-han'
+p5175
+g50
+tp5176
 ssg50
-(dp5175
+(dp5177
 g6
-S'method'
-p5176
-sg50
-S'double-check'
-p5177
-sg177
-S'metric'
+(S'method'
 p5178
-sg210
-S'application'
-p5179
-ssg177
-(dp5180
 g6
-S'2005'
-p5181
+tp5179
 sg50
-S'2000'
+(S'double-check'
+p5180
+g50
+tp5181
+sg177
+(S'metric'
 p5182
-sg177
-S'2015'
-p5183
+g177
+tp5183
 sg210
-S'2010'
+(S'application'
 p5184
-ssg210
-(dp5185
+g210
+tp5185
+ssg177
+(dp5186
 g6
-S'machine learning'
-p5186
-sg50
-S'data mining'
+(S'2005'
 p5187
-sg177
-S'information retrieval'
-p5188
-sg210
-S'database'
+g6
+tp5188
+sg50
+(S'2000'
 p5189
+g50
+tp5190
+sg177
+(S'2015'
+p5191
+g177
+tp5192
+sg210
+(S'2010'
+p5193
+g210
+tp5194
+ssg210
+(dp5195
+g6
+(S'machine learning'
+p5196
+g6
+tp5197
+sg50
+(S'data mining'
+p5198
+g50
+tp5199
+sg177
+(S'information retrieval'
+p5200
+g177
+tp5201
+sg210
+(S'database'
+p5202
+g210
+tp5203
 ssssS'nodes'
-p5190
+p5204
 g2
 (g3
-tp5191
-Rp5192
+tp5205
+Rp5206
 g6
-(dp5193
+(dp5207
 S'216'
-p5194
-S'Bin Jiang'
-p5195
-sS'217'
-p5196
-S'Tianyi Wu'
-p5197
-sS'214'
-p5198
-S'Kun-Lung Wu'
-p5199
-sS'215'
-p5200
-S'Zhenhua Lin'
-p5201
-sS'212'
-p5202
-S'Tim Weninger'
-p5203
-sS'213'
-p5204
-S'Arijit Khan'
-p5205
-sS'210'
-p5206
-S'Ryen W. White'
-p5207
-sS'211'
 p5208
-S'Susan T. Dumais'
+S'Bin Jiang'
 p5209
-sS'218'
+sS'217'
 p5210
-S'Wen Jin'
+S'Tianyi Wu'
 p5211
-sS'219'
+sS'214'
 p5212
-S'Yufei Tao'
+S'Kun-Lung Wu'
 p5213
-sS'133'
+sS'215'
 p5214
-S'Wei Wang'
+S'Zhenhua Lin'
 p5215
-sS'132'
+sS'212'
 p5216
-S'Ander de Keijzer'
+S'Tim Weninger'
 p5217
-sS'131'
+sS'213'
 p5218
-S'Lise Getoor'
+S'Arijit Khan'
 p5219
-sS'130'
+sS'210'
 p5220
-S'Jian Pei'
+S'Ryen W. White'
 p5221
-sS'137'
+sS'211'
 p5222
-S'Jisheng Liang'
+S'Susan T. Dumais'
 p5223
-sS'136'
+sS'218'
 p5224
-S'Baile Shi'
+S'Wen Jin'
 p5225
-sS'135'
+sS'219'
 p5226
-S'Yongtai Zhu'
+S'Yufei Tao'
 p5227
-sS'134'
+sS'133'
 p5228
-S'Chen Wang'
+S'Wei Wang'
 p5229
-sS'139'
+sS'132'
 p5230
-S'Thien Nguyen'
+S'Ander de Keijzer'
 p5231
-sS'138'
+sS'131'
 p5232
-S'Krzysztof Koperski'
+S'Lise Getoor'
 p5233
-sS'225'
+sS'130'
 p5234
-S'Jie Yu'
+S'Jian Pei'
 p5235
-sS'224'
+sS'137'
 p5236
-S'Bing Liu'
+S'Jisheng Liang'
 p5237
-sS'223'
+sS'136'
 p5238
-S'Bo Zhao'
+S'Baile Shi'
 p5239
-sS'222'
+sS'135'
 p5240
-S'Cindy Xide Lin'
+S'Yongtai Zhu'
 p5241
-sS'221'
+sS'134'
 p5242
-S'Xiaofei He'
+S'Chen Wang'
 p5243
-sS'220'
+sS'139'
 p5244
-S'Yizhou Sun'
+S'Thien Nguyen'
 p5245
-sS'227'
+sS'138'
 p5246
-S'Yu Zhang'
+S'Krzysztof Koperski'
 p5247
-sS'120'
+sS'225'
 p5248
-S'Bhavesh Shah'
+S'Jie Yu'
 p5249
-sS'121'
+sS'224'
 p5250
-S'T L Prasanna Venkatesan'
+S'Bing Liu'
 p5251
-sS'122'
+sS'223'
 p5252
-S'Lakshmanan Velusamy'
+S'Bo Zhao'
 p5253
-sS'123'
+sS'222'
 p5254
-S'Melania Degerattu'
+S'Cindy Xide Lin'
 p5255
-sS'124'
+sS'221'
 p5256
-S'Xifeng Yan'
+S'Xiaofei He'
 p5257
-sS'125'
+sS'220'
 p5258
-S'Philip S. Yu'
+S'Yizhou Sun'
 p5259
-sS'126'
+sS'227'
 p5260
-S'Min-Soo Kim'
+S'Yu Zhang'
 p5261
-sS'127'
+sS'120'
 p5262
-S'Kyu-Young Whang'
+S'Bhavesh Shah'
 p5263
-sS'128'
+sS'121'
 p5264
-S'Jae-Gil Lee'
+S'T L Prasanna Venkatesan'
 p5265
-sS'129'
+sS'122'
 p5266
-S'Min-Jae Lee'
+S'Lakshmanan Velusamy'
 p5267
-sS'201'
+sS'123'
 p5268
-S'Mohammad M. Masud'
+S'Melania Degerattu'
 p5269
-sS'199'
+sS'124'
 p5270
-S'Raghotham Murthy'
+S'Xifeng Yan'
 p5271
-sS'198'
+sS'125'
 p5272
-S'Joydeep Sen Sarma'
+S'Philip S. Yu'
 p5273
-sS'200'
+sS'126'
 p5274
-S'Hao Liu'
+S'Min-Soo Kim'
 p5275
-sS'195'
+sS'127'
 p5276
-S'Suresh Anthony'
+S'Kyu-Young Whang'
 p5277
-sS'194'
+sS'128'
 p5278
-S'Zheng Shao'
+S'Jae-Gil Lee'
 p5279
-sS'197'
+sS'129'
 p5280
-S'Namit Jain'
+S'Min-Jae Lee'
 p5281
-sS'196'
+sS'201'
 p5282
-S'Dhruba Borthakur'
+S'Mohammad M. Masud'
 p5283
-sS'191'
+sS'199'
 p5284
-S'Ce Zhang'
+S'Raghotham Murthy'
 p5285
-sS'190'
+sS'198'
 p5286
-S'Bin Cui'
+S'Joydeep Sen Sarma'
 p5287
-sS'193'
+sS'200'
 p5288
-S'Ashish Thusoo'
+S'Hao Liu'
 p5289
-sS'192'
+sS'195'
 p5290
-S'Z. Zhao'
+S'Suresh Anthony'
 p5291
-sS'115'
+sS'194'
 p5292
-S'Jieping Ye'
+S'Zheng Shao'
 p5293
-sS'114'
+sS'197'
 p5294
-S'Beng Chin Ooi'
+S'Namit Jain'
 p5295
-sS'117'
+sS'196'
 p5296
-S'Qi Li'
+S'Dhruba Borthakur'
 p5297
-sS'116'
+sS'191'
 p5298
-S'Ravi Janardan'
+S'Ce Zhang'
 p5299
-sS'111'
+sS'190'
 p5300
-S'Venkatesh Ganti'
+S'Bin Cui'
 p5301
-sS'110'
+sS'193'
 p5302
-S'Surajit Chaudhuri'
+S'Ashish Thusoo'
 p5303
-sS'113'
+sS'192'
 p5304
-S'Dong Xin'
+S'Z. Zhao'
 p5305
-sS'112'
+sS'115'
 p5306
-S'Arnd Christian K\xc3\xb6nig'
+S'Jieping Ye'
 p5307
-sS'205'
+sS'114'
 p5308
-S'Liangliang Cao'
+S'Beng Chin Ooi'
 p5309
-sS'119'
+sS'117'
 p5310
-S'Thomas Burris'
+S'Qi Li'
 p5311
-sS'118'
+sS'116'
 p5312
-S'Ajinkya Kale'
+S'Ravi Janardan'
 p5313
-sS'204'
+sS'111'
 p5314
-S'Bhavani M. Thuraisingham'
+S'Venkatesh Ganti'
 p5315
-sS'207'
+sS'110'
 p5316
-S'Jiebo Luo'
+S'Surajit Chaudhuri'
 p5317
-sS'206'
+sS'113'
 p5318
-S'Andrey Del Pozo'
+S'Dong Xin'
 p5319
-sS'226'
+sS'112'
 p5320
-S'Lidan Wang'
+S'Arnd Christian K\xc3\xb6nig'
 p5321
-sS'108'
+sS'205'
 p5322
-S'Sanjay Agrawal'
+S'Liangliang Cao'
 p5323
-sS'109'
+sS'119'
 p5324
-S'Kaushik Chakrabarti'
+S'Thomas Burris'
 p5325
-sS'240'
+sS'118'
 p5326
-S'Hector Gonzalez'
+S'Ajinkya Kale'
 p5327
-sS'102'
+sS'204'
 p5328
-S'Zhijun Yin'
+S'Bhavani M. Thuraisingham'
 p5329
-sS'103'
+sS'207'
 p5330
-S'Jiawei Han'
+S'Jiebo Luo'
 p5331
-sS'100'
+sS'206'
 p5332
-S'Manish Gupta'
+S'Andrey Del Pozo'
 p5333
-sS'101'
+sS'226'
 p5334
-S'Rui Li'
+S'Lidan Wang'
 p5335
-sS'106'
+sS'108'
 p5336
-S'Kian-Lee Tan'
+S'Sanjay Agrawal'
 p5337
-sS'107'
+sS'109'
 p5338
-S'Anthony K. H. Tung'
+S'Kaushik Chakrabarti'
 p5339
-sS'104'
+sS'240'
 p5340
-S'Feng Zhao'
+S'Hector Gonzalez'
 p5341
-sS'105'
+sS'102'
 p5342
-S'Gautam Das'
+S'Zhijun Yin'
 p5343
-sS'179'
+sS'103'
 p5344
-S'Yun-Fang Juan'
+S'Jiawei Han'
 p5345
-sS'178'
+sS'100'
 p5346
-S'Ding Zhou'
+S'Manish Gupta'
 p5347
-sS'177'
+sS'101'
 p5348
-S'Ge Yu'
+S'Rui Li'
 p5349
-sS'176'
+sS'106'
 p5350
-S'Zhenjie Zhang'
+S'Kian-Lee Tan'
 p5351
-sS'175'
+sS'107'
 p5352
-S'Jia Xu'
+S'Anthony K. H. Tung'
 p5353
-sS'174'
+sS'104'
 p5354
-S'Nick Koudas'
+S'Feng Zhao'
 p5355
-sS'173'
+sS'105'
 p5356
-S'Chen Li'
+S'Gautam Das'
 p5357
-sS'172'
+sS'179'
 p5358
-S'Liang Jin'
+S'Yun-Fang Juan'
 p5359
-sS'171'
+sS'178'
 p5360
-S'Ning An'
+S'Ding Zhou'
 p5361
-sS'170'
+sS'177'
 p5362
-S'Jianyong Wang'
+S'Ge Yu'
 p5363
-sS'203'
+sS'176'
 p5364
-S'Latifur Khan'
+S'Zhenjie Zhang'
 p5365
-sS'182'
+sS'175'
 p5366
-S'Deng Cai'
+S'Jia Xu'
 p5367
-sS'183'
+sS'174'
 p5368
-S'Jinsong Lu'
+S'Nick Koudas'
 p5369
-sS'180'
+sS'173'
 p5370
-S'Dell Zhang'
+S'Chen Li'
 p5371
-sS'181'
+sS'172'
 p5372
-S'Jun Wang'
+S'Liang Jin'
 p5373
-sS'186'
+sS'171'
 p5374
-S'Hang Li'
+S'Ning An'
 p5375
-sS'187'
+sS'170'
 p5376
-S'Hong Cheng'
+S'Jianyong Wang'
 p5377
-sS'184'
+sS'203'
 p5378
-S'Zhengzheng Xing'
+S'Latifur Khan'
 p5379
-sS'185'
+sS'182'
 p5380
-S'Eamonn J. Keogh'
+S'Deng Cai'
 p5381
-sS'188'
+sS'183'
 p5382
-S'Ke Wang'
+S'Jinsong Lu'
 p5383
-sS'189'
+sS'180'
 p5384
-S'Yu He'
+S'Dell Zhang'
 p5385
-sS'202'
+sS'181'
 p5386
-S'Jing Gao'
+S'Jun Wang'
 p5387
-sS'168'
+sS'186'
 p5388
-S'Lili Jiang'
+S'Hang Li'
 p5389
-sS'169'
+sS'187'
 p5390
-S'Wei Shen'
+S'Hong Cheng'
 p5391
-sS'229'
+sS'184'
 p5392
-S'Cuiping Li'
+S'Zhengzheng Xing'
 p5393
-sS'228'
+sS'185'
 p5394
-S'Chen Chen'
+S'Eamonn J. Keogh'
 p5395
-sS'164'
+sS'188'
 p5396
-S'Behzad Mortazavi-Asl'
+S'Ke Wang'
 p5397
-sS'165'
+sS'189'
 p5398
-S'Qiming Chen'
+S'Yu He'
 p5399
-sS'166'
+sS'202'
 p5400
-S'Umeshwar Dayal'
+S'Jing Gao'
 p5401
-sS'167'
+sS'168'
 p5402
-S'Meichun Hsu'
+S'Lili Jiang'
 p5403
-sS'160'
+sS'169'
 p5404
-S'Yanzan Zhou'
+S'Wei Shen'
 p5405
-sS'161'
+sS'229'
 p5406
-S'Bamshad Mobasher'
+S'Cuiping Li'
 p5407
-sS'162'
+sS'228'
 p5408
-S'Gao Cong'
+S'Chen Chen'
 p5409
-sS'163'
+sS'164'
 p5410
-S'Xin Xu'
+S'Behzad Mortazavi-Asl'
 p5411
-sS'151'
+sS'165'
 p5412
-S'Wei Chen'
+S'Qiming Chen'
 p5413
-sS'150'
+sS'166'
 p5414
-S'Panos Kalnis'
+S'Umeshwar Dayal'
 p5415
-sS'153'
+sS'167'
 p5416
-S'Yajun Wang'
+S'Meichun Hsu'
 p5417
-sS'152'
+sS'160'
 p5418
-S'Chi Wang'
+S'Yanzan Zhou'
 p5419
-sS'155'
+sS'161'
 p5420
-S'Ming Ji'
+S'Bamshad Mobasher'
 p5421
-sS'154'
+sS'162'
 p5422
-S'Zhenhui Li'
+S'Gao Cong'
 p5423
-sS'157'
+sS'163'
 p5424
-S'Yintao Yu'
+S'Xin Xu'
 p5425
-sS'156'
+sS'151'
 p5426
-S'Lu An Tang'
+S'Wei Chen'
 p5427
-sS'159'
+sS'150'
 p5428
-S'Xin Jin'
+S'Panos Kalnis'
 p5429
-sS'158'
+sS'153'
 p5430
-S'Roland Kays'
+S'Yajun Wang'
 p5431
-sS'238'
+sS'152'
 p5432
-S'Honglei Zhuang'
+S'Chi Wang'
 p5433
-sS'239'
+sS'155'
 p5434
-S'Hwanjo Yu'
+S'Ming Ji'
 p5435
-sS'234'
+sS'154'
 p5436
-S'Bolin Ding'
+S'Zhenhui Li'
 p5437
-sS'235'
+sS'157'
 p5438
-S'Xiaoxin Yin'
+S'Yintao Yu'
 p5439
-sS'236'
+sS'156'
 p5440
-S'Peixiang Zhao'
+S'Lu An Tang'
 p5441
-sS'237'
+sS'159'
 p5442
-S'Quan Yuan'
+S'Xin Jin'
 p5443
-sS'230'
+sS'158'
 p5444
-S'Hong Chen'
+S'Roland Kays'
 p5445
-sS'231'
+sS'238'
 p5446
-S'Jialu Liu'
+S'Honglei Zhuang'
 p5447
-sS'232'
+sS'239'
 p5448
-S'Charu C. Aggarwal'
+S'Hwanjo Yu'
 p5449
-sS'233'
+sS'234'
 p5450
-S'Nan Zhang'
+S'Bolin Ding'
 p5451
-sS'146'
+sS'235'
 p5452
-S'Wei Tang'
+S'Xiaoxin Yin'
 p5453
-sS'147'
+sS'236'
 p5454
-S'Daxin Jiang'
+S'Peixiang Zhao'
 p5455
-sS'144'
+sS'237'
 p5456
-S'Wei Han'
+S'Quan Yuan'
 p5457
-sS'145'
+sS'230'
 p5458
-S'Henrique Paques'
+S'Hong Chen'
 p5459
-sS'142'
+sS'231'
 p5460
-S'Calton Pu'
+S'Jialu Liu'
 p5461
-sS'143'
+sS'232'
 p5462
-S'David Buttler'
+S'Charu C. Aggarwal'
 p5463
-sS'140'
+sS'233'
 p5464
-S'Giovanni B. Marchisio'
+S'Nan Zhang'
 p5465
-sS'141'
+sS'146'
 p5466
-S'Ling Liu'
+S'Wei Tang'
 p5467
-sS'209'
+sS'147'
 p5468
-S'Chao Liu'
+S'Daxin Jiang'
 p5469
-sS'208'
+sS'144'
 p5470
-S'Thomas S. Huang'
+S'Wei Han'
 p5471
-sS'148'
+sS'145'
 p5472
-S'Aidong Zhang'
+S'Henrique Paques'
 p5473
-sS'149'
+sS'142'
 p5474
-S'Rui Yang'
+S'Calton Pu'
 p5475
-ssg50
-(dp5476
-S'24'
+sS'143'
+p5476
+S'David Buttler'
 p5477
-S'graph query'
+sS'140'
 p5478
-sS'25'
+S'Giovanni B. Marchisio'
 p5479
-S'frequent pattern'
+sS'141'
 p5480
-sS'26'
+S'Ling Liu'
 p5481
-S'information retrieval'
+sS'209'
 p5482
-sS'27'
+S'Chao Liu'
 p5483
-S'graph theory'
+sS'208'
 p5484
-sS'20'
+S'Thomas S. Huang'
 p5485
-S'high dimensional data'
+sS'148'
 p5486
-sS'21'
+S'Aidong Zhang'
 p5487
-S'dimension reduction'
+sS'149'
 p5488
-sS'22'
+S'Rui Yang'
 p5489
-S'image retrieval'
-p5490
-sS'23'
+ssg50
+(dp5490
+S'24'
 p5491
-S'web pages'
+S'graph query'
 p5492
-sS'28'
+sS'25'
 p5493
-S'data mining'
+S'frequent pattern'
 p5494
-sS'29'
+sS'26'
 p5495
-S'pattern recognition'
+S'information retrieval'
 p5496
+sS'27'
+p5497
+S'graph theory'
+p5498
+sS'20'
+p5499
+S'high dimensional data'
+p5500
+sS'21'
+p5501
+S'dimension reduction'
+p5502
+sS'22'
+p5503
+S'image retrieval'
+p5504
+sS'23'
+p5505
+S'web pages'
+p5506
+sS'28'
+p5507
+S'data mining'
+p5508
+sS'29'
+p5509
+S'pattern recognition'
+p5510
 sg50
 S'social tagging'
-p5497
+p5511
 sg241
 S'social classification'
-p5498
+p5512
 sg196
 S'right tag'
-p5499
-sS'59'
-p5500
-S'web data'
-p5501
-sS'58'
-p5502
-S'sequential pattern mining'
-p5503
-sS'55'
-p5504
-S'mining result'
-p5505
-sS'54'
-p5506
-S'object data'
-p5507
-sS'57'
-p5508
-S'rule based'
-p5509
-sS'56'
-p5510
-S'recommender system'
-p5511
-sS'51'
-p5512
-S'heuristic algorithm'
 p5513
-sS'50'
+sS'59'
 p5514
-S'tree structure'
+S'web data'
 p5515
-sS'53'
+sS'58'
 p5516
-S'social networks'
+S'sequential pattern mining'
 p5517
-sS'52'
+sS'55'
 p5518
-S'social network'
+S'mining result'
 p5519
-sS'88'
+sS'54'
 p5520
-S'relational databases'
+S'object data'
 p5521
-sS'89'
+sS'57'
 p5522
-S'learning to rank'
+S'rule based'
 p5523
-sS'82'
+sS'56'
 p5524
-S'synthetic data'
+S'recommender system'
 p5525
-sS'83'
+sS'51'
 p5526
-S'information network'
+S'heuristic algorithm'
 p5527
-sS'80'
+sS'50'
 p5528
-S'random walk'
+S'tree structure'
 p5529
-sS'81'
+sS'53'
 p5530
-S'large graph'
+S'social networks'
 p5531
-sS'86'
+sS'52'
 p5532
-S'manifold learning'
+S'social network'
 p5533
-sS'87'
+sS'88'
 p5534
-S'vector space model'
+S'relational databases'
 p5535
-sS'84'
+sS'89'
 p5536
-S'data retrieval'
+S'learning to rank'
 p5537
-sS'85'
+sS'82'
 p5538
-S'world wide web'
+S'synthetic data'
 p5539
+sS'83'
+p5540
+S'information network'
+p5541
+sS'80'
+p5542
+S'random walk'
+p5543
+sS'81'
+p5544
+S'large graph'
+p5545
+sS'86'
+p5546
+S'manifold learning'
+p5547
+sS'87'
+p5548
+S'vector space model'
+p5549
+sS'84'
+p5550
+S'data retrieval'
+p5551
+sS'85'
+p5552
+S'world wide web'
+p5553
 sg177
 S'collaborative tagging'
-p5540
+p5554
 sg195
 S'people tag'
-p5541
-sS'39'
-p5542
-S'uncertain data'
-p5543
-sS'38'
-p5544
-S'data streams'
-p5545
-sS'33'
-p5546
-S'graph databases'
-p5547
-sS'32'
-p5548
-S'query performance'
-p5549
-sS'31'
-p5550
-S'data structure'
-p5551
-sS'30'
-p5552
-S'database management system'
-p5553
-sS'37'
-p5554
-S'feature selection'
 p5555
-sS'36'
+sS'39'
 p5556
-S'memory bandwidth'
+S'uncertain data'
 p5557
-sS'35'
+sS'38'
 p5558
-S'database system'
+S'data streams'
 p5559
-sS'34'
+sS'33'
 p5560
-S'similarity search'
+S'graph databases'
 p5561
-sS'60'
+sS'32'
 p5562
-S'web search'
+S'query performance'
 p5563
-sS'61'
+sS'31'
 p5564
-S'relational database'
+S'data structure'
 p5565
-sS'62'
+sS'30'
 p5566
-S'distance metric'
+S'database management system'
 p5567
-sS'63'
+sS'37'
 p5568
-S'online advertising'
+S'feature selection'
 p5569
-sS'64'
+sS'36'
 p5570
-S'laplacian eigenmap'
+S'memory bandwidth'
 p5571
-sS'65'
+sS'35'
 p5572
-S'support vector machine'
+S'database system'
 p5573
-sS'66'
+sS'34'
 p5574
-S'log data'
+S'similarity search'
 p5575
-sS'67'
+sS'60'
 p5576
-S'log mining'
+S'web search'
 p5577
-sS'68'
+sS'61'
 p5578
-S'process large scale log'
+S'relational database'
 p5579
-sS'69'
+sS'62'
 p5580
-S'search engine'
+S'distance metric'
 p5581
+sS'63'
+p5582
+S'online advertising'
+p5583
+sS'64'
+p5584
+S'laplacian eigenmap'
+p5585
+sS'65'
+p5586
+S'support vector machine'
+p5587
+sS'66'
+p5588
+S'log data'
+p5589
+sS'67'
+p5590
+S'log mining'
+p5591
+sS'68'
+p5592
+S'process large scale log'
+p5593
+sS'69'
+p5594
+S'search engine'
+p5595
 sg210
 S'tag semantics'
-p5582
+p5596
 sg242
 S'tagging process'
-p5583
-sS'99'
-p5584
-S'search space'
-p5585
-sS'98'
-p5586
-S'divide and conquer'
-p5587
-sS'91'
-p5588
-S'covariance matrix'
-p5589
-sS'90'
-p5590
-S'load balance'
-p5591
-sS'93'
-p5592
-S'skyline query'
-p5593
-sS'92'
-p5594
-S'web mining'
-p5595
-sS'95'
-p5596
-S'query optimization'
 p5597
-sS'94'
+sS'99'
 p5598
-S'essential data mining task'
+S'search space'
 p5599
-sS'97'
+sS'98'
 p5600
-S'active learning'
+S'divide and conquer'
 p5601
-sS'96'
+sS'91'
 p5602
-S'recommender systems'
+S'covariance matrix'
 p5603
-sS'11'
+sS'90'
 p5604
-S'database community'
+S'load balance'
 p5605
-sS'10'
+sS'93'
 p5606
-S'folk classification'
+S'skyline query'
 p5607
-sS'13'
+sS'92'
 p5608
-S'hierarchical clustering'
+S'web mining'
 p5609
-sS'12'
+sS'95'
 p5610
-S'skyline object'
+S'query optimization'
 p5611
-sS'15'
+sS'94'
 p5612
-S'web search engine'
+S'essential data mining task'
 p5613
-sS'14'
+sS'97'
 p5614
-S'extensive experiment'
+S'active learning'
 p5615
-sS'17'
+sS'96'
 p5616
-S'data management'
+S'recommender systems'
 p5617
-sS'16'
+sS'11'
 p5618
-S'information extraction'
+S'database community'
 p5619
-sS'19'
+sS'10'
 p5620
-S'feature extraction'
+S'folk classification'
 p5621
-sS'18'
+sS'13'
 p5622
-S'face recognition'
+S'hierarchical clustering'
 p5623
-sS'48'
+sS'12'
 p5624
-S'lower bound'
+S'skyline object'
 p5625
-sS'49'
+sS'15'
 p5626
-S'edit distance'
+S'web search engine'
 p5627
-sS'46'
+sS'14'
 p5628
-S'novel algorithm'
+S'extensive experiment'
 p5629
-sS'47'
+sS'17'
 p5630
-S'computational complexity'
+S'data management'
 p5631
-sS'44'
+sS'16'
 p5632
-S'text mining'
+S'information extraction'
 p5633
-sS'45'
+sS'19'
 p5634
-S'statistical analysis'
+S'feature extraction'
 p5635
-sS'42'
+sS'18'
 p5636
-S'new approach'
+S'face recognition'
 p5637
-sS'43'
+sS'48'
 p5638
-S'data analysis'
+S'lower bound'
 p5639
-sS'40'
+sS'49'
 p5640
-S'knowledge discovery'
+S'edit distance'
 p5641
-sS'41'
+sS'46'
 p5642
-S'efficient algorithm'
+S'novel algorithm'
 p5643
+sS'47'
+p5644
+S'computational complexity'
+p5645
+sS'44'
+p5646
+S'text mining'
+p5647
+sS'45'
+p5648
+S'statistical analysis'
+p5649
+sS'42'
+p5650
+S'new approach'
+p5651
+sS'43'
+p5652
+S'data analysis'
+p5653
+sS'40'
+p5654
+S'knowledge discovery'
+p5655
+sS'41'
+p5656
+S'efficient algorithm'
+p5657
 sg6
 S'tagging domain'
-p5644
+p5658
 sg224
 S'web object'
-p5645
+p5659
 sg197
 S'tagging usage'
-p5646
-sS'77'
-p5647
-S'graph structure'
-p5648
-sS'76'
-p5649
-S'network structure'
-p5650
-sS'75'
-p5651
-S'web page'
-p5652
-sS'74'
-p5653
-S'image collection'
-p5654
-sS'73'
-p5655
-S'probabilistic model'
-p5656
-sS'72'
-p5657
-S'small number'
-p5658
-sS'71'
-p5659
-S'empirical study'
 p5660
-sS'70'
+sS'77'
 p5661
-S'generative model'
+S'graph structure'
 p5662
-sS'79'
+sS'76'
 p5663
-S'user experience'
+S'network structure'
 p5664
-sS'78'
+sS'75'
 p5665
-S'unified framework'
+S'web page'
 p5666
-ssg177
-(dp5667
-S'252'
+sS'74'
+p5667
+S'image collection'
 p5668
-S'2015'
+sS'73'
 p5669
-sS'250'
+S'probabilistic model'
 p5670
-S'2005'
+sS'72'
 p5671
-sS'251'
+S'small number'
 p5672
-S'2000'
+sS'71'
 p5673
-sS'249'
+S'empirical study'
 p5674
-S'2010'
+sS'70'
 p5675
-ssg210
-(dp5676
-S'245'
+S'generative model'
+p5676
+sS'79'
 p5677
-S'very large data bases'
+S'user experience'
 p5678
-sS'244'
+sS'78'
 p5679
-S'international acm sigir conference on research and development in information retrieval'
+S'unified framework'
 p5680
-sS'247'
-p5681
-S'web search and data mining'
+ssg177
+(dp5681
+S'252'
 p5682
-sS'246'
+S'2015'
 p5683
-S'international world wide web conferences'
+sS'250'
 p5684
-sS'241'
+S'2005'
 p5685
-S'knowledge discovery and data mining'
+sS'251'
 p5686
-sS'243'
+S'2000'
 p5687
-S'neural information processing systems'
+sS'249'
 p5688
-sS'242'
+S'2010'
 p5689
-S'international conference on management of data'
-p5690
-sS'248'
+ssg210
+(dp5690
+S'245'
 p5691
-S'international conference on machine learning'
+S'very large data bases'
 p5692
+sS'244'
+p5693
+S'international acm sigir conference on research and development in information retrieval'
+p5694
+sS'247'
+p5695
+S'web search and data mining'
+p5696
+sS'246'
+p5697
+S'international world wide web conferences'
+p5698
+sS'241'
+p5699
+S'knowledge discovery and data mining'
+p5700
+sS'243'
+p5701
+S'neural information processing systems'
+p5702
+sS'242'
+p5703
+S'international conference on management of data'
+p5704
+sS'248'
+p5705
+S'international conference on machine learning'
+p5706
 sss.
