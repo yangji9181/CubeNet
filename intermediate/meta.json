@@ -41,26 +41,68 @@
     },
     "label": {
         "1": {
-            "1": "han",
-            "0": "non-han"
+            "1": [
+                "han",
+                "1"
+            ],
+            "0": [
+                "non-han",
+                "0"
+            ]
         },
         "0": {
-            "1": "method",
-            "0": "double-check",
-            "3": "metric",
-            "2": "application"
+            "1": [
+                "method",
+                "1"
+            ],
+            "0": [
+                "double-check",
+                "0"
+            ],
+            "3": [
+                "metric",
+                "3"
+            ],
+            "2": [
+                "application",
+                "2"
+            ]
         },
         "3": {
-            "1": "2005",
-            "0": "2000",
-            "3": "2015",
-            "2": "2010"
+            "1": [
+                "2005",
+                "1"
+            ],
+            "0": [
+                "2000",
+                "0"
+            ],
+            "3": [
+                "2015",
+                "3"
+            ],
+            "2": [
+                "2010",
+                "2"
+            ]
         },
         "2": {
-            "1": "machine learning",
-            "0": "data mining",
-            "3": "information retrieval",
-            "2": "database"
+            "1": [
+                "machine learning",
+                "1"
+            ],
+            "0": [
+                "data mining",
+                "0"
+            ],
+            "3": [
+                "information retrieval",
+                "3"
+            ],
+            "2": [
+                "database",
+                "2"
+            ]
         }
     }
 }

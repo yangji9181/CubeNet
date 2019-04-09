@@ -21,7 +21,7 @@ def analysis(data, args):
 
 		for n in nodes[t]:
 			supernode[n] = n
-		if t in query['merges'].keys():
+		if 'merges' in query and t in query['merges'].keys():
 			for label in query['merges'][t]:
 				for n in data.labels[t][label]:
 					supernode[n] = 's/'+t+'/'+label
@@ -69,9 +69,15 @@ def analysis(data, args):
 				else:
 					sup.add(supernode[n])
 			for n in sup:
-				network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.meta['label'][t][n.split('/')[2]], 'size': node_size[n]})
+				network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.meta['label'][t][n.split('/')[2]][0], 'size': node_size[n]})
 
-
+	#collect labels
+	network['labels'] = defaultdict(list)
+	if 'evals' in query:
+		for t in query['evals'].keys():
+			for label in query['evals'][t]:
+				for node in data.labels[t][label]:
+					network['labels'][t].append((label, node))
 
 	json.dump(
 		network,
@@ -83,13 +89,13 @@ def analysis(data, args):
 
 def test(args):
 	q0 = {"nodes": ["0", "1", "2", "3"], "filters": {"0": ["3"], "1": ["1"]}, "merges": {"2": ["0", "1"]}}
-	q1 = {"nodes": ["0", "1", "2", "3"], "filters": {}}
-	q2 = {"nodes": ["0", "1", "2", "3"], "filters": {"2": ["0"], "3": ["2", "3"]}}
+	q1 = {"nodes": ["0", "1", "2", "3"], "filters": {}, "evals": {"1": ["0", "1"]}}
+	q2 = {"nodes": ["0", "1", "2", "3"], "filters": {"2": ["0"], "3": ["2", "3"]}, "evals": {"1": ["0", "1"]}}
 	q3 = {"nodes": ["0", "1"], "filters": {"0": ["3"], "2": ["0"], "3": ["2", "3"]}}
 	q4 = {"nodes": ["1"], "filters": {"2": ["0"], "3": ["2", "3"]}}
 	q5 = {"nodes": ["1"], "filters": {"1": ["1"], "2": ["0"], "3": ["2", "3"]}}
 
-	json.dump(q0, open(args.query_file, 'w'))
+	json.dump(q2, open(args.query_file, 'w'))
 	data = Dataset(args)
 	analysis(data, args)
 

@@ -2,7 +2,7 @@ import pickle
 import os.path
 import json
 from collections import defaultdict
-from process.config import *
+from config import *
 
 class Dataset(object):
 	def __init__(self, args):
@@ -27,7 +27,7 @@ class Dataset(object):
 			elif tokens[0] == 'l':
 				self.meta['link'][tokens[1]] = (tokens[3], tokens[4])
 			elif tokens[0] == 's':
-				self.meta['label'][tokens[1]][tokens[2]] = tokens[3]
+				self.meta['label'][tokens[1]][tokens[2]] = (tokens[4], tokens[3])
 
 	def read_node(self):
 		self.nodes = defaultdict(dict)
@@ -61,9 +61,12 @@ class Dataset(object):
 			if tokens[1] in self.meta['label'] and tokens[2] in self.meta['label'][tokens[1]]:
 				if tokens[2] not in self.labels[tokens[1]]:
 					self.labels[tokens[1]][tokens[2]] = []
-				if tokens[0] in unlabeled:
-					self.labels[tokens[1]][tokens[2]].append(str(self.nodes_tmp.index(tokens[0])))
-					unlabeled.remove(tokens[0])
+				if tokens[0] in self.nodes_tmp:
+					indices = [i for i, x in enumerate(self.nodes_tmp) if x == tokens[0]]
+					for ind in indices:
+						self.labels[tokens[1]][tokens[2]].append(str(ind))
+						if tokens[0] in unlabeled:
+							unlabeled.remove(tokens[0])
 				else:
 					unused.append(tokens[0])
 			else:
