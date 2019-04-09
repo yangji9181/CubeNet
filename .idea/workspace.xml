@@ -84,25 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="300">
-              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-=======
             <state relative-caret-position="240">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
               <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
->>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
-=======
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
->>>>>>> Stashed changes
-=======
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
->>>>>>> Stashed changes
-=======
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
->>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -435,11 +418,15 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2639485" />
 =======
       <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.26752505" />
 >>>>>>> da33dd7d787de54c9dae4ffffa4ab96f018bc9a7
+=======
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.27110156" />
+>>>>>>> Stashed changes
 =======
       <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.27110156" />
 >>>>>>> Stashed changes
@@ -614,6 +601,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         <state relative-caret-position="300">
           <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
@@ -624,6 +612,10 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="541">
+          <caret line="267" selection-start-line="267" selection-end-line="267" />
+>>>>>>> Stashed changes
 =======
         <state relative-caret-position="541">
           <caret line="267" selection-start-line="267" selection-end-line="267" />
