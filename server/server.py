@@ -11,13 +11,22 @@ def post():
     print("req_data" + str(req_data))
     print(req_data)
 
-    json.dump(req_data['query'], open(os.path.join('../intermediate/', 'query.json'), 'w'))
+    from test_import import Dataset
+    data = Dataset()
+    data.test_func()
+    with open(os.path.join('intermediate/', 'short_text.txt')) as f:
+        print(f)
+    # return "hi from server"
+
+    json.dump(req_data['query'], open(os.path.join('intermediate/', 'query.json'), 'w'))
     from process.dataset import Dataset
     from process.config import args
     data = Dataset(args)
     from process.analysis import analysis
     analysis(data, args)
     d = {"status": "success"}
+
+    print('success return')
     return jsonify(d)
 
 # @app.route('/test', methods=['POST', 'GET'])
