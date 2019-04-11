@@ -2,7 +2,7 @@ import pickle
 import os.path
 import json
 from collections import defaultdict
-from process.config import *
+from server.process.config import *
 
 class Dataset(object):
 	def __init__(self, args):
@@ -19,7 +19,7 @@ class Dataset(object):
 		self.meta['node'] = {}
 		self.meta['link'] = {}
 		self.meta['label'] = defaultdict(dict)
-		f = open(self.args.meta_file, 'r')
+		f = open(self.args['meta_file'], 'r')
 		for line in f:
 			tokens = line.strip().split('\t')
 			if tokens[0] == 'n':
@@ -32,7 +32,7 @@ class Dataset(object):
 	def read_node(self):
 		self.nodes = defaultdict(dict)
 		self.nodes_tmp = []
-		f = open(self.args.node_file, 'r')
+		f = open(self.args['node_file'], 'r')
 		n = 0
 		for line in f:
 			tokens = line.strip().split('\t')
@@ -43,7 +43,7 @@ class Dataset(object):
 
 	def read_link(self):
 		self.links = defaultdict(dict)
-		f = open(self.args.link_file, 'r')
+		f = open(self.args['link_file'], 'r')
 		for line in f:
 			tokens = line.strip().split('\t')
 			if tokens[2] in self.meta['link']:
@@ -55,7 +55,7 @@ class Dataset(object):
 		self.labels = defaultdict(dict)
 		unused = []
 		unlabeled = self.nodes_tmp[:]
-		f = open(self.args.label_file, 'r')
+		f = open(self.args['label_file'], 'r')
 		for line in f:
 			tokens = line.strip().split('\t')
 			if tokens[1] in self.meta['label'] and tokens[2] in self.meta['label'][tokens[1]]:
@@ -76,22 +76,24 @@ class Dataset(object):
 		del self.nodes_tmp
 
 	def load(self):
-		if os.path.isfile(args.pickle_file):
-			tmp = pickle.load(open(args.pickle_file, 'r'))
+		if os.path.isfile(args['pickle_file']):
+			file = open(args['pickle_file'], 'rb')
+			# tmp = pickle.load(open(args['pickle_file'], 'r'))
+			tmp = pickle.load(file, encoding='latin1')
 			self.__dict__.update(tmp)
 			return True
 		else:
 			return False
 
 	def save(self):
-		pickle.dump(self.__dict__, open(args.pickle_file, 'w'))
+		pickle.dump(self.__dict__, open(args['pickle_file'], 'w'))
 
 
 def test(args):
 	data = Dataset(args)
 	json.dump(
 		data.meta,
-		open(args.meta_json, 'w'),
+		open(args['meta_json'], 'w'),
 		indent=4,
 		separators=(',', ': ')
 		)

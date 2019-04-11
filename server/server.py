@@ -11,18 +11,18 @@ def post():
     print("req_data" + str(req_data))
     print(req_data)
 
-    from test_import import Dataset
-    data = Dataset()
-    data.test_func()
-    with open(os.path.join('intermediate/', 'short_text.txt')) as f:
-        print(f)
-    # return "hi from server"
-
+    # from server.process.test_import import Dataset
+    # data = Dataset()
+    # data.test_func()
+    # with open(os.path.join('intermediate/', 'short_text.txt')) as f:
+    #     print(f)
+    # # return "hi from server"
+    #
     json.dump(req_data['query'], open(os.path.join('intermediate/', 'query.json'), 'w'))
-    from process.dataset import Dataset
-    from process.config import args
+    from server.process.dataset import Dataset
+    from server.process.config import args
     data = Dataset(args)
-    from process.analysis import analysis
+    from server.process.analysis import analysis
     analysis(data, args)
     d = {"status": "success"}
 

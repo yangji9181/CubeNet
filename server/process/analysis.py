@@ -1,12 +1,12 @@
 import json
 from collections import defaultdict
-from process.config import *
-from process.dataset import Dataset
+from server.process.config import *
+from server.process.dataset import Dataset
 
 
 def analysis(data, args):
 	network = {}
-	query = json.load(open(args.query_file, 'r'))
+	query = json.load(open(args['query_file'], 'r'))
 
 	nodes = {}
 	supernode = {}
@@ -81,7 +81,7 @@ def analysis(data, args):
 
 	json.dump(
 		network,
-		open(args.network_file, 'w'),
+		open(args['network_file'], 'w'),
 		indent=4,
 		separators=(',', ': ')
 		)
@@ -95,7 +95,7 @@ def test(args):
 	q4 = {"nodes": ["1"], "filters": {"2": ["0"], "3": ["2", "3"]}}
 	q5 = {"nodes": ["1"], "filters": {"1": ["1"], "2": ["0"], "3": ["2", "3"]}}
 
-	json.dump(q2, open(args.query_file, 'w'))
+	json.dump(q2, open(args['query_file'], 'w'))
 	data = Dataset(args)
 	analysis(data, args)
 

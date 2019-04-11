@@ -1,4 +1,4 @@
-from config import *
+# from config import *
 from dataset import Dataset
 from analysis import analysis
 
