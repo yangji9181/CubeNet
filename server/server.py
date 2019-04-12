@@ -24,10 +24,12 @@ def post():
     data = Dataset(args)
     from server.process.analysis import analysis
     analysis(data, args)
-    d = {"status": "success"}
-
+    # d = {"status": "success"}
+    res_network = open(os.path.join('intermediate/', 'network.json'), 'r')
+    res = json.load(res_network)
+    # print (res)
     print('success return')
-    return jsonify(d)
+    return jsonify(res)
 
 # @app.route('/test', methods=['POST', 'GET'])
 # def test():
