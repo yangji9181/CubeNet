@@ -87,9 +87,9 @@ $("button").click(function(){
 	  dataType: "json",
 	  contentType : "application/json"
 	}).done(function(data)  {
-    	console.log("success:");
-    	console.log(data);
-		updateNetwork();
+    console.log("success");
+  	// console.log(data);
+		updateNetwork(data);
 	}).fail(function()  {
 		alert("Sorry. Server unavailable. ");
 	});

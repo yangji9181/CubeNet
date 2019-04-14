@@ -1,0 +1,474 @@
+{
+    "links": [
+        {
+            "source": "s/1/1",
+            "target": "s/1/0",
+            "weight": 168
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/1/1",
+            "weight": 168
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/1/0",
+            "weight": 192
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/1/1",
+            "weight": 152
+        },
+        {
+            "source": "s/0/1",
+            "target": "s/0/2",
+            "weight": 117
+        },
+        {
+            "source": "s/0/1",
+            "target": "s/0/1",
+            "weight": 72
+        },
+        {
+            "source": "s/0/2",
+            "target": "s/0/1",
+            "weight": 117
+        },
+        {
+            "source": "s/0/2",
+            "target": "s/0/2",
+            "weight": 216
+        },
+        {
+            "source": "s/0/3",
+            "target": "s/0/1",
+            "weight": 25
+        },
+        {
+            "source": "s/0/3",
+            "target": "s/0/2",
+            "weight": 38
+        },
+        {
+            "source": "s/0/2",
+            "target": "s/0/3",
+            "weight": 38
+        },
+        {
+            "source": "s/0/1",
+            "target": "s/0/3",
+            "weight": 25
+        },
+        {
+            "source": "s/0/3",
+            "target": "s/0/3",
+            "weight": 14
+        },
+        {
+            "source": "s/0/1",
+            "target": "s/1/1",
+            "weight": 143
+        },
+        {
+            "source": "s/0/1",
+            "target": "s/1/0",
+            "weight": 96
+        },
+        {
+            "source": "s/0/2",
+            "target": "s/1/1",
+            "weight": 196
+        },
+        {
+            "source": "s/0/2",
+            "target": "s/1/0",
+            "weight": 173
+        },
+        {
+            "source": "s/0/3",
+            "target": "s/1/1",
+            "weight": 46
+        },
+        {
+            "source": "s/0/3",
+            "target": "s/1/0",
+            "weight": 34
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/0/2",
+            "weight": 196
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/0/1",
+            "weight": 143
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/0/1",
+            "weight": 96
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/0/2",
+            "weight": 173
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/0/3",
+            "weight": 46
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/0/3",
+            "weight": 34
+        },
+        {
+            "source": "243",
+            "target": "s/1/1",
+            "weight": 2
+        },
+        {
+            "source": "243",
+            "target": "s/1/0",
+            "weight": 4
+        },
+        {
+            "source": "246",
+            "target": "s/1/1",
+            "weight": 30
+        },
+        {
+            "source": "246",
+            "target": "s/1/0",
+            "weight": 22
+        },
+        {
+            "source": "242",
+            "target": "s/1/0",
+            "weight": 33
+        },
+        {
+            "source": "242",
+            "target": "s/1/1",
+            "weight": 30
+        },
+        {
+            "source": "247",
+            "target": "s/1/1",
+            "weight": 2
+        },
+        {
+            "source": "247",
+            "target": "s/1/0",
+            "weight": 1
+        },
+        {
+            "source": "241",
+            "target": "s/1/0",
+            "weight": 30
+        },
+        {
+            "source": "241",
+            "target": "s/1/1",
+            "weight": 54
+        },
+        {
+            "source": "244",
+            "target": "s/1/0",
+            "weight": 17
+        },
+        {
+            "source": "244",
+            "target": "s/1/1",
+            "weight": 8
+        },
+        {
+            "source": "245",
+            "target": "s/1/1",
+            "weight": 20
+        },
+        {
+            "source": "245",
+            "target": "s/1/0",
+            "weight": 14
+        },
+        {
+            "source": "248",
+            "target": "s/1/1",
+            "weight": 1
+        },
+        {
+            "source": "248",
+            "target": "s/1/0",
+            "weight": 1
+        },
+        {
+            "source": "s/1/1",
+            "target": "243",
+            "weight": 2
+        },
+        {
+            "source": "s/1/0",
+            "target": "241",
+            "weight": 30
+        },
+        {
+            "source": "s/1/1",
+            "target": "242",
+            "weight": 30
+        },
+        {
+            "source": "s/1/1",
+            "target": "245",
+            "weight": 20
+        },
+        {
+            "source": "s/1/0",
+            "target": "242",
+            "weight": 33
+        },
+        {
+            "source": "s/1/1",
+            "target": "241",
+            "weight": 54
+        },
+        {
+            "source": "s/1/0",
+            "target": "244",
+            "weight": 17
+        },
+        {
+            "source": "s/1/0",
+            "target": "246",
+            "weight": 22
+        },
+        {
+            "source": "s/1/0",
+            "target": "248",
+            "weight": 1
+        },
+        {
+            "source": "s/1/0",
+            "target": "243",
+            "weight": 4
+        },
+        {
+            "source": "s/1/0",
+            "target": "247",
+            "weight": 1
+        },
+        {
+            "source": "s/1/1",
+            "target": "244",
+            "weight": 8
+        },
+        {
+            "source": "s/1/1",
+            "target": "246",
+            "weight": 30
+        },
+        {
+            "source": "s/1/1",
+            "target": "248",
+            "weight": 1
+        },
+        {
+            "source": "s/1/1",
+            "target": "247",
+            "weight": 2
+        },
+        {
+            "source": "s/1/0",
+            "target": "245",
+            "weight": 14
+        },
+        {
+            "source": "s/3/3",
+            "target": "s/1/1",
+            "weight": 2
+        },
+        {
+            "source": "s/3/3",
+            "target": "s/1/0",
+            "weight": 1
+        },
+        {
+            "source": "s/3/1",
+            "target": "s/1/1",
+            "weight": 42
+        },
+        {
+            "source": "s/3/1",
+            "target": "s/1/0",
+            "weight": 36
+        },
+        {
+            "source": "s/3/0",
+            "target": "s/1/1",
+            "weight": 9
+        },
+        {
+            "source": "s/3/0",
+            "target": "s/1/0",
+            "weight": 5
+        },
+        {
+            "source": "s/3/2",
+            "target": "s/1/0",
+            "weight": 80
+        },
+        {
+            "source": "s/3/2",
+            "target": "s/1/1",
+            "weight": 94
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/3/1",
+            "weight": 42
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/3/2",
+            "weight": 80
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/3/2",
+            "weight": 94
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/3/1",
+            "weight": 36
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/3/0",
+            "weight": 5
+        },
+        {
+            "source": "s/1/0",
+            "target": "s/3/3",
+            "weight": 1
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/3/3",
+            "weight": 2
+        },
+        {
+            "source": "s/1/1",
+            "target": "s/3/0",
+            "weight": 9
+        }
+    ],
+    "nodes": [
+        {
+            "id": "s/1/0",
+            "type": "author",
+            "name": "non-han",
+            "size": 775
+        },
+        {
+            "id": "s/1/1",
+            "type": "author",
+            "name": "han",
+            "size": 649
+        },
+        {
+            "id": "s/0/3",
+            "type": "phrase",
+            "name": "metric",
+            "size": 143
+        },
+        {
+            "id": "s/0/1",
+            "type": "phrase",
+            "name": "method",
+            "size": 398
+        },
+        {
+            "id": "s/0/2",
+            "type": "phrase",
+            "name": "application",
+            "size": 632
+        },
+        {
+            "id": "s/3/1",
+            "type": "year",
+            "name": "2005",
+            "size": 45
+        },
+        {
+            "id": "s/3/3",
+            "type": "year",
+            "name": "2015",
+            "size": 3
+        },
+        {
+            "id": "s/3/2",
+            "type": "year",
+            "name": "2010",
+            "size": 93
+        },
+        {
+            "id": "s/3/0",
+            "type": "year",
+            "name": "2000",
+            "size": 8
+        },
+        {
+            "id": "243",
+            "type": "venue",
+            "name": "neural information processing systems",
+            "size": 3
+        },
+        {
+            "id": "246",
+            "type": "venue",
+            "name": "international world wide web conferences",
+            "size": 31
+        },
+        {
+            "id": "242",
+            "type": "venue",
+            "name": "international conference on management of data",
+            "size": 41
+        },
+        {
+            "id": "247",
+            "type": "venue",
+            "name": "web search and data mining",
+            "size": 3
+        },
+        {
+            "id": "241",
+            "type": "venue",
+            "name": "knowledge discovery and data mining",
+            "size": 52
+        },
+        {
+            "id": "244",
+            "type": "venue",
+            "name": "international acm sigir conference on research and development in information retrieval",
+            "size": 21
+        },
+        {
+            "id": "245",
+            "type": "venue",
+            "name": "very large data bases",
+            "size": 24
+        },
+        {
+            "id": "248",
+            "type": "venue",
+            "name": "international conference on machine learning",
+            "size": 2
+        }
+    ],
+    "labels": {}
+}

@@ -260,8 +260,11 @@ $ ->
   d3.json "../static/data/test_data.json", (json) ->
     myNetwork("#vis", json)
 
-  window.updateNetwork = ->
+  window.updateNetwork = (json) ->
     console.log("update network in coffee")
-    d3.json "../static/data/network1.json", (json) ->
-      myNetwork.updateData(json)
+    myNetwork.updateData(json)
+    # d3.json "../intermediate/network.json", (json) ->
+    #   myNetwork.updateData(json)
+    # d3.json "../static/data/test_data.json", (json) ->
+    #   myNetwork.updateData(json)
 
