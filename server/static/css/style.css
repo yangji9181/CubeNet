@@ -135,7 +135,7 @@ a, a:visited {
 footer p {
   text-align: center;
 }
-/*
+
 .tooltip {
   position: absolute;
   top: 100px;
@@ -172,7 +172,7 @@ hr.tooltip-hr {
 .tooltip .name {
   font-weight:bold;
 }
-*/
+
 
 line.link {
   fill: none;
