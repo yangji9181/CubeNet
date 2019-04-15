@@ -39,15 +39,17 @@ $('.filter').change(function() {
 
   if ($(this).is(':checked')) {
   	if (!(nodeIdx in query["filters"])) {
-		query["filters"][nodeIdx] = []
+		  query["filters"][nodeIdx] = []
   	}
-	query["filters"][nodeIdx].push(labelIdx);
+    query["filters"][nodeIdx].push(labelIdx);
   } else {
   	var index = query["filters"][nodeIdx].indexOf(labelIdx);
   	if (index !== -1) query["filters"][nodeIdx].splice(index, 1);
   	if (query["filters"][nodeIdx].length === 0) {
   		console.log("delete list");
-  		delete query.filters.nodeIdx;
+  		// delete query.filters.nodeIdx;
+      delete query['filters'][nodeIdx];
+
   	}
   }
   console.log(query);
@@ -72,7 +74,8 @@ $('.merge').change(function() {
   	if (index !== -1) query["merges"][nodeIdx].splice(index, 1);
   	if (query["merges"][nodeIdx].length === 0) {
   		console.log("delete list");
-  		delete query.merges.nodeIdx;
+  		// delete query.merges.nodeIdx;
+      delete query['merges'][nodeIdx];
   	}
   }
   console.log(query);

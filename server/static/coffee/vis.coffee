@@ -92,6 +92,7 @@ Network = () ->
   setupData = (data) ->
     console.log("setupData()")
     # initialize circle radius scale
+    console.log(data)
     countExtent = d3.extent(data.nodes, (d) -> d.size)
     circleRadius = d3.scale.sqrt().range([3, 12]).domain(countExtent)
 
@@ -103,8 +104,11 @@ Network = () ->
       # add radius to the node so we can use it later
       n.radius = circleRadius(n.size)
 
+    console.log('haha1')
+
     # id's -> node objects
     nodesMap  = mapNodes(data.nodes)
+    console.log('haha2')
 
     # switch links to point to node objects instead of id's
     data.links.forEach (l) ->
@@ -114,9 +118,14 @@ Network = () ->
       # linkedByIndex is used for link sorting
       linkedByIndex["#{l.source.id},#{l.target.id}"] = 1
 
-    # uodate the max weight of links
+    console.log('haha3')
+
+    # update the max weight of links
     weights = data.links.map (l) -> l.weight
-    maxLinkWeight = weights.reduce (a,b) -> Math.max a, b
+    console.log(weights)
+    if weights.length != 0
+      maxLinkWeight = weights.reduce (a,b) -> Math.max a, b
+    
     console.log("max link weight" + maxLinkWeight)
     data
 
@@ -204,10 +213,11 @@ Network = () ->
   # Mouseover tooltip function
   showDetails = (d,i) ->
     # for map data
+    console.log('show details')
     content = '<p class="main">' + d.name + '</span></p>'
     content += '<hr class="tooltip-hr">'
     content += '<p class="main">' + d.type + '</span></p>'
-
+    # console.log(content)
     tooltip.showTooltip(content,d3.event)
 
     # higlight connected links
