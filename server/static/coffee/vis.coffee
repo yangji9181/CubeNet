@@ -5,7 +5,7 @@ root = exports ? this
 Network = () ->
   # variables we want to access
   # in multiple places of Network
-  width = 960
+  width = 700
   height = 800
   # allData will store the unfiltered data
   allData = []
