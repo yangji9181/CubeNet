@@ -1,0 +1,110 @@
+#node	id	node_type
+n	0	business
+n	1	location
+n	2	stars
+n	3	phrase
+#link	id	bidirection?	node_type_1	node_type_2	link_type
+l	0	0	0	1	located in
+l	1	0	1	0	located in
+l	2	0	0	3	described with
+l	3	0	3	0	described with
+l	4	0	0	2	rate
+l	5	0	2	0	rate
+l	6	1	3	3	context
+#label	node_type	label_id	parent_id	label_name
+s	0	0	64	Hawaiian
+s	0	1	1	Beer
+s	0	2	53	Sports Bars
+s	0	3	64	Sushi Bars
+s	0	4	64	Barbeque
+s	0	5	47	Coffee & Tea
+s	0	6	64	Comfort Food
+s	0	7	64	Waffles
+s	0	8	8	Shopping
+s	0	9	64	Korean
+s	0	10	64	Seafood
+s	0	11	64	Hot Dogs
+s	0	12	64	British
+s	0	13	46	Szechuan
+s	0	14	64	Noodles
+s	0	15	15	Wine & Spirits
+s	0	16	53	Lounges
+s	0	17	17	Event Planning & Services
+s	0	18	47	Grocery
+s	0	19	47	Bakeries
+s	0	20	85	Tacos
+s	0	21	21	Automotive
+s	0	22	64	Greek
+s	0	23	47	Farmers Market
+s	0	24	64	Caribbean
+s	0	25	56	Airports
+s	0	26	64	Wraps
+s	0	27	62	Music Venues
+s	0	28	64	Thai
+s	0	29	64	Italian
+s	0	30	8	Flowers & Gifts
+s	0	31	17	Caterers
+s	0	32	53	Cocktail Bars
+s	0	33	64	Modern European
+s	0	34	64	Pizza
+s	0	35	64	Asian Fusion
+s	0	36	36	Local Flavor
+s	0	37	64	Gluten-Free
+s	0	38	64	Latin American
+s	0	39	64	Sandwiches
+s	0	40	76	Golf
+s	0	41	51	Cheese Shops
+s	0	42	53	Beer Bar
+s	0	43	21	Gas Stations
+s	0	44	47	Desserts
+s	0	45	64	Vegetarian
+s	0	46	64	Chinese
+s	0	47	47	Food
+s	0	48	64	Soul Food
+s	0	49	73	Real Estate
+s	0	50	17	Venues & Event Spaces
+s	0	51	47	Specialty Food
+s	0	52	17	Party & Event Planning
+s	0	53	79	Bars
+s	0	54	64	Tex-Mex
+s	0	55	64	Breakfast & Brunch
+s	0	56	56	Hotels & Travel
+s	0	57	64	Tapas/Small Plates
+s	0	58	64	Cafes
+s	0	59	64	Turkish
+s	0	60	47	Donuts
+s	0	61	47	Food Trucks
+s	0	62	62	Arts & Entertainment
+s	0	63	64	Delis
+s	0	64	64	Restaurants
+s	0	65	64	Steakhouses
+s	0	66	56	Hotels
+s	0	67	64	Cajun/Creole
+s	0	68	64	Diners
+s	0	69	53	Wine Bars
+s	0	70	21	Car Wash
+s	0	71	64	American (Traditional)
+s	0	72	64	Brazilian
+s	0	73	73	Home Services
+s	0	74	47	Breweries
+s	0	75	64	Japanese
+s	0	76	76	Active Life
+s	0	77	64	Middle Eastern
+s	0	78	75	Ramen
+s	0	79	79	Nightlife
+s	0	80	64	New Mexican Cuisine
+s	0	81	64	Burgers
+s	0	82	64	Tapas Bars
+s	0	83	64	Mediterranean
+s	0	84	64	French
+s	0	85	64	Mexican
+s	0	86	64	Salad
+s	0	87	64	Gastropubs
+s	0	88	53	Pubs
+s	0	89	64	Soup
+s	0	90	62	Cinema
+s	0	91	64	Fast Food
+s	0	92	64	Southern
+s	0	93	64	American (New)
+s	0	94	64	Vegan
+s	0	95	47	Ice Cream & Frozen Yogurt
