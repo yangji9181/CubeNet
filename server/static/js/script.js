@@ -81,8 +81,20 @@ $('.merge').change(function() {
   console.log(query);
 });
 
-const button = document.getElementById('query_btn');
-$("button").click(function(){
+
+var contrast = {"node": 0};
+
+$('.contrast').change(function() {
+  var node = $(this).parent().text();
+  console.log("node checked " + node);
+
+  var index = nodeMap[node];
+  contrast["node"] = index;
+  console.log(contrast);
+});
+
+// const button = document.getElementById('query_btn');
+$("#query_btn").click(function(){
 	$.ajax({
 	  type: "POST",
 	  url: "/query",
@@ -97,6 +109,25 @@ $("button").click(function(){
 		alert("Sorry. Server unavailable. ");
 	});
 	console.log("click:");
+
+});
+
+// const button = document.getElementById('query_btn');
+$("#contrast_btn").click(function(){
+  $.ajax({
+    type: "POST",
+    url: "/contrast",
+    data: JSON.stringify(contrast),
+    dataType: "json",
+    contentType : "application/json"
+  }).done(function(data)  {
+    console.log("success");
+    // console.log(data);
+    updateNetwork(data);
+  }).fail(function()  {
+    alert("Sorry. Server unavailable. ");
+  });
+  console.log("click:");
 
 });
 

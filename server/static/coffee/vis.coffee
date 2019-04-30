@@ -28,7 +28,7 @@ Network = () ->
   # our force directed layout
   force = d3.layout.force()
   # color function used to color nodes
-  nodeColors = d3.scale.category20()
+  nodeColors = d3.scale.category10()
   # tooltip used to display details
   tooltip = Tooltip("vis-tooltip", 230)
 
@@ -267,7 +267,7 @@ $ ->
 
   console.log("hello")
 
-  d3.json "../static/data/test_data.json", (json) ->
+  d3.json "../static/data/network1.json", (json) ->
     myNetwork("#vis", json)
 
   window.updateNetwork = (json) ->
