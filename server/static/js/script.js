@@ -451,7 +451,8 @@ $("#contrast_btn").click(function(){
  }).done(function(data)  {
     console.log("success");
    // console.log(data);
-   updateNetwork(data);
+   // updateNetwork(data);
+   drawHistogram(data);
  }).fail(function()  {
    alert("Sorry. Server unavailable. ");
  });
@@ -459,4 +460,149 @@ $("#contrast_btn").click(function(){
 
 });
 
+function barChart(div_id, data, node_type){
+    // var svg = foo;
+    //this reefers to the bars' SVG
+    var numBars = data.length;
+    var margin = {top: 40, right: 20, bottom: 30, left: 70},
+    width = 300 - margin.left - margin.right,
+    height = 250 - margin.top - margin.bottom;
+
+    // width = d3.max(300, numBars * 15) - margin.left - margin.right,
+    // height = d3.max(250, numBars * 15) - margin.top - margin.bottom;
+
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .1);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(10, "");
+
+    // var tip = d3.tip()
+    //   .attr('class', 'd3-tip')
+    //   .offset([-10, 0])
+    //   .html(function(d) {
+    //     return "<strong>Value:</strong> <span style='color:red'>" + d.val + "</span>";
+    //   });
+
+    var svg = d3.select("#" + div_id).append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // svg.call(tip);
+
+    x.domain(data.labels.map(function(d) { return d.name; }));
+    y.domain([0, d3.max(data.labels, function(d) { return d.val; })]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+      // .append("text")
+      //   // .attr("transform", "rotate(-90)")
+      //   .attr("x", 50)
+      //   .attr("dx", ".71em")
+      //   .style("text-anchor", "end")
+      //   .text(node_type);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -50)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text(data.name);
+
+    svg.selectAll(".bar")
+        .data(data.labels)
+      .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.name); })
+        .attr("width", x.rangeBand())
+        .attr("y", function(d) { return y(d.val); })
+        .attr("height", function(d) { return height - y(d.val); })
+        // .on('mouseover', tip.show)
+        // .on('mouseout', tip.hide);
+
+    // function type(d) {
+    //   d.Salary = +d.Salary;
+    //   return d;
+    // }
+
+};
+
+// function type(d) {
+//   d.val = +d.val;
+//   return d;
+// }
+
+function drawHistogram(contrast_res) {
+    document.getElementById("histogram_title").innerHTML = "Contrast Analysis on " + contrast_res.node_type.charAt(0).toUpperCase() + contrast_res.node_type.slice(1);
+
+    for (var i = 0; i < contrast_res.properties.length; i++) {
+    // var i = 0;
+
+      var chart_div = document.getElementById("chart" + i);
+      console.log(chart_div);
+      if (chart_div == null) {
+        chart_div = document.createElement("div");
+        chart_div.style.display = "inline-block";
+      }
+      
+      chart_div.className = "chart";
+      chart_div.id = "chart" + i;
+
+      document.getElementById("main").appendChild(chart_div);
+      barChart(chart_div.id, contrast_res.properties[i], contrast_res.node_type);
+    }
+}
+
+// to test
+// draw histogram
+var contrast_graph_fake = 
+{
+  "node_type": "year",
+  "properties": [
+    {
+      "name": "density",
+      "labels": [
+        {
+          "name": "2000",
+          "val": 20
+        },
+        {
+          "name": "2005",
+          "val": 30
+        }
+      ]
+    },
+    {
+      "name": "prop2",
+      "labels": [
+        {
+          "name": "2000",
+          "val": 1
+        },
+        {
+          "name": "2005",
+          "val": 2
+        }
+      ]
+    }
+  ]
+}
+
+drawHistogram(contrast_graph_fake);
 

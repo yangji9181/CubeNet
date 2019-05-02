@@ -1,0 +1,31 @@
+{
+  "node_type": "year",
+  "properties": [
+    {
+      "name": "density",
+      "labels": [
+        {
+          "name": "2000",
+          "val": 20
+        },
+        {
+          "name": "2005",
+          "val": 30
+        }
+      ]
+    },
+    {
+      "name": "prop2",
+      "labels": [
+        {
+          "name": "2000",
+          "val": 1
+        },
+        {
+          "name": "2005",
+          "val": 2
+        }
+      ]
+    }
+  ]
+}
