@@ -1,305 +1,866 @@
 {
-    "links": [],
+    "links": [
+        {
+            "source": "151",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "75",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "123",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "63",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "249",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "203",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "36",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "47",
+            "target": "48",
+            "weight": 1
+        },
+        {
+            "source": "12",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "59",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "97",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "186",
+            "target": "140",
+            "weight": 1
+        },
+        {
+            "source": "54",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "172",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "228",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "29",
+            "target": "30",
+            "weight": 1
+        },
+        {
+            "source": "86",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "230",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "181",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "183",
+            "target": "48",
+            "weight": 1
+        },
+        {
+            "source": "91",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "45",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "211",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "105",
+            "target": "30",
+            "weight": 1
+        },
+        {
+            "source": "142",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "158",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "190",
+            "target": "10",
+            "weight": 1
+        },
+        {
+            "source": "99",
+            "target": "10",
+            "weight": 1
+        },
+        {
+            "source": "146",
+            "target": "140",
+            "weight": 1
+        },
+        {
+            "source": "164",
+            "target": "35",
+            "weight": 1
+        },
+        {
+            "source": "78",
+            "target": "37",
+            "weight": 1
+        },
+        {
+            "source": "119",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "84",
+            "target": "30",
+            "weight": 1
+        },
+        {
+            "source": "132",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "243",
+            "target": "244",
+            "weight": 1
+        },
+        {
+            "source": "108",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "218",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "127",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "196",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "72",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "241",
+            "target": "35",
+            "weight": 1
+        },
+        {
+            "source": "56",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "168",
+            "target": "35",
+            "weight": 1
+        },
+        {
+            "source": "52",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "201",
+            "target": "30",
+            "weight": 1
+        },
+        {
+            "source": "213",
+            "target": "214",
+            "weight": 1
+        },
+        {
+            "source": "68",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "224",
+            "target": "13",
+            "weight": 1
+        },
+        {
+            "source": "9",
+            "target": "10",
+            "weight": 1
+        },
+        {
+            "source": "88",
+            "target": "55",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "151",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "119",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "172",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "132",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "59",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "86",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "88",
+            "weight": 1
+        },
+        {
+            "source": "55",
+            "target": "54",
+            "weight": 1
+        },
+        {
+            "source": "244",
+            "target": "243",
+            "weight": 1
+        },
+        {
+            "source": "30",
+            "target": "201",
+            "weight": 1
+        },
+        {
+            "source": "30",
+            "target": "29",
+            "weight": 1
+        },
+        {
+            "source": "30",
+            "target": "84",
+            "weight": 1
+        },
+        {
+            "source": "30",
+            "target": "105",
+            "weight": 1
+        },
+        {
+            "source": "48",
+            "target": "47",
+            "weight": 1
+        },
+        {
+            "source": "48",
+            "target": "183",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "97",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "78",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "249",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "203",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "36",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "45",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "91",
+            "weight": 1
+        },
+        {
+            "source": "37",
+            "target": "142",
+            "weight": 1
+        },
+        {
+            "source": "214",
+            "target": "213",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "228",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "75",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "123",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "63",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "72",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "52",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "224",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "108",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "218",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "230",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "127",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "196",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "12",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "181",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "56",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "68",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "211",
+            "weight": 1
+        },
+        {
+            "source": "13",
+            "target": "158",
+            "weight": 1
+        },
+        {
+            "source": "10",
+            "target": "9",
+            "weight": 1
+        },
+        {
+            "source": "10",
+            "target": "99",
+            "weight": 1
+        },
+        {
+            "source": "10",
+            "target": "190",
+            "weight": 1
+        },
+        {
+            "source": "35",
+            "target": "164",
+            "weight": 1
+        },
+        {
+            "source": "35",
+            "target": "241",
+            "weight": 1
+        },
+        {
+            "source": "35",
+            "target": "168",
+            "weight": 1
+        },
+        {
+            "source": "140",
+            "target": "186",
+            "weight": 1
+        },
+        {
+            "source": "140",
+            "target": "146",
+            "weight": 1
+        }
+    ],
     "nodes": [
         {
-            "id": "52",
+            "id": "151",
             "type": "business",
-            "name": "EarlyBaker",
-            "size": 0
-        },
-        {
-            "id": "213",
-            "type": "business",
-            "name": "Lon's At the Hermosa",
-            "size": 0
-        },
-        {
-            "id": "164",
-            "type": "business",
-            "name": "Nando's Mexican Cafe",
-            "size": 0
-        },
-        {
-            "id": "91",
-            "type": "business",
-            "name": "The House Brasserie",
-            "size": 0
-        },
-        {
-            "id": "142",
-            "type": "business",
-            "name": "Diego Pops",
-            "size": 0
-        },
-        {
-            "id": "47",
-            "type": "business",
-            "name": "Eest Asian Bistro",
-            "size": 0
-        },
-        {
-            "id": "228",
-            "type": "business",
-            "name": "Harvey's Wineburger",
-            "size": 0
-        },
-        {
-            "id": "12",
-            "type": "business",
-            "name": "Chino Bandido",
-            "size": 0
-        },
-        {
-            "id": "218",
-            "type": "business",
-            "name": "The Farm At South Mountain",
-            "size": 0
-        },
-        {
-            "id": "108",
-            "type": "business",
-            "name": "Rubio's",
-            "size": 0
-        },
-        {
-            "id": "78",
-            "type": "business",
-            "name": "Defalco's Italian Grocery",
-            "size": 0
-        },
-        {
-            "id": "168",
-            "type": "business",
-            "name": "Cantina Laredo",
-            "size": 0
-        },
-        {
-            "id": "190",
-            "type": "business",
-            "name": "Olive Garden Italian Restaurant",
-            "size": 0
-        },
-        {
-            "id": "123",
-            "type": "business",
-            "name": "Sun Valley Stereo",
-            "size": 0
-        },
-        {
-            "id": "241",
-            "type": "business",
-            "name": "Pita Jungle",
-            "size": 0
-        },
-        {
-            "id": "56",
-            "type": "business",
-            "name": "Arizona Florist",
-            "size": 0
-        },
-        {
-            "id": "36",
-            "type": "business",
-            "name": "Fast Fix Jewelry and Watch Repairs",
-            "size": 0
-        },
-        {
-            "id": "105",
-            "type": "business",
-            "name": "Fleming's Prime Steakhouse & Wine Bar- Chandler",
-            "size": 0
-        },
-        {
-            "id": "132",
-            "type": "business",
-            "name": "Perfect Pear Bistro",
-            "size": 0
-        },
-        {
-            "id": "63",
-            "type": "business",
-            "name": "The Arrogant Butcher",
-            "size": 0
-        },
-        {
-            "id": "88",
-            "type": "business",
-            "name": "Vine Tavern & Eatery",
-            "size": 0
-        },
-        {
-            "id": "99",
-            "type": "business",
-            "name": "Red Robin Gourmet Burgers",
-            "size": 0
-        },
-        {
-            "id": "86",
-            "type": "business",
-            "name": "Loco Patron",
-            "size": 0
-        },
-        {
-            "id": "181",
-            "type": "business",
-            "name": "32 Shea",
-            "size": 0
-        },
-        {
-            "id": "45",
-            "type": "business",
-            "name": "Squid Ink",
-            "size": 0
-        },
-        {
-            "id": "203",
-            "type": "business",
-            "name": "Pita Jungle",
-            "size": 0
-        },
-        {
-            "id": "211",
-            "type": "business",
-            "name": "Buffalo Wild Wings",
-            "size": 0
-        },
-        {
-            "id": "29",
-            "type": "business",
-            "name": "Slim Chickens",
-            "size": 0
-        },
-        {
-            "id": "127",
-            "type": "business",
-            "name": "Escobar Mexican Kitchen",
-            "size": 0
-        },
-        {
-            "id": "230",
-            "type": "business",
-            "name": "Gadzooks Enchiladas & Soup",
-            "size": 0
+            "name": "Bosa Donuts",
+            "size": 1
         },
         {
             "id": "75",
             "type": "business",
             "name": "Songbird Coffee & Tea House",
-            "size": 0
+            "size": 1
         },
         {
-            "id": "196",
+            "id": "123",
             "type": "business",
-            "name": "Wild Thaiger",
-            "size": 0
+            "name": "Sun Valley Stereo",
+            "size": 1
         },
         {
-            "id": "54",
+            "id": "63",
             "type": "business",
-            "name": "Green New American Vegetarian",
-            "size": 0
-        },
-        {
-            "id": "158",
-            "type": "business",
-            "name": "New India Bazaar",
-            "size": 0
-        },
-        {
-            "id": "186",
-            "type": "business",
-            "name": "Bitz-ee Mama's",
-            "size": 0
-        },
-        {
-            "id": "201",
-            "type": "business",
-            "name": "Cyprus Grill",
-            "size": 0
-        },
-        {
-            "id": "97",
-            "type": "business",
-            "name": "Salt Cellar",
-            "size": 0
-        },
-        {
-            "id": "119",
-            "type": "business",
-            "name": "El Hefe",
-            "size": 0
-        },
-        {
-            "id": "146",
-            "type": "business",
-            "name": "Federico's Mexican Food",
-            "size": 0
-        },
-        {
-            "id": "9",
-            "type": "business",
-            "name": "Beast of Bourbon Bar & Grill",
-            "size": 0
-        },
-        {
-            "id": "183",
-            "type": "business",
-            "name": "IHOP",
-            "size": 0
-        },
-        {
-            "id": "151",
-            "type": "business",
-            "name": "Bosa Donuts",
-            "size": 0
-        },
-        {
-            "id": "72",
-            "type": "business",
-            "name": "The Covenant",
-            "size": 0
-        },
-        {
-            "id": "84",
-            "type": "business",
-            "name": "Chou's Kitchen",
-            "size": 0
-        },
-        {
-            "id": "68",
-            "type": "business",
-            "name": "Bell' Italia Pizzeria",
-            "size": 0
-        },
-        {
-            "id": "59",
-            "type": "business",
-            "name": "Jimmy John's",
-            "size": 0
+            "name": "The Arrogant Butcher",
+            "size": 1
         },
         {
             "id": "249",
             "type": "business",
             "name": "Grazie",
-            "size": 0
+            "size": 1
         },
         {
-            "id": "243",
+            "id": "203",
             "type": "business",
-            "name": "Taps Signature Cuisine & Bar",
-            "size": 0
+            "name": "Pita Jungle",
+            "size": 1
+        },
+        {
+            "id": "36",
+            "type": "business",
+            "name": "Fast Fix Jewelry and Watch Repairs",
+            "size": 1
+        },
+        {
+            "id": "47",
+            "type": "business",
+            "name": "Eest Asian Bistro",
+            "size": 1
+        },
+        {
+            "id": "12",
+            "type": "business",
+            "name": "Chino Bandido",
+            "size": 1
+        },
+        {
+            "id": "59",
+            "type": "business",
+            "name": "Jimmy John's",
+            "size": 1
+        },
+        {
+            "id": "97",
+            "type": "business",
+            "name": "Salt Cellar",
+            "size": 1
+        },
+        {
+            "id": "186",
+            "type": "business",
+            "name": "Bitz-ee Mama's",
+            "size": 1
+        },
+        {
+            "id": "54",
+            "type": "business",
+            "name": "Green New American Vegetarian",
+            "size": 1
         },
         {
             "id": "172",
             "type": "business",
             "name": "Original Geno's Pizza & Cheesesteak",
-            "size": 0
+            "size": 1
+        },
+        {
+            "id": "228",
+            "type": "business",
+            "name": "Harvey's Wineburger",
+            "size": 1
+        },
+        {
+            "id": "29",
+            "type": "business",
+            "name": "Slim Chickens",
+            "size": 1
+        },
+        {
+            "id": "86",
+            "type": "business",
+            "name": "Loco Patron",
+            "size": 1
+        },
+        {
+            "id": "230",
+            "type": "business",
+            "name": "Gadzooks Enchiladas & Soup",
+            "size": 1
+        },
+        {
+            "id": "181",
+            "type": "business",
+            "name": "32 Shea",
+            "size": 1
+        },
+        {
+            "id": "183",
+            "type": "business",
+            "name": "IHOP",
+            "size": 1
+        },
+        {
+            "id": "91",
+            "type": "business",
+            "name": "The House Brasserie",
+            "size": 1
+        },
+        {
+            "id": "45",
+            "type": "business",
+            "name": "Squid Ink",
+            "size": 1
+        },
+        {
+            "id": "211",
+            "type": "business",
+            "name": "Buffalo Wild Wings",
+            "size": 1
+        },
+        {
+            "id": "105",
+            "type": "business",
+            "name": "Fleming's Prime Steakhouse & Wine Bar- Chandler",
+            "size": 1
+        },
+        {
+            "id": "142",
+            "type": "business",
+            "name": "Diego Pops",
+            "size": 1
+        },
+        {
+            "id": "158",
+            "type": "business",
+            "name": "New India Bazaar",
+            "size": 1
+        },
+        {
+            "id": "190",
+            "type": "business",
+            "name": "Olive Garden Italian Restaurant",
+            "size": 1
+        },
+        {
+            "id": "99",
+            "type": "business",
+            "name": "Red Robin Gourmet Burgers",
+            "size": 1
+        },
+        {
+            "id": "146",
+            "type": "business",
+            "name": "Federico's Mexican Food",
+            "size": 1
+        },
+        {
+            "id": "164",
+            "type": "business",
+            "name": "Nando's Mexican Cafe",
+            "size": 1
+        },
+        {
+            "id": "78",
+            "type": "business",
+            "name": "Defalco's Italian Grocery",
+            "size": 1
+        },
+        {
+            "id": "119",
+            "type": "business",
+            "name": "El Hefe",
+            "size": 1
+        },
+        {
+            "id": "84",
+            "type": "business",
+            "name": "Chou's Kitchen",
+            "size": 1
+        },
+        {
+            "id": "132",
+            "type": "business",
+            "name": "Perfect Pear Bistro",
+            "size": 1
+        },
+        {
+            "id": "243",
+            "type": "business",
+            "name": "Taps Signature Cuisine & Bar",
+            "size": 1
+        },
+        {
+            "id": "108",
+            "type": "business",
+            "name": "Rubio's",
+            "size": 1
+        },
+        {
+            "id": "218",
+            "type": "business",
+            "name": "The Farm At South Mountain",
+            "size": 1
+        },
+        {
+            "id": "127",
+            "type": "business",
+            "name": "Escobar Mexican Kitchen",
+            "size": 1
+        },
+        {
+            "id": "196",
+            "type": "business",
+            "name": "Wild Thaiger",
+            "size": 1
+        },
+        {
+            "id": "72",
+            "type": "business",
+            "name": "The Covenant",
+            "size": 1
+        },
+        {
+            "id": "241",
+            "type": "business",
+            "name": "Pita Jungle",
+            "size": 1
+        },
+        {
+            "id": "56",
+            "type": "business",
+            "name": "Arizona Florist",
+            "size": 1
+        },
+        {
+            "id": "168",
+            "type": "business",
+            "name": "Cantina Laredo",
+            "size": 1
+        },
+        {
+            "id": "52",
+            "type": "business",
+            "name": "EarlyBaker",
+            "size": 1
+        },
+        {
+            "id": "201",
+            "type": "business",
+            "name": "Cyprus Grill",
+            "size": 1
+        },
+        {
+            "id": "213",
+            "type": "business",
+            "name": "Lon's At the Hermosa",
+            "size": 1
+        },
+        {
+            "id": "68",
+            "type": "business",
+            "name": "Bell' Italia Pizzeria",
+            "size": 1
         },
         {
             "id": "224",
             "type": "business",
             "name": "Little Miss BBQ",
-            "size": 0
+            "size": 1
+        },
+        {
+            "id": "9",
+            "type": "business",
+            "name": "Beast of Bourbon Bar & Grill",
+            "size": 1
+        },
+        {
+            "id": "88",
+            "type": "business",
+            "name": "Vine Tavern & Eatery",
+            "size": 1
+        },
+        {
+            "id": "55",
+            "type": "location",
+            "name": "Tempe",
+            "size": 8
+        },
+        {
+            "id": "244",
+            "type": "location",
+            "name": "Litchfield Park",
+            "size": 1
+        },
+        {
+            "id": "30",
+            "type": "location",
+            "name": "Chandler",
+            "size": 4
+        },
+        {
+            "id": "48",
+            "type": "location",
+            "name": "Avondale",
+            "size": 2
+        },
+        {
+            "id": "37",
+            "type": "location",
+            "name": "Scottsdale",
+            "size": 8
+        },
+        {
+            "id": "214",
+            "type": "location",
+            "name": "Paradise Valley",
+            "size": 1
+        },
+        {
+            "id": "13",
+            "type": "location",
+            "name": "Phoenix",
+            "size": 18
+        },
+        {
+            "id": "10",
+            "type": "location",
+            "name": "Mesa",
+            "size": 3
+        },
+        {
+            "id": "35",
+            "type": "location",
+            "name": "Gilbert",
+            "size": 3
+        },
+        {
+            "id": "140",
+            "type": "location",
+            "name": "Glendale",
+            "size": 2
         }
     ],
     "labels": {}

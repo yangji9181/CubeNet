@@ -26,6 +26,7 @@ def post():
     from server.process.config import args, make_dir
     make_dir(data_name)
     data = Dataset(args)
+    print (data.labels)
     from server.process.analysis import analysis
     analysis(data, args)
     # d = {"status": "success"}
@@ -83,13 +84,26 @@ def contrast():
     data = Dataset(args)
 
     # setup return result
-    res_dict = {}
-    res_dict[type_name] = {}
-    res_dict[type_name]['radius'] = {}
-    res_dict[type_name]['diameter'] = {}
-    res_dict[type_name]['density'] = {}
+    # res_dict = {}
+    # res_dict[type_name] = {}
+    # res_dict[type_name]['radius'] = {}
+    # res_dict[type_name]['diameter'] = {}
+    # res_dict[type_name]['density'] = {}
+
+    res_dict['node_type'] = type_name
+    res_dict['properties'] = []
+    res_dict['properties'].append({})
+    res_dict['properties'].append({})
+    res_dict['properties'].append({})
+    res_dict['properties'][0]['name'] = 'radius'
+    res_dict['properties'][0]['labels'] = []
+    res_dict['properties'][1]['name'] = 'diameter'
+    res_dict['properties'][1]['labels'] = []
+    res_dict['properties'][2]['name'] = 'density'
+    res_dict['properties'][2]['labels'] = []
 
     # get property for each sub-graph
+    cur = 0
     for item in iter_list:
         cur_dict = json.load(cur_query)
         contrast = open(os.path.join('intermediate/', 'constrast_q.json'), 'w')
@@ -100,11 +114,16 @@ def contrast():
         analysis(data, args)
         from server.process.get_networkx import get_graph_property
         t = get_graph_property(args['constrast_n'])
-        label = meta['label'][sub_type][item][0]
-        res_dict[type_name]['radius'][label] = t[0]
-        res_dict[type_name]['diameter'][label] = t[1]
-        res_dict[type_name]['density'][label] = t[2]
-
+        # label = meta['label'][sub_type][item][0]
+        # res_dict[type_name]['radius'][label] = t[0]
+        # res_dict[type_name]['diameter'][label] = t[1]
+        # res_dict[type_name]['density'][label] = t[2]
+        for i in range(3):
+            res_dict['properties'][i]['labels'].append({})
+            res_dict['properties'][i]['labels'][cur]['name'] = label
+            res_dict['properties'][i]['labels'][cur]['val'] = t[i]
+        cur += 1
+    json.dump(res_dict, open(os.path.join('intermediate/', 'histogram_res.json'), 'w'))
     return jsonify(res_dict)
 
 if __name__ == '__main__':
