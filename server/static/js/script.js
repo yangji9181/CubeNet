@@ -100,81 +100,6 @@
 // contrast: add all labels of a node type if not been filtered 
 // probably want to split filters for each type of nodes (looks confusing right now)
 // hardcoded labels
-const yelp_label_mapping = {
-            '0.4':'Restaurants',
-            '0.8':'Breakfast & Brunch',
-            '0.5':'Italian',
-            '0.6':'Asian Fusion',
-            '0.7':'American (New)',
-            '0.9':'Active Life',
-            '0.11':'Mountain Biking',
-            '0.10':'Soccer',
-            '0.12': 'Bowling',
-            '0.13':'Fitness & Instruction',
-            '0.14':'Boxing',
-              '0.15':'Yoga',
-              '0.0':'Shopping',
-              '0.2': 'Arts & Crafts',
-              '0.1': 'Computers',
-              '0.3': 'Cosmatics & Beauty Supply'
-          }
-const yelp_label_mapping_type = {
-  "0": {'0.4':'Restaurants',
-            '0.8':'Breakfast & Brunch',
-            '0.5':'Italian',
-            '0.6':'Asian Fusion',
-            '0.7':'American (New)',
-            '0.9':'Active Life',
-            '0.11':'Mountain Biking',
-            '0.10':'Soccer',
-            '0.12': 'Bowling',
-            '0.13':'Fitness & Instruction',
-            '0.14':'Boxing',
-              '0.15':'Yoga',
-              '0.0':'Shopping',
-              '0.2': 'Arts & Crafts',
-              '0.1': 'Computers',
-              '0.3': 'Cosmatics & Beauty Supply'}
-}
-const dblp_label_mapping = {
-        '0.1':'Method',
-        '0.2': 'Metric',
-        '0.3':'Application',
-        '1.0':'Han',
-        '1.1':'Non-Han',
-        '2.0':'Data Mining',
-        '2.1':'Machine Learning',
-        '2.2':'Database',
-        '2.3':'Information Retrieval',
-        '3.0':'2000',
-        '3.1':'2005',
-        '3.2':'2010',
-        '3.3':'2015'
-      }
-
-const dblp_label_mapping_type = {
-  "0": {'0.1':'Method',
-        '0.2': 'Metric',
-        '0.3':'Application',},
-  "1": {
-    '1.0':'Han',
-        '1.1':'Non-Han',
-  },
-  "2": {
-    '2.0':'Data Mining',
-        '2.1':'Machine Learning',
-        '2.2':'Database',
-        '2.3':'Information Retrieval',
-  },
-  "3":{
-    '3.0':'2000',
-        '3.1':'2005',
-        '3.2':'2010',
-        '3.3':'2015'
-  }
-
-}
-
 
 const dblp_node = [ {
           id: '0',
@@ -189,24 +114,6 @@ const dblp_node = [ {
           id: '3',
           label: 'Year',
         } ]
-
-const dblp_contrast_labels = [ {
-          id: '0',
-          label: 'Phrase',
-          children: [],
-        }, {
-          id: '1',
-          label: 'Author',
-          children: [],
-        }, {
-          id: '2',
-          label: 'Venue',
-          children: [],
-        }, {
-          id: '3',
-          label: 'Year',
-          children: [],
-        } ];
 
 const dblp_label = [ {
           id: '0',
@@ -348,79 +255,54 @@ const yelp_label = [{
           label: 'Phrase',
         } ]
 
-const yelp_contrast_labels = [ {
-          id: '0',
-          label: 'Business',
-          children: [],
-        }, {
-          id: '1',
-          label: 'Location',
-          children: [],
-        }, {
-          id: '2',
-          label: 'Stars',
-          children: [],
-        }, {
-          id: '3',
-          label: 'Phrase',
-          children: [],
-        } ]
 
-const simulateAsyncOperation = fn => {
-  setTimeout(fn, 2000)
-}
 // current global states
-var dataset = "dblp"
-var query = {"dataset": "dblp", "merges": {}, "nodes": [], "filters": {}};
-var contrast = [];
-var selected_labels_flat = {}
-var id_mapping = dblp_label_mapping;
-var id_mapping_type = dblp_label_mapping_type;
+var dataset_info = {nodes: dblp_node, labels: dblp_label};
+var query_json = {"dataset": "dblp","query": {"dataset": "dblp", "merges": {}, "nodes": [], "filters": {}}};
+var contrast_json = {"node": null};
 
 // register the component
 Vue.component('treeselect', VueTreeselect.Treeselect)
-selected_labels_flat = {"0":["0.1", "0.2"]}
 
 var contrast_select = new Vue({
       el: '#contrast',
       data: {
         // define default value
-        value: [],
+        value: null,
         // define options
         options: [],
       },
       watch: {
         value: function (val) {
-          // add labels to contrast array
+          console.log(val);
+          contrast_json.node = val;
         }
       },
-
       methods: {
         updateOptions: function () {
+
+          // var newOptions = $.extend(true, [], dataset_node);
+          var currTypes = node_select.value;
+          console.log("updateOptions", currTypes);
           for (var i = 0; i < this.options.length; i++) {
-            var parentNode = this.options[i];
-            parentNode.children = [];
-            // console.log(parentNode);
-            if (parentNode.id in selected_labels_flat) {
-              var children = selected_labels_flat[parentNode.id].map(label_id => ({
-                                          id: label_id, label: id_mapping[label_id],
-                                          }));
-              for (var c = 0; c < children.length; c++) {
-                this.options[i].children.push(children[c]);
-              }
-            } else { // should include all labels under the node type
-              var curr_id_mapping = id_mapping_type[parentNode.id];
-              var children = Object.keys(curr_id_mapping).map(label_id => ({
-                                          id: label_id, label: id_mapping[label_id],
-                                          }));
-              for (var c = 0; c < children.length; c++) {
-                this.options[i].children.push(children[c]);
-              }
+            // debugger
+            // if ($.inArray(this.options[i].id, currTypes)) {
+            if (currTypes.includes(this.options[i].id)) {
+
+              console.log("in", this.options[i].id);
+              // newOptions[i].isDisabled = false;
+              Vue.set(contrast_select.options[i], "isDisabled", false);
+            } else {
+              console.log("not in", this.options[i].id);
+              // newOptions[i].isDisabled = true;
+              Vue.set(contrast_select.options[i], "isDisabled", true);
             }
           }
+          // Vue.set(contrast_select, "options", newOptions);
+          // Vue.nextTick();
         }
-      },
-    })
+      }
+    });
 
 var filter_select = new Vue({
       el: '#filter',
@@ -429,30 +311,23 @@ var filter_select = new Vue({
         value: [],
         valueConsistsOf: 'ALL',
         // define options
-        options: yelp_label,
+        options: [],
       },
       watch: {
         value: function (val) {
-          query["filters"] = {}
+          query_json.query.filters = {}
           selected_labels_flat = []
           for (var i = 0; i < val.length; i++) {
             let node_label = val[i].split('.');
             // console.log(node_label);
             if (node_label.length === 1) continue; // node type only
 
-            if (!(node_label[0] in selected_labels_flat)) {
-              selected_labels_flat[node_label[0]] = []
+            if (!(node_label[0] in query_json.query.filters)) {
+              query_json.query.filters[node_label[0]] = []
             }
-            selected_labels_flat[node_label[0]].push(val[i]);
-            
-            if (!(node_label[0] in query["filters"])) {
-              query["filters"][node_label[0]] = []
-            }
-            query["filters"][node_label[0]].push(node_label[node_label.length-1]);
+            query_json.query.filters[node_label[0]].push(node_label[node_label.length-1]);
           }
-
-          contrast_select.updateOptions();
-          console.log(query);
+          console.log(query_json);
         }
       }
     })
@@ -463,21 +338,21 @@ var merge_select = new Vue({
         // define default value
         value: [],
         // define options
-        options: yelp_label,
+        options: [],
       },
       watch: {
         value: function (val) {
-          query["merges"] = {}
+          query_json.query.merges = {}
           for (var i = 0; i < val.length; i++) {
             let node_label = val[i].split('.');
             if (node_label.length === 1) continue; // node type only
 
-            if (!(node_label[0] in query["merges"])) {
-              query["merges"][node_label[0]] = []
+            if (!(node_label[0] in query_json.query.merges)) {
+              query_json.query.merges[node_label[0]] = []
             }
-            query["merges"][node_label[0]].push(node_label[1]);
+            query_json.query.merges[node_label[0]].push(node_label[1]);
           }
-          console.log(query);
+          console.log(query_json);
         }
       }
     })
@@ -488,18 +363,19 @@ var node_select = new Vue({
         // define default value
         value: [],
         // define options
-        options: yelp_node,
+        options: [],
       },
       watch: {
         value: function (val) {
-          query["nodes"] = val;
+          query_json.query.nodes = val;
+          contrast_select.updateOptions();
         }
       }
     })
 
 
 var clearValues = function () {
-  contrast_select.value = [];
+  contrast_select.value = null;
   filter_select.value = [];
   merge_select.value = [];
   node_select.value = [];
@@ -513,68 +389,33 @@ $(".select-dataset").dropdown({
     switch (data) {
       case 'dblp':
         console.log('change dataset', 'dblp');
-        dataset = "dblp";
-        query["dataset"] = "dblp";
-        node_select.options = dblp_node;
-        filter_select.options = dblp_label;
-        merge_select.options = $.extend(true, [], dblp_label);
-        for (var i = 0; i < merge_select.options.length; i++) {
-          Vue.set(merge_select.options[i], "isDisabled", true);
-        }
-        id_mapping = dblp_label_mapping;
-        id_mapping_type = dblp_label_mapping_type;
-
-        contrast_select.options = dblp_contrast_labels;
+        query_json.dataset = "dblp";
+        dataset_info.nodes = dblp_node;
+        dataset_info.labels = dblp_label;
         break;
       case 'yelp':
         console.log('change dataset', 'yelp');
-        dataset = "yelp";
-        query["dataset"] = "yelp";
-
-        node_select.options = yelp_node;
-        filter_select.options = yelp_label;
-        merge_select.options = $.extend(true, [], yelp_label);
-        for (var i = 0; i < merge_select.options.length; i++) {
-          Vue.set(merge_select.options[i], "isDisabled", true);
-        }
-        id_mapping = yelp_label_mapping;
-        id_mapping_type = yelp_label_mapping_type;
-        contrast_select.options = yelp_contrast_labels;
+        query_json.dataset = "yelp";
+        dataset_info.nodes = yelp_node;
+        dataset_info.labels = yelp_label;
         break;
       case 'freebase':
-        console.log('change dataset', 'freebase');
-        dataset = "freebase";
-        query["dataset"] = "freebase";
-
-        node_select.options = yelp_node;
-        filter_select.options = yelp_label;
-        merge_select.options = $.extend(true, [], yelp_label);
-        for (var i = 0; i < merge_select.options.length; i++) {
-          Vue.set(merge_select.options[i], "isDisabled", true);
-        }
-        contrast_select.id_mapping = yelp_label_mapping;
-        contrast_select.id_mapping_type = yelp_label_mapping_type;
-        id_mapping = yelp_label_mapping;
-        id_mapping_type = yelp_label_mapping_type;
-        contrast_select.options = yelp_contrast_labels;
+        
         break;
       case 'pubmed':
-        console.log('change dataset', 'pubmed');
-        dataset = "pubmed";
-        query["dataset"] = "pubmed";
-
-        node_select.options = yelp_node;
-        filter_select.options = yelp_label;
-        merge_select.options = $.extend(true, [], yelp_label);
-        for (var i = 0; i < merge_select.options.length; i++) {
-          Vue.set(merge_select.options[i], "isDisabled", true);
-        }
-        id_mapping = yelp_label_mapping;
-        id_mapping_type = yelp_label_mapping_type;
-
-        contrast_select.options = yelp_contrast_labels;
+        
         break;
     }
+    node_select.options = dataset_info.nodes;
+    contrast_select.options = $.extend(true, [], dataset_info.nodes);
+    for (var i = 0; i < contrast_select.options.length; i++) {
+      Vue.set(contrast_select.options[i], "isDisabled", true);
+    }
+    filter_select.options = dataset_info.labels;
+    merge_select.options = $.extend(true, [], dataset_info.labels);
+    // for (var i = 0; i < merge_select.options.length; i++) {
+    //   Vue.set(merge_select.options[i], "isDisabled", true);
+    // }
  }
 });
 
@@ -584,17 +425,18 @@ $("#query_btn").click(function(){
  $.ajax({
    type: "POST",
    url: "/query",
-   data: JSON.stringify({"query": query}),
+   data: JSON.stringify(query_json),
    dataType: "json",
    contentType : "application/json"
  }).done(function(data)  {
     console.log("success");
+    contrast_select.value = null; // reset contrast dropdown
    // console.log(data);
    updateNetwork(data);
  }).fail(function()  {
    alert("Sorry. Server unavailable. ");
  });
- console.log("click:");
+ console.log("click query");
 
 });
 
@@ -603,7 +445,7 @@ $("#contrast_btn").click(function(){
  $.ajax({
    type: "POST",
    url: "/contrast",
-   data: JSON.stringify({"labels": contrast}),
+   data: JSON.stringify(contrast_json),
    dataType: "json",
    contentType : "application/json"
  }).done(function(data)  {
@@ -613,7 +455,7 @@ $("#contrast_btn").click(function(){
  }).fail(function()  {
    alert("Sorry. Server unavailable. ");
  });
- console.log("click:");
+ console.log("click contrast");
 
 });
 
