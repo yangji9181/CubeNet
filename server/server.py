@@ -8,12 +8,12 @@ app = Flask(__name__)
 @app.route('/query', methods=['POST'])
 def post():
     req_data = request.get_json()
-    data_name = req_data['query']['dataset']
+    data_name = req_data['dataset']
     data_name_record = open('intermediate/dataname.txt', 'w')
     data_name_record.write('data_name')
     data_name_record.close()
     # print("req_data" + str(req_data))
-    # print(req_data)
+    print(req_data)
     # from server.process.test_import import Dataset
     # data = Dataset()
     # data.test_func()
