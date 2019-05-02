@@ -2,7 +2,7 @@ import pickle
 import os.path
 import json
 from collections import defaultdict
-from server.process.config import *
+#from server.process.config import *
 
 class Dataset(object):
 	def __init__(self, args):
@@ -76,8 +76,8 @@ class Dataset(object):
 		del self.nodes_tmp
 
 	def load(self):
-		if os.path.isfile(args['pickle_file']):
-			file = open(args['pickle_file'], 'rb')
+		if os.path.isfile(self.args['pickle_file']):
+			file = open(self.args['pickle_file'], 'rb')
 			# tmp = pickle.load(open(args['pickle_file'], 'r'))
 			tmp = pickle.load(file, encoding='latin1')
 			self.__dict__.update(tmp)
@@ -86,7 +86,7 @@ class Dataset(object):
 			return False
 
 	def save(self):
-		pickle.dump(self.__dict__, open(args['pickle_file'], 'w'))
+		pickle.dump(self.__dict__, open(self.args['pickle_file'], 'wb'))
 
 
 def test(args):

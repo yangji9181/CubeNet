@@ -8,9 +8,12 @@ app = Flask(__name__)
 @app.route('/query', methods=['POST'])
 def post():
     req_data = request.get_json()
-    print("req_data" + str(req_data))
-    print(req_data)
-
+    data_name = req_data['query']['dataset']
+    data_name_record = open('intermediate/dataname.txt', 'w')
+    data_name_record.write('data_name')
+    data_name_record.close()
+    # print("req_data" + str(req_data))
+    # print(req_data)
     # from server.process.test_import import Dataset
     # data = Dataset()
     # data.test_func()
@@ -20,7 +23,8 @@ def post():
     #
     json.dump(req_data['query'], open(os.path.join('intermediate/', 'query.json'), 'w'))
     from server.process.dataset import Dataset
-    from server.process.config import args
+    from server.process.config import args, make_dir
+    make_dir(data_name)
     data = Dataset(args)
     from server.process.analysis import analysis
     analysis(data, args)
@@ -42,6 +46,66 @@ def post():
 def get():
     print("get!!")
     return render_template('index.html')
+
+
+@app.route('/contrast', methods=['POST'])
+def contrast():
+    '''
+    take: {"node": "x"}
+    :return: {'type': {'property1': {'label1' : x, 'label2': x}, 'property2': {'label1' : x, 'label2': x}}
+    '''
+    # read contrast index
+    req_data = request.get_json()
+    sub_type = req_data['node']
+
+    # get meta file in order to know index meaning
+    meta = open(os.path.join('intermediate/', 'meta.json'), 'r')
+    meta = json.load(meta)
+
+    # get type name
+    type_name = meta['node'][sub_type]
+
+    # get current full graph
+    cur_query = open(os.path.join('intermediate/', 'query.json'), 'r')
+
+    # get contrast label list
+    iter_list = cur_query['filters'][sub_type]
+
+    # setup parameters
+    from server.process.dataset import Dataset
+    from server.process.config import args, make_dir
+    data_name_record = open('intermediate/dataname.txt', 'r')
+    for line in data_name_record:
+        data_name = line
+        break
+    data_name_record.close()
+    make_dir(data_name)
+    data = Dataset(args)
+
+    # setup return result
+    res_dict = {}
+    res_dict[type_name] = {}
+    res_dict[type_name]['radius'] = {}
+    res_dict[type_name]['diameter'] = {}
+    res_dict[type_name]['density'] = {}
+
+    # get property for each sub-graph
+    for item in iter_list:
+        cur_dict = json.load(cur_query)
+        contrast = open(os.path.join('intermediate/', 'constrast_q.json'), 'w')
+        cur_dict['filters'][sub_type] = []
+        cur_dict['filters'][sub_type].append(item)
+        json.dump(cur_dict, contrast)
+        from server.process.contrast import analysis
+        analysis(data, args)
+        from server.process.get_networkx import get_graph_property
+        t = get_graph_property(args['constrast_n'])
+        label = meta['label'][sub_type][item][0]
+        res_dict[type_name]['radius'][label] = t[0]
+        res_dict[type_name]['diameter'][label] = t[1]
+        res_dict[type_name]['density'][label] = t[2]
+
+    return jsonify(res_dict)
 
 if __name__ == '__main__':
    app.run(debug = True)

@@ -6,7 +6,7 @@ from server.process.dataset import Dataset
 
 def analysis(data, args):
 	network = {}
-	query = json.load(open(args['query_file'], 'r'))
+	query = json.load(open(args['contrast_q'], 'r'))
 
 	nodes = {}
 	supernode = {}
@@ -81,7 +81,7 @@ def analysis(data, args):
 
 	json.dump(
 		network,
-		open(args['network_file'], 'w'),
+		open(args['contrast_n'], 'w'),
 		indent=4,
 		separators=(',', ': ')
 		)

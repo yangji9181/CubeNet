@@ -30,21 +30,25 @@
 # 	args.label_file = args.data_dir + args.data_name + '/' + args.data_sub + '.label.dat'
 # 	args.pickle_file = args.data_dir + args.data_name + '/' + args.data_sub + '.pickle'
 
-argsDict = {}
-argsDict['data_dir'] = 'data/'
-argsDict['data_name'] = 'dblp'
-argsDict['data_sub'] = 'toy'
-argsDict['query_file'] = 'intermediate/query.json'
-argsDict['meta_json'] = 'intermediate/meta.json'
-argsDict['network_file'] = 'intermediate/network.json'
-argsDict['meta_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + 'meta.dat'
-argsDict['node_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.node.dat'
-argsDict['link_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.link.dat'
-argsDict['label_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.label.dat'
-argsDict['pickle_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.pickle'
-args = argsDict.copy()
 # args = parse_args()
 # init(args)
 
 # print (args)
 # print (args)
+argsDict = {}
+argsDict['data_sub'] = 'toy'
+argsDict['query_file'] = 'intermediate/query.json'
+argsDict['meta_json'] = 'intermediate/meta.json'
+argsDict['network_file'] = 'intermediate/network.json'
+argsDict['data_dir'] = 'data/'
+argsDict['contrast_q'] = 'intermediate/contrast_q.json'
+argsDict['contrast_n'] = 'intermediate/contrast_n.json'
+def make_dir(data_name):
+    argsDict['data_name'] = data_name
+    argsDict['meta_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + 'meta.dat'
+    argsDict['node_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.node.dat'
+    argsDict['link_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.link.dat'
+    argsDict['label_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.label.dat'
+    argsDict['pickle_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.pickle'
+
+args = argsDict
