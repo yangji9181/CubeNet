@@ -10,10 +10,10 @@ def post():
     req_data = request.get_json()
     data_name = req_data['dataset']
     data_name_record = open('intermediate/dataname.txt', 'w')
-    data_name_record.write('data_name')
+    data_name_record.write(data_name)
     data_name_record.close()
     # print("req_data" + str(req_data))
-    print(req_data)
+    # print(req_data)
     # from server.process.test_import import Dataset
     # data = Dataset()
     # data.test_func()
@@ -26,7 +26,6 @@ def post():
     from server.process.config import args, make_dir
     make_dir(data_name)
     data = Dataset(args)
-    print (data.labels)
     from server.process.analysis import analysis
     analysis(data, args)
     # d = {"status": "success"}
@@ -58,7 +57,8 @@ def contrast():
     # read contrast index
     req_data = request.get_json()
     sub_type = req_data['node']
-
+    # print (req_data)
+    # print (sub_type)
     # get meta file in order to know index meaning
     meta = open(os.path.join('intermediate/', 'meta.json'), 'r')
     meta = json.load(meta)
@@ -68,7 +68,7 @@ def contrast():
 
     # get current full graph
     cur_query = open(os.path.join('intermediate/', 'query.json'), 'r')
-
+    cur_query = json.load(cur_query)
     # get contrast label list
     iter_list = cur_query['filters'][sub_type]
 
@@ -84,7 +84,7 @@ def contrast():
     data = Dataset(args)
 
     # setup return result
-    # res_dict = {}
+    res_dict = {}
     # res_dict[type_name] = {}
     # res_dict[type_name]['radius'] = {}
     # res_dict[type_name]['diameter'] = {}
@@ -105,16 +105,15 @@ def contrast():
     # get property for each sub-graph
     cur = 0
     for item in iter_list:
-        cur_dict = json.load(cur_query)
-        contrast = open(os.path.join('intermediate/', 'constrast_q.json'), 'w')
+        cur_dict = cur_query.copy()
         cur_dict['filters'][sub_type] = []
         cur_dict['filters'][sub_type].append(item)
-        json.dump(cur_dict, contrast)
+        json.dump(cur_dict, open(os.path.join('intermediate/', 'contrast_q.json'), 'w'))
         from server.process.contrast import analysis
         analysis(data, args)
         from server.process.get_networkx import get_graph_property
-        t = get_graph_property(args['constrast_n'])
-        # label = meta['label'][sub_type][item][0]
+        t = get_graph_property(args['contrast_n'])
+        label = meta['label'][sub_type][item][0]
         # res_dict[type_name]['radius'][label] = t[0]
         # res_dict[type_name]['diameter'][label] = t[1]
         # res_dict[type_name]['density'][label] = t[2]
@@ -124,6 +123,7 @@ def contrast():
             res_dict['properties'][i]['labels'][cur]['val'] = t[i]
         cur += 1
     json.dump(res_dict, open(os.path.join('intermediate/', 'histogram_res.json'), 'w'))
+    print ('success')
     return jsonify(res_dict)
 
 if __name__ == '__main__':

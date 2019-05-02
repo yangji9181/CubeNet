@@ -7,7 +7,6 @@ from server.process.dataset import Dataset
 def analysis(data, args):
 	network = {}
 	query = json.load(open(args['contrast_q'], 'r'))
-
 	nodes = {}
 	supernode = {}
 	#initialize node sets of each type
