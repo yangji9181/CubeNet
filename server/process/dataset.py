@@ -3,6 +3,7 @@ import os.path
 import json
 from collections import defaultdict
 from server.process.config import *
+#from config import *
 
 class Dataset(object):
 	def __init__(self, args):
@@ -57,7 +58,7 @@ class Dataset(object):
 		unlabeled = self.nodes_tmp[:]
 		f = open(self.args['label_file'], 'r')
 		for line in f:
-			tokens = line.strip().split('\t')
+			tokens = line.strip().split('\t')[1:]
 			if tokens[1] in self.meta['label'] and tokens[2] in self.meta['label'][tokens[1]]:
 				if tokens[2] not in self.labels[tokens[1]]:
 					self.labels[tokens[1]][tokens[2]] = []
@@ -86,7 +87,7 @@ class Dataset(object):
 			return False
 
 	def save(self):
-		pickle.dump(self.__dict__, open(args['pickle_file'], 'w'))
+		pickle.dump(self.__dict__, open(args['pickle_file'], 'wb'))
 
 
 def test(args):
