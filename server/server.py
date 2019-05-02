@@ -70,7 +70,11 @@ def contrast():
     cur_query = open(os.path.join('intermediate/', 'query.json'), 'r')
     cur_query = json.load(cur_query)
     # get contrast label list
-    iter_list = cur_query['filters'][sub_type]
+    if sub_type in cur_query['filters']:
+        iter_list = cur_query['filters'][sub_type]
+    else:
+        iter_list = meta['label'][sub_type].keys()
+        cur_query['filters'][sub_type] = iter_list
 
     # setup parameters
     from server.process.dataset import Dataset
