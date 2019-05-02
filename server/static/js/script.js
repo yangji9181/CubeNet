@@ -133,10 +133,10 @@ const dblp_label = [ {
           label: 'Author',
           children: [ {
             id: '1.0',
-            label: 'Han'
+            label: 'Non-Han'
           }, {
             id: '1.1',
-            label: 'Non-Han'
+            label: 'Han'
           }]
         }, {
           id: '2',
@@ -274,7 +274,7 @@ var contrast_select = new Vue({
       },
       watch: {
         value: function (val) {
-          console.log(val);
+          console.log("contrast value changes");
           contrast_json.node = val;
         }
       },
@@ -283,17 +283,19 @@ var contrast_select = new Vue({
 
           // var newOptions = $.extend(true, [], dataset_node);
           var currTypes = node_select.value;
-          console.log("updateOptions", currTypes);
+          // console.log("updateOptions", currTypes);
+          Vue.set(contrast_select, "value", null);
+
           for (var i = 0; i < this.options.length; i++) {
             // debugger
             // if ($.inArray(this.options[i].id, currTypes)) {
             if (currTypes.includes(this.options[i].id)) {
 
-              console.log("in", this.options[i].id);
+              // console.log("in", this.options[i].id);
               // newOptions[i].isDisabled = false;
               Vue.set(contrast_select.options[i], "isDisabled", false);
             } else {
-              console.log("not in", this.options[i].id);
+              // console.log("not in", this.options[i].id);
               // newOptions[i].isDisabled = true;
               Vue.set(contrast_select.options[i], "isDisabled", true);
             }
@@ -315,6 +317,8 @@ var filter_select = new Vue({
       },
       watch: {
         value: function (val) {
+          console.log("filter value changes");
+
           query_json.query.filters = {}
           selected_labels_flat = []
           for (var i = 0; i < val.length; i++) {
@@ -342,6 +346,7 @@ var merge_select = new Vue({
       },
       watch: {
         value: function (val) {
+          console.log("merge value changes");
           query_json.query.merges = {}
           for (var i = 0; i < val.length; i++) {
             let node_label = val[i].split('.');
@@ -384,17 +389,15 @@ var clearValues = function () {
 // change dataset
 $(".select-dataset").dropdown({
  onChange: function(data) {
-    // console.log('change dataset', data)
+    console.log('change dataset', data)
     clearValues();
     switch (data) {
       case 'dblp':
-        console.log('change dataset', 'dblp');
         query_json.dataset = "dblp";
         dataset_info.nodes = dblp_node;
         dataset_info.labels = dblp_label;
         break;
       case 'yelp':
-        console.log('change dataset', 'yelp');
         query_json.dataset = "yelp";
         dataset_info.nodes = yelp_node;
         dataset_info.labels = yelp_label;
@@ -413,15 +416,16 @@ $(".select-dataset").dropdown({
     }
     filter_select.options = dataset_info.labels;
     merge_select.options = $.extend(true, [], dataset_info.labels);
-    // for (var i = 0; i < merge_select.options.length; i++) {
-    //   Vue.set(merge_select.options[i], "isDisabled", true);
-    // }
+    for (var i = 0; i < merge_select.options.length; i++) {
+      Vue.set(merge_select.options[i], "isDisabled", true);
+    }
  }
 });
 
-
+var graphConstructed = false;
 const query_button = document.getElementById('query_btn');
 $("#query_btn").click(function(){
+  graphConstructed = true;
  $.ajax({
    type: "POST",
    url: "/query",
@@ -431,6 +435,7 @@ $("#query_btn").click(function(){
  }).done(function(data)  {
     console.log("success");
     contrast_select.value = null; // reset contrast dropdown
+    clearContrastGraph();
    // console.log(data);
    updateNetwork(data);
  }).fail(function()  {
@@ -442,31 +447,52 @@ $("#query_btn").click(function(){
 
 const contrast_button = document.getElementById('contrast_btn');
 $("#contrast_btn").click(function(){
- $.ajax({
-   type: "POST",
-   url: "/contrast",
-   data: JSON.stringify(contrast_json),
-   dataType: "json",
-   contentType : "application/json"
- }).done(function(data)  {
-    console.log("success");
-   // console.log(data);
-   // updateNetwork(data);
-   drawHistogram(data);
- }).fail(function()  {
-   alert("Sorry. Server unavailable. ");
- });
- console.log("click contrast");
+  if (!graphConstructed) {
+    alert("Please construct graph first.");
+
+  } else if (contrast_json.node == null) {
+    alert("Please select node type to contrast.");
+  } else {
+    $.ajax({
+       type: "POST",
+       url: "/contrast",
+       data: JSON.stringify(contrast_json),
+       dataType: "json",
+       contentType : "application/json"
+     }).done(function(data)  {
+        console.log("success");
+       // console.log(data);
+       // delete old contrast graphs
+       // console.log("to remove", document.getElementsByClassName("chart"));
+       // [...document.getElementsByClassName("chart")].map(n => n && n.remove());
+       clearContrastGraph();
+       // document.getElementsByClassName("chart").remove();
+       drawHistogram(data);
+     }).fail(function()  {
+       alert("Sorry. Server unavailable. ");
+     });
+  }
+  console.log("click contrast");
 
 });
+
+function clearContrastGraph() {
+  [...document.getElementsByClassName("chart")].map(n => n && n.remove());
+  var title = document.getElementById("histogram_title");
+  if (title != null) {
+    title.remove();
+  }
+  
+}
 
 function barChart(div_id, data, node_type){
     // var svg = foo;
     //this reefers to the bars' SVG
     var numBars = data.length;
-    var margin = {top: 40, right: 20, bottom: 30, left: 70},
-    width = 300 - margin.left - margin.right,
-    height = 250 - margin.top - margin.bottom;
+    // var margin = {top: 40, right: 20, bottom: 30, left: 70};
+    var margin = {top: 30, right: 40, bottom: 50, left: 50};
+    width = 220 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
     // width = d3.max(300, numBars * 15) - margin.left - margin.right,
     // height = d3.max(250, numBars * 15) - margin.top - margin.bottom;
@@ -504,10 +530,17 @@ function barChart(div_id, data, node_type){
     x.domain(data.labels.map(function(d) { return d.name; }));
     y.domain([0, d3.max(data.labels, function(d) { return d.val; })]);
 
+
     svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis)
+       .attr("class", "x axis")
+       .attr("transform", "translate(0," + height + ")")
+       .call(xAxis)
+         .selectAll("text")  
+         .style("text-anchor", "end")
+         .attr("dx", "-.8em")
+         .attr("dy", ".15em")
+         .attr("transform", "rotate(-25)");
+
       // .append("text")
       //   // .attr("transform", "rotate(-90)")
       //   .attr("x", 50)
@@ -549,7 +582,12 @@ function barChart(div_id, data, node_type){
 // }
 
 function drawHistogram(contrast_res) {
-    document.getElementById("histogram_title").innerHTML = "Contrast Analysis on " + contrast_res.node_type.charAt(0).toUpperCase() + contrast_res.node_type.slice(1);
+      // <h3 id="histogram_title" style="text-align: center"> Contrast Analysis</h3>
+    var title = document.createElement("h3");
+    title.id = "histogram_title";
+    title.style.textAlign = "center";
+    title.innerHTML = "Contrast Analysis on " + contrast_res.node_type.charAt(0).toUpperCase() + contrast_res.node_type.slice(1);
+    document.getElementById("main").appendChild(title);
 
     for (var i = 0; i < contrast_res.properties.length; i++) {
     // var i = 0;
@@ -604,5 +642,5 @@ var contrast_graph_fake =
   ]
 }
 
-drawHistogram(contrast_graph_fake);
+// drawHistogram(contrast_graph_fake);
 

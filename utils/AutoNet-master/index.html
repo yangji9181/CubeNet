@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AutoNet</title>
+    <link rel="stylesheet" href="movie-network.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/uiuc.ico" type="image/x-icon">
+    <script>
+      // Sniff MSIE version
+      // http://james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
+      var ie = ( function() {
+        var undef,
+        v = 3,
+        div = document.createElement('div'),
+        all = div.getElementsByTagName('i');
+        while (
+         div.innerHTML='<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',all[0]
+        );
+        return v > 4 ? v : undef;
+      }() );
+
+      function takeAction() {
+        if( ie && ie < 9 ) {
+	  D3notok();
+        } else {
+          // Load D3.js, and once loaded do our stuff
+          var head = document.getElementsByTagName('head')[0];
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+	  script.src = "d3.min.js";
+          script.addEventListener('load', D3ok, false);
+          script.onload = "D3ok();";
+	  head.appendChild(script);
+       }
+     }
+    </script>
+</head>
+<body onload="takeAction();">
+
+  <div id="nocontent">
+    <h1>Sadly your browser is not compatible with this site</h1>
+
+    <div>You can use <a href="http://www.google.com/chrome/">Google
+    Chrome</a>, <a href="http://www.mozilla.org/firefox">Mozilla Firefox</a>
+    or <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Microsoft
+    Internet Explorer (v9 or above)</a> to access the AutoNet system</div>
+
+  </div>
+
+  <div id="movieNetwork"></div>
+
+  <div id="sidepanel">
+
+    <div id="title">
+      <img src="img/logo.png"/>
+      <br/>
+      <h2>AutoNet System
+      <!-- <a href="javascript:void(0);" 
+              onClick="zoomCall(0.5);" style="pointer-events: all;">+</a>
+      <a href="javascript:void(0);" 
+         onClick="zoomCall(-0.5);" style="pointer-events: all;">-</a> -->
+
+      <img id="helpIcon" 
+           src="img/question-mark.png" title="Click for help" 
+           onClick="toggleDiv('help');"/>
+      </h2>
+    </div>    
+
+    <div id="help" class="panel_off">
+      <img src="img/close.png" style="float: right;" 
+           onClick="toggleDiv('help');"/>
+
+      <p>
+        The AutoNet system can turn domain-specific corpora in structured networks without additional expert effort.
+        This interface is for the <b>online discovery and exploration</b>.
+      </p>
+
+      <p>
+        <b>1. Construction on the Fly:</b>
+        Put the URL to your corpus and click the <em>upload</em> button.
+        The constructed network will be visualized on the left panel.
+      </p>
+      <p>
+        <b>2. Keyword Exploration:</b>
+        Type your keywords and click the <em>search</em> button.
+        The retrieved network will be visualized on the left panel.
+      </p>
+      <p>
+          <b>General Tips</b>
+          <ul>
+            <li>Click the <em>expand</em> button will retrieve 32 more related nodes if there are</li>
+            <li>Hover over a node or an edge to see the entity names, and to highlight
+            related entities.</li>
+            <li>Click on a node or an edge to show entity details. It will open up a
+            side panel.</li>
+            <li>On the details panel, you can click on the <em>target</em> 
+            icon to center the graph on that movie. And clicking on the link to
+            a related entity will move to that entity (in the graph and in the
+            panel)</li>
+            <li>You can use you usual browser controls to zoom and pan
+            over the graph. If you zoom in when centred on a entity, the
+            graph will expand around it.</li>
+            <li>Above a certain zoom level, entity names are automatically
+            displayed for all the nodes.</li>
+          </ul>
+      </p>
+      </ul>
+    </div>
+    <div id="movieInfo" class="panel_off"></div>
+    
+  </div>
+  <script src="movie-network.js"></script>
+  <form>
+      <div class="form-group">
+        <input class="form-control" id="exampleInputEmail1" placeholder="Keyword1;Keyword2 or URL">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+      <button type="submit" class="btn btn-default">Upload</button>
+      <button type="submit" class="btn btn-default">Expand</button>
+    </form>
+</body>
+</html>
