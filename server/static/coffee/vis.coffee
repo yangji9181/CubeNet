@@ -27,6 +27,10 @@ Network = () ->
 
   # our force directed layout
   force = d3.layout.force()
+    # .gravity(.05)
+    .charge(-240)
+    .linkDistance(50)
+    .size([width, height]);
   # color function used to color nodes
   nodeColors = d3.scale.category10()
   # tooltip used to display details
@@ -104,11 +108,8 @@ Network = () ->
       # add radius to the node so we can use it later
       n.radius = circleRadius(n.size)
 
-    console.log('haha1')
-
     # id's -> node objects
     nodesMap  = mapNodes(data.nodes)
-    console.log('haha2')
 
     # switch links to point to node objects instead of id's
     data.links.forEach (l) ->
@@ -117,8 +118,6 @@ Network = () ->
 
       # linkedByIndex is used for link sorting
       linkedByIndex["#{l.source.id},#{l.target.id}"] = 1
-
-    console.log('haha3')
 
     # update the max weight of links
     weights = data.links.map (l) -> l.weight
@@ -158,6 +157,7 @@ Network = () ->
       .style("fill", (d) -> nodeColors(d.type))
       .style("stroke", (d) -> strokeFor(d))
       .style("stroke-width", 1.0)
+      .call(force.drag)
 
     node.on("mouseover", showDetails)
       .on("mouseout", hideDetails)
@@ -195,9 +195,15 @@ Network = () ->
 
   # tick function for force directed layout
   forceTick = (e) ->
+
     node
-      .attr("cx", (d) -> d.x)
-      .attr("cy", (d) -> d.y)
+      .attr("cx", (d) -> Math.max(10, Math.min(width - 10, d.x)))
+      .attr("cy", (d) -> Math.max(10, Math.min(height - 10, d.y)))
+
+
+    # node
+    #   .attr("cx", (d) -> d.x)
+    #   .attr("cy", (d) -> d.y)
 
     link
       .attr("x1", (d) -> d.source.x)

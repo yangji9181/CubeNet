@@ -1,6 +1,6 @@
 import json
 from collections import defaultdict
-from server.process.config import *
+#from server.process.config import *
 from server.process.dataset import Dataset
 
 
