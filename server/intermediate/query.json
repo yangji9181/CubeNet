@@ -1,1 +1,1 @@
-{"dataset": "dblp", "filters": {}, "merges": {}, "nodes": ["1", "2", "0"]}
+{"dataset": "dblp", "filters": {"0": ["1", "2", "3"], "1": ["0", "1"]}, "merges": {"0": ["1", "2", "3"]}, "nodes": ["0", "1"]}

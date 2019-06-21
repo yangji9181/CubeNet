@@ -40,7 +40,7 @@ argsDict['data_sub'] = 'toy'
 argsDict['query_file'] = 'intermediate/query.json'
 argsDict['meta_json'] = 'intermediate/meta.json'
 argsDict['network_file'] = 'intermediate/network.json'
-argsDict['data_dir'] = 'data/'
+argsDict['data_dir'] = '../data/'
 argsDict['contrast_q'] = 'intermediate/contrast_q.json'
 argsDict['contrast_n'] = 'intermediate/contrast_n.json'
 def make_dir(data_name):
@@ -51,4 +51,5 @@ def make_dir(data_name):
     argsDict['label_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.label.dat'
     argsDict['pickle_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + argsDict['data_sub'] + '.pickle'
 
+make_dir('dblp')
 args = argsDict
