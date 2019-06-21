@@ -25,7 +25,7 @@ class Dataset(object):
 			if tokens[0] == 'n':
 				self.meta['node'][tokens[1]] = tokens[2]
 			elif tokens[0] == 'l':
-				self.meta['link'][tokens[1]] = (tokens[3], tokens[4])
+				self.meta['link'][tokens[1]] = (tokens[2], tokens[3])
 			elif tokens[0] == 's':
 				self.meta['label'][tokens[1]][tokens[2]] = (tokens[4], tokens[3])
 
