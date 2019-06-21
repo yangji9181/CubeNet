@@ -3,9 +3,9 @@
 ### To run the demo
 `cd server`
 
-`pip install flask`
+`pip3 install flask`
 
 `export FLASK_APP=server`
 
-`python -m flask run`
+`python3 -m flask run`
 
