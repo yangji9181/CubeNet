@@ -1,444 +1,188 @@
 {
     "links": [
         {
-            "source": "s/0/1",
-            "target": "s/0/1",
-            "weight": 94
-        },
-        {
-            "source": "s/0/1",
-            "target": "1205",
-            "weight": 4
-        },
-        {
-            "source": "s/0/1",
-            "target": "1070",
-            "weight": 7
-        },
-        {
-            "source": "s/0/1",
-            "target": "1894",
-            "weight": 1
-        },
-        {
-            "source": "67",
-            "target": "1135",
-            "weight": 1
-        },
-        {
-            "source": "67",
-            "target": "s/0/1",
+            "source": "647",
+            "target": "725",
             "weight": 2
         },
         {
-            "source": "67",
-            "target": "1070",
-            "weight": 1
-        },
-        {
-            "source": "67",
-            "target": "1894",
-            "weight": 1
-        },
-        {
-            "source": "185",
-            "target": "s/0/1",
-            "weight": 1
-        },
-        {
-            "source": "1070",
-            "target": "1135",
-            "weight": 1
-        },
-        {
-            "source": "s/0/1",
-            "target": "613",
-            "weight": 6
-        },
-        {
-            "source": "s/0/1",
-            "target": "1135",
+            "source": "647",
+            "target": "885",
             "weight": 2
         },
         {
-            "source": "s/0/1",
-            "target": "3576",
-            "weight": 63
-        },
-        {
-            "source": "s/0/1",
-            "target": "3580",
-            "weight": 158
-        },
-        {
-            "source": "s/0/1",
-            "target": "3591",
-            "weight": 26
-        },
-        {
-            "source": "s/0/1",
-            "target": "3579",
-            "weight": 18
-        },
-        {
-            "source": "s/0/1",
-            "target": "3581",
-            "weight": 38
-        },
-        {
-            "source": "s/0/1",
-            "target": "3577",
-            "weight": 9
-        },
-        {
-            "source": "s/0/1",
-            "target": "3578",
-            "weight": 16
-        },
-        {
-            "source": "s/0/1",
-            "target": "3585",
-            "weight": 4
-        },
-        {
-            "source": "67",
-            "target": "3579",
-            "weight": 8
-        },
-        {
-            "source": "67",
-            "target": "3576",
-            "weight": 4
-        },
-        {
-            "source": "67",
-            "target": "3581",
-            "weight": 5
-        },
-        {
-            "source": "67",
-            "target": "3577",
+            "source": "647",
+            "target": "869",
             "weight": 3
         },
         {
-            "source": "67",
-            "target": "3580",
-            "weight": 1
-        },
-        {
-            "source": "67",
-            "target": "3582",
-            "weight": 1
-        },
-        {
-            "source": "185",
-            "target": "3580",
-            "weight": 1
-        },
-        {
-            "source": "185",
-            "target": "3579",
-            "weight": 4
-        },
-        {
-            "source": "185",
-            "target": "3577",
+            "source": "638",
+            "target": "647",
             "weight": 2
         },
         {
-            "source": "185",
-            "target": "3581",
+            "source": "638",
+            "target": "869",
+            "weight": 2
+        },
+        {
+            "source": "679",
+            "target": "725",
+            "weight": 1
+        },
+        {
+            "source": "679",
+            "target": "885",
+            "weight": 1
+        },
+        {
+            "source": "698",
+            "target": "869",
+            "weight": 2
+        },
+        {
+            "source": "609",
+            "target": "647",
+            "weight": 2
+        },
+        {
+            "source": "609",
+            "target": "638",
+            "weight": 1
+        },
+        {
+            "source": "609",
+            "target": "869",
+            "weight": 1
+        },
+        {
+            "source": "832",
+            "target": "921",
+            "weight": 1
+        },
+        {
+            "source": "832",
+            "target": "833",
+            "weight": 1
+        },
+        {
+            "source": "869",
+            "target": "870",
+            "weight": 1
+        },
+        {
+            "source": "725",
+            "target": "885",
             "weight": 3
-        },
-        {
-            "source": "1070",
-            "target": "3579",
-            "weight": 2
-        },
-        {
-            "source": "1070",
-            "target": "3576",
-            "weight": 1
-        },
-        {
-            "source": "1070",
-            "target": "3581",
-            "weight": 3
-        },
-        {
-            "source": "1070",
-            "target": "3575",
-            "weight": 1
-        },
-        {
-            "source": "1070",
-            "target": "3577",
-            "weight": 4
-        },
-        {
-            "source": "1070",
-            "target": "3580",
-            "weight": 5
-        },
-        {
-            "source": "1070",
-            "target": "3578",
-            "weight": 2
-        },
-        {
-            "source": "s/0/1",
-            "target": "3575",
-            "weight": 16
-        },
-        {
-            "source": "s/0/1",
-            "target": "3583",
-            "weight": 16
-        },
-        {
-            "source": "s/0/1",
-            "target": "3582",
-            "weight": 17
-        },
-        {
-            "source": "s/0/1",
-            "target": "3584",
-            "weight": 6
-        },
-        {
-            "source": "s/0/1",
-            "target": "3587",
-            "weight": 2
-        },
-        {
-            "source": "s/0/1",
-            "target": "3586",
-            "weight": 5
-        },
-        {
-            "source": "1135",
-            "target": "3581",
-            "weight": 1
-        },
-        {
-            "source": "1135",
-            "target": "3576",
-            "weight": 2
-        },
-        {
-            "source": "1135",
-            "target": "3582",
-            "weight": 1
-        },
-        {
-            "source": "1205",
-            "target": "3591",
-            "weight": 1
-        },
-        {
-            "source": "1205",
-            "target": "3580",
-            "weight": 2
-        },
-        {
-            "source": "1205",
-            "target": "3576",
-            "weight": 1
-        },
-        {
-            "source": "s/0/1",
-            "target": "3589",
-            "weight": 3
-        },
-        {
-            "source": "613",
-            "target": "3580",
-            "weight": 7
-        },
-        {
-            "source": "613",
-            "target": "3582",
-            "weight": 2
-        },
-        {
-            "source": "613",
-            "target": "3576",
-            "weight": 3
-        },
-        {
-            "source": "613",
-            "target": "3583",
-            "weight": 1
-        },
-        {
-            "source": "1894",
-            "target": "3580",
-            "weight": 1
-        },
-        {
-            "source": "1894",
-            "target": "3579",
-            "weight": 2
-        },
-        {
-            "source": "1894",
-            "target": "3575",
-            "weight": 1
-        },
-        {
-            "source": "s/0/1",
-            "target": "3593",
-            "weight": 10
-        },
-        {
-            "source": "613",
-            "target": "3593",
-            "weight": 1
         }
     ],
     "nodes": [
         {
-            "id": "67",
-            "type": "phrase",
-            "name": "lower bound",
-            "size": 11
+            "id": "647",
+            "type": "author",
+            "name": "hanghang tong",
+            "size": 3
         },
         {
-            "id": "185",
-            "type": "phrase",
-            "name": "covariance matrix",
-            "size": 5
+            "id": "781",
+            "type": "author",
+            "name": "pieter abbeel",
+            "size": 0
         },
         {
-            "id": "1070",
-            "type": "phrase",
-            "name": "computational complexity",
-            "size": 8
+            "id": "638",
+            "type": "author",
+            "name": "lei li",
+            "size": 2
+        },
+        {
+            "id": "833",
+            "type": "author",
+            "name": "adam coates",
+            "size": 0
+        },
+        {
+            "id": "679",
+            "type": "author",
+            "name": "deepayan chakrabarti",
+            "size": 2
+        },
+        {
+            "id": "698",
+            "type": "author",
+            "name": "alex beutel",
+            "size": 1
+        },
+        {
+            "id": "609",
+            "type": "author",
+            "name": "b. aditya prakash",
+            "size": 3
+        },
+        {
+            "id": "870",
+            "type": "author",
+            "name": "mary mcglohon",
+            "size": 0
+        },
+        {
+            "id": "695",
+            "type": "author",
+            "name": "ashutosh saxena",
+            "size": 0
+        },
+        {
+            "id": "1045",
+            "type": "author",
+            "name": "tao wang",
+            "size": 0
+        },
+        {
+            "id": "832",
+            "type": "author",
+            "name": "jiquan ngiam",
+            "size": 2
+        },
+        {
+            "id": "869",
+            "type": "author",
+            "name": "leman akoglu",
+            "size": 1
+        },
+        {
+            "id": "618",
+            "type": "author",
+            "name": "danai koutra",
+            "size": 0
         },
         {
             "id": "1135",
-            "type": "phrase",
-            "name": "edit distance",
-            "size": 3
-        },
-        {
-            "id": "1205",
-            "type": "phrase",
-            "name": "user experience",
-            "size": 3
-        },
-        {
-            "id": "613",
-            "type": "phrase",
-            "name": "search space",
-            "size": 5
-        },
-        {
-            "id": "1894",
-            "type": "phrase",
-            "name": "distance metric",
-            "size": 3
-        },
-        {
-            "id": "s/0/1",
-            "type": "phrase",
-            "name": "application",
-            "size": 200
-        },
-        {
-            "id": "3584",
-            "type": "venue",
-            "name": "bioinformatics",
+            "type": "author",
+            "name": "rajat raina",
             "size": 0
         },
         {
-            "id": "3579",
-            "type": "venue",
-            "name": "international conference on machine learning",
+            "id": "725",
+            "type": "author",
+            "name": "jimeng sun",
+            "size": 1
+        },
+        {
+            "id": "1234",
+            "type": "author",
+            "name": "rion snow",
             "size": 0
         },
         {
-            "id": "3576",
-            "type": "venue",
-            "name": "international conference on management of data",
+            "id": "921",
+            "type": "author",
+            "name": "honglak lee",
             "size": 0
         },
         {
-            "id": "3581",
-            "type": "venue",
-            "name": "neural information processing systems",
-            "size": 0
-        },
-        {
-            "id": "3575",
-            "type": "venue",
-            "name": "computer vision and pattern recognition",
-            "size": 0
-        },
-        {
-            "id": "3587",
-            "type": "venue",
-            "name": "international journal of computer vision",
-            "size": 0
-        },
-        {
-            "id": "3583",
-            "type": "venue",
-            "name": "european conference on principles of data mining and knowledge discovery",
-            "size": 0
-        },
-        {
-            "id": "3586",
-            "type": "venue",
-            "name": "international conference on computer vision",
-            "size": 0
-        },
-        {
-            "id": "3589",
-            "type": "venue",
-            "name": "european conference on computer vision",
-            "size": 0
-        },
-        {
-            "id": "3577",
-            "type": "venue",
-            "name": "journal of machine learning research",
-            "size": 0
-        },
-        {
-            "id": "3580",
-            "type": "venue",
-            "name": "knowledge discovery and data mining",
-            "size": 0
-        },
-        {
-            "id": "3591",
-            "type": "venue",
-            "name": "web search and data mining",
-            "size": 0
-        },
-        {
-            "id": "3578",
-            "type": "venue",
-            "name": "international joint conference on artificial intelligence",
-            "size": 0
-        },
-        {
-            "id": "3585",
-            "type": "venue",
-            "name": "north american chapter of the association for computational linguistics",
-            "size": 0
-        },
-        {
-            "id": "3582",
-            "type": "venue",
-            "name": "siam international conference on data mining",
-            "size": 0
-        },
-        {
-            "id": "3593",
-            "type": "year",
-            "name": "2001",
+            "id": "885",
+            "type": "author",
+            "name": "spiros papadimitriou",
             "size": 0
         }
     ],

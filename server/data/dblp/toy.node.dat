@@ -1,12 +1,8 @@
 hidden markov model	0	11
 data streams	0	20
 training data	0	60
-audio visual	0	4
-unusual events	0	2
 semi supervised	0	22
 event detection	0	9
-dna sequences	0	2
-neural nets	0	2
 machine learning	0	114
 supervised learning	0	35
 speech recognition	0	10
@@ -17,120 +13,65 @@ document classification	0	9
 neural network	0	34
 weakly supervised	0	11
 deep learning	0	40
-sentiment classification	0	5
 recurrent neural networks	0	29
 power laws	0	6
-web objects	0	4
-social tagging	0	2
-gaussian graphical models	0	4
 conditional independence	0	9
-conditionally independent	0	4
-opposite direction	0	2
 markov chains	0	13
-stability analysis	0	2
 random variables	0	16
 conditional distributions	0	6
 error bounds	0	7
 markov chain	0	16
 approximate inference	0	30
 probabilistic models	0	27
-grows exponentially	0	2
 belief propagation	0	20
-marginal distributions	0	3
-extremely large	0	5
 semantic relationships	0	6
 training examples	0	28
-image dataset	0	3
-set cover	0	3
 social network	0	41
 np hard	0	20
 maximum entropy	0	9
 search engines	0	12
 search engine	0	11
-document summarization	0	2
-hierarchical clustering	0	5
 long standing	0	8
-graph matching	0	4
 convex relaxation	0	6
 auto encoder	0	6
 unsupervised learning	0	28
-conditional random field	0	4
 real world	0	219
 main contributions	0	6
 parameter free	0	10
 temporal patterns	0	7
 communication cost	0	7
-communication costs	0	4
 theoretical analysis	0	33
 frank wolfe	0	6
-approximate solution	0	4
 optimization problem	0	38
 lower bound	0	22
 empirical studies	0	23
 web search	0	9
-pre processing	0	5
-web queries	0	2
-named entities	0	4
-web search engines	0	2
-additional information	0	2
 distance metrics	0	6
 gene expression	0	30
-hierarchical dirichlet process	0	5
 mixture model	0	21
-data fusion	0	4
-data integration	0	3
 supplementary information supplementary data	0	35
-dependency grammar	0	2
-word segmentation	0	4
-context free	0	2
-markov chain monte carlo methods	0	4
-prior distributions	0	4
 variational inference	0	49
 stick breaking	0	7
 parse trees	0	7
-spatial distribution	0	2
 large scale	0	150
-human perception	0	2
 point process	0	7
 determinantal point processes	0	6
-confidence intervals	0	4
 data sets	0	66
 active learning	0	21
 parameter estimation	0	17
-object class	0	3
-free form	0	2
-newly introduced	0	2
-query evaluation	0	2
-approximate solutions	0	4
-object localization	0	3
-bounding boxes	0	3
-sliding window	0	5
 object detection	0	24
-aspect ratios	0	2
-patch based	0	2
-texture mapping	0	2
 input image	0	6
-analogical reasoning	0	2
-word embedding	0	5
 word embeddings	0	9
-semantic meaning	0	3
 model selection	0	11
-likelihood function	0	5
 gaussian processes	0	16
 benchmark datasets	0	23
-group lasso	0	5
 reproducing kernel hilbert space	0	10
 probabilistic graphical models	0	6
-infinite dimensional	0	4
-normalizing constant	0	3
 graphical model	0	25
 exponential family	0	10
 graph structure	0	7
-exponential families	0	3
-data management	0	4
 optimal solution	0	9
 low level	0	17
-retrieval performance	0	4
 image database	0	7
 general purpose	0	11
 image retrieval	0	13
@@ -140,30 +81,21 @@ semantic information	0	6
 closed form	0	13
 transfer learning	0	9
 multiple views	0	8
-cross modal	0	4
 query processing	0	13
 differential privacy	0	10
 privacy preserving	0	7
 data analysis	0	23
 social networks	0	65
-correlation clustering	0	5
-shortest path	0	5
 large graphs	0	21
-public private	0	2
 anomaly detection	0	15
-information flow	0	2
-semantic meanings	0	3
 recent advances	0	16
-research challenges	0	2
 pattern mining	0	12
 maximum margin	0	8
 markov networks	0	9
 rule based	0	8
 structured prediction	0	22
 graphical models	0	36
-web data extraction	0	3
 posterior distribution	0	12
-l1 regularized	0	5
 bayesian networks	0	11
 input output	0	7
 maximum likelihood	0	25
@@ -172,394 +104,184 @@ convex optimization	0	32
 high dimensional	0	75
 loss function	0	19
 objective function	0	33
-ensemble methods	0	2
-deep convolutional neural network	0	5
 visual recognition	0	9
 multi scale	0	7
-computing resources	0	3
-distributional semantics	0	2
-sentiment lexicon	0	2
-hidden layers	0	5
 log likelihood	0	15
-minimum description length	0	5
-largest eigenvalue	0	2
 covariance matrix	0	10
 upper bound	0	18
 semidefinite programming	0	10
-frobenius norm	0	2
-sparse pca	0	5
-positive semidefinite	0	3
 labeled examples	0	6
 dimension reduction	0	8
 feature extraction	0	13
 high dimensional data	0	27
-scatter matrices	0	3
 principal component analysis	0	15
-pca lda	0	3
 face recognition	0	12
-eigen decomposition	0	3
 linear discriminant analysis	0	11
 raw data	0	7
 high quality	0	36
-binary codes	0	2
 image datasets	0	11
 graph mining	0	16
 black box	0	15
-shared memory	0	3
-consistently outperforms	0	5
 stochastic optimization	0	6
 multi core	0	6
-variance reduction	0	5
-parallel execution	0	2
 missing data	0	16
-normal distribution	0	4
-svm classifier	0	3
-polarity classification	0	3
 f1 score	0	7
 sentiment analysis	0	13
 dictionary learning	0	8
 data set	0	38
 object categories	0	7
 object recognition	0	24
-performance gains	0	5
 mid level	0	7
-pre defined	0	3
 domain knowledge	0	10
 wide range	0	35
-similarity functions	0	2
 index structure	0	9
-association rule	0	3
 similarity search	0	16
 data mining	0	77
 similarity function	0	7
-market basket	0	2
-false discovery rate	0	3
-escherichia coli	0	2
-false positives	0	3
-information transfer	0	3
 multi task learning	0	22
 previous approaches	0	8
 source code	0	19
 unsupervised domain adaptation	0	8
-fine tuning	0	5
-high sensitivity	0	3
 loss functions	0	13
 cross domain	0	6
 domain adaptation	0	14
 large margin	0	21
 fraud detection	0	9
-billion edges	0	4
-fake reviews	0	3
-bipartite graph	0	3
 upper bounds	0	13
-linear program	0	2
 maximum likelihood estimation	0	12
 differentially private	0	7
-minimization problem	0	3
-post processing	0	4
 gibbs sampler	0	7
 topic model	0	27
 predictive performance	0	23
-document collections	0	5
 hierarchical bayesian	0	8
 nearest neighbor	0	20
-error rates	0	5
 low dimensional	0	40
-image denoising	0	5
 linear model	0	9
 data driven	0	20
 state space	0	16
-bayesian analysis	0	2
-kalman smoothing	0	2
-bayesian learning	0	5
-junction tree	0	5
-variational bayesian	0	4
 hidden state	0	7
-regularization term	0	3
 empirical evidence	0	11
-log linear models	0	3
 viral marketing	0	8
-heuristic algorithm	0	3
 influence maximization	0	7
-optimal solutions	0	4
-feasible solutions	0	2
-revenue maximization	0	2
-photo collections	0	3
-bundle adjustment	0	2
-inexact newton	0	2
 computationally efficient	0	21
 dimensionality reduction	0	30
 latent space	0	12
 input data	0	11
-euclidean distances	0	2
-intelligence analysts	0	2
 news articles	0	10
 user feedback	0	8
 user studies	0	9
 large datasets	0	33
-web users	0	4
-health care	0	2
-experimentally validated	0	2
-web server	0	4
-manually curated	0	2
-open access	0	3
 single image	0	10
-sparsity prior	0	2
-statistical physics	0	3
-turbo codes	0	2
-free energy	0	3
 message passing	0	9
-brain network	0	2
 tensor factorization	0	10
 motion capture	0	6
 large databases	0	9
-linear dynamical systems	0	3
-manual labeling	0	3
-transition matrix	0	3
 real valued	0	11
 temporal dynamics	0	7
 em algorithm	0	17
 social media	0	33
 relevant information	0	10
 high throughput	0	8
-rna seq	0	4
-semi parametric	0	4
-differential expression	0	3
-experimental design	0	5
-software package	0	5
 sample size	0	15
-electronic health records	0	4
 decision making	0	10
-human supervision	0	2
-clinical research	0	2
-predictive power	0	4
-patient management	0	2
 dirichlet process	0	16
-topic detection	0	2
-empirical bayes	0	2
-document clustering	0	4
-novelty detection	0	2
-dirichlet multinomial	0	3
-web based	0	4
 computational efficiency	0	13
-prohibitively high	0	2
 hypothesis testing	0	8
-null hypotheses	0	2
 sequential monte carlo	0	6
-low noise	0	4
 lower bounds	0	13
-complexity measure	0	2
-vc dimension	0	4
 worst case	0	11
-complexity measures	0	2
 deep convolutional neural networks	0	11
 ground truth	0	25
-notoriously difficult	0	3
-segmentation algorithm	0	4
 conditional random fields	0	10
 training set	0	22
-segmentation algorithms	0	3
-regression problems	0	4
-quadratic optimization	0	2
 classification problems	0	15
 support vector machines	0	18
 http www	0	27
 generative model	0	44
-multilayer perceptrons	0	2
 generative models	0	28
-generative adversarial	0	5
 nonparametric bayesian	0	21
 multi task	0	17
 posterior distributions	0	10
-bayesian nonparametrics	0	4
 convergence rates	0	9
 multivariate gaussian	0	6
-gaussian distributions	0	3
-parameter space	0	5
-covariance matrices	0	4
-discriminative training	0	4
 empirical risk minimization	0	6
-breast cancer	0	2
-penalty function	0	2
-gold standard	0	3
-test sets	0	2
 times faster	0	14
-encoder decoder	0	5
-semantic relatedness	0	5
-higher degree	0	2
-numerically stable	0	2
-l1 regularization	0	3
-update rule	0	3
 error rate	0	13
 massive data	0	9
 gradient descent	0	10
 generalization error	0	7
 convergence rate	0	17
 submodular optimization	0	9
-condition number	0	2
 optimization algorithm	0	7
-minimum norm	0	2
-strong convexity	0	2
-regression model	0	5
-joint optimization	0	4
 gradient based	0	7
 data points	0	37
 closely related	0	15
-sparse regression	0	2
-covariance function	0	2
 large data sets	0	17
 partition function	0	9
-coordinate descent	0	5
 topic models	0	40
-topic discovery	0	2
 machine translation	0	12
-artificial intelligence	0	4
 computer vision	0	43
 natural language processing	0	23
-highly variable	0	3
-image collection	0	3
 greedy algorithm	0	7
-submodular function	0	3
 densely connected	0	6
 markov chain monte carlo	0	24
-parameter estimates	0	4
-undirected graphical models	0	5
 markov random fields	0	11
 latent factor	0	8
-online shopping	0	4
 e commerce	0	12
 latent factors	0	7
 user item	0	7
-personalized recommendation	0	4
 recommender systems	0	18
-nearest neighbor search	0	5
-search algorithm	0	2
-textual descriptions	0	2
-decision support systems	0	2
-branch and bound	0	5
 missing values	0	9
-compressive sensing	0	3
-matrix completion	0	4
 trace norm	0	8
 collaborative filtering	0	23
-rating matrix	0	2
 low rank	0	22
 monte carlo	0	12
-latent semantic	0	4
 importance sampling	0	7
-retrieval accuracy	0	3
-undirected graphical model	0	4
 latent dirichlet allocation	0	25
-temporal coherence	0	3
 factor analysis	0	7
 expectation maximization	0	19
 prior knowledge	0	13
-real scenes	0	2
-xml documents	0	2
-chemical compounds	0	2
 frequent pattern mining	0	11
-variational autoencoder	0	3
 variational methods	0	11
-belief networks	0	4
 natural images	0	17
 input images	0	8
 text corpora	0	13
-hierarchical dirichlet processes	0	2
 superior performance	0	21
-hierarchical dirichlet process hdp	0	5
-high scalability	0	3
-user level	0	4
 prediction accuracy	0	20
 diffusion processes	0	6
 feature based	0	6
-distance computation	0	2
-cluster based	0	4
-clustering ensemble	0	2
-concurrency control	0	4
 big data	0	25
-textual documents	0	2
 parallel computing	0	6
 open source	0	8
-gene expressions	0	4
 user friendly	0	12
-recommendation systems	0	5
-text mining	0	5
-weighted sum	0	3
 partially observed	0	6
-heterogeneous network	0	5
-text messages	0	3
 user interests	0	7
 latent variables	0	31
 latent variable	0	14
 word alignment	0	7
-saddle point	0	4
 structured output	0	7
-convex concave	0	4
 dynamic programming	0	12
 image segmentation	0	14
-quadratic program	0	4
-combinatorial algorithms	0	2
-variable selection	0	4
-kernel functions	0	4
-multiple kernels	0	2
 regularization parameter	0	8
 logistic regression	0	18
 linear regression	0	8
 norm regularization	0	6
-text analysis	0	4
-semantic representations	0	3
-user profile	0	2
-comparable corpora	0	2
-sentence extraction	0	2
-visual odometry	0	4
-state estimation	0	2
 latent variable models	0	19
-autonomous vehicles	0	2
-sensor readings	0	2
-camera images	0	2
-network architecture	0	3
-function approximators	0	3
 recurrent neural network	0	13
 convolutional neural networks	0	22
 online learning	0	11
-online advertising	0	5
-implicit feedback	0	5
 user behavior	0	12
 highly efficient	0	9
-medium sized	0	2
 gibbs sampling	0	15
 multi label classification	0	6
 multi class	0	13
 max margin	0	15
 classification performance	0	9
-data augmentation	0	5
-restrictive assumptions	0	5
 user generated	0	9
-distant supervision	0	4
-medical knowledge	0	2
-medical information	0	2
-linguistic cues	0	2
-vision tasks	0	3
-scene classification	0	5
-analytic functions	0	2
-graphic user interface	0	2
-copy number	0	2
-dna copy number	0	2
-command line interface	0	2
-tumor samples	0	3
-search queries	0	5
-mutual reinforcement	0	4
-search task	0	3
 point processes	0	7
-hawkes processes	0	4
-user query	0	2
-search tasks	0	2
 synthetic data	0	39
-query log	0	3
-field theory	0	2
 small scale	0	6
 posterior inference	0	19
-quasi newton	0	4
 pascal voc	0	11
 average precision	0	7
 optimization techniques	0	9
@@ -567,1806 +289,306 @@ information diffusion	0	13
 online social networks	0	12
 prior information	0	8
 link prediction	0	17
-particle filtering	0	2
 metropolis hastings	0	6
-kullback leibler divergence	0	3
 parameter learning	0	9
-sequential monte carlo smc	0	2
-particle filters	0	3
 high level	0	26
-data records	0	3
 information extraction	0	11
 directed graphs	0	10
 labeled data	0	21
-distributed denial of service	0	2
 connectivity patterns	0	8
-detection accuracy	0	4
-directed graph	0	4
-twitter users	0	3
-network traffic	0	5
-timing information	0	2
 experimental evaluations	0	14
-question answer	0	2
 long term	0	15
-community question answering cqa	0	3
-graph theoretic	0	2
 multi dimensional	0	15
-expert finding	0	5
 question answering	0	14
 real life	0	35
 multi view	0	26
 graph clustering	0	6
 non negative matrix factorization	0	6
-multi domain	0	3
-data model	0	2
-cardinality estimation	0	3
 kernel based	0	13
-estimation errors	0	2
 high accuracy	0	18
-database systems	0	3
 higher order	0	15
 input space	0	7
 manifold learning	0	11
 previously proposed	0	9
 deep architectures	0	7
-score function	0	2
-low variance	0	3
 search space	0	14
-biologically relevant	0	2
-spatially varying	0	4
 spatio temporal	0	13
-historical data	0	2
-short range	0	4
 long range	0	13
 computationally expensive	0	11
-projection matrix	0	2
-semidefinite relaxation	0	2
 synthetic datasets	0	14
-support recovery	0	2
 numerical experiments	0	13
-random vector	0	2
 dependency structure	0	7
-classification and regression trees	0	2
-generalized linear models	0	5
-probability distributions	0	5
-large deviation	0	3
 conditional probabilities	0	8
 cold start	0	9
 fine grained	0	20
 matrix factorization	0	22
 real data sets	0	31
-high capacity	0	5
-a 4	0	3
 stochastic gradient descent	0	17
-langevin dynamics	0	5
-prediction error	0	5
 stochastic gradient	0	11
-widely adopted	0	3
-running times	0	4
-sensor observations	0	2
 kernel methods	0	16
-statistical tests	0	3
 statistical significance	0	6
-classification error	0	4
-limited memory	0	5
-conjugate gradient	0	2
-line search	0	2
 optimization methods	0	7
-big datasets	0	3
-data science	0	2
-linguistic information	0	2
-word error rate	0	2
 optimization problems	0	9
 graph cut	0	7
-sequential pattern mining	0	5
-sequential patterns	0	5
-action recognition	0	5
 computational cost	0	26
 feature learning	0	16
-genetic markers	0	4
-genetic variations	0	2
-single nucleotide polymorphisms	0	5
-structural information	0	4
-highly correlated	0	5
-quantitative traits	0	2
-multivariate regression	0	3
-fused lasso	0	2
-genetic variation	0	4
-link analysis	0	4
 natural language	0	22
 discriminative learning	0	6
-trade offs	0	4
 information retrieval	0	23
-amino acid	0	4
-cluster analysis	0	2
-phylogenetic tree	0	2
-drug design	0	2
 mutual information	0	7
 hidden markov models	0	14
-electron microscopy	0	2
-carefully chosen	0	2
 cyber security	0	6
-storage space	0	2
-similarity based	0	4
 gene ontology	0	9
-functional annotation	0	4
-visual concepts	0	3
-semi markov	0	3
-purchasing behavior	0	2
-gaussian mixture model	0	5
-product recommendation	0	2
-computational methods	0	3
 cross validation	0	8
 highly accurate	0	6
-significantly reduced	0	2
-light field	0	2
-light source	0	2
-task oriented	0	2
-personalized search	0	2
 topic modeling	0	22
 user preferences	0	8
-kl divergence	0	5
-clustering technique	0	3
-brute force	0	4
-face identification	0	2
 feature space	0	21
-penn treebank	0	5
-document collection	0	4
-document retrieval	0	5
 search results	0	9
-parameter tuning	0	3
-query expansion	0	2
-search result	0	4
-epidemic spread	0	2
-adjacency matrix	0	3
 primal dual	0	6
-approximation algorithms	0	4
-approximation error	0	5
 outlier detection	0	11
 probability density	0	6
-estimation method	0	2
-covariate shift	0	3
-learning to rank	0	3
 embedding space	0	6
-image annotation	0	5
 ranked list	0	6
-web documents	0	5
-research questions	0	4
-research communities	0	2
-research efforts	0	2
 feature representations	0	14
-deep reinforcement learning	0	5
-benchmark suite	0	2
 hierarchical structure	0	10
-https url	0	2
 reinforcement learning	0	23
 atari games	0	6
 high impact	0	8
 previous works	0	7
-temporal relations	0	2
-short term	0	4
-black boxes	0	2
-restricted boltzmann machine rbm	0	3
-facial expression	0	3
-recognition tasks	0	2
-recognition performance	0	5
-auto regressive	0	2
 feed forward	0	12
 feature selection	0	34
 graph databases	0	6
 structured data	0	8
-feature set	0	5
 pairwise similarity	0	6
 feature sets	0	6
-selection strategy	0	2
-exact matching	0	2
 nearest neighbors	0	8
-performance evaluation	0	3
 data structures	0	8
 density estimation	0	6
 tree based	0	9
 probability distribution	0	11
 real world data sets	0	17
 single pass	0	7
-correlation coefficient	0	2
-noise estimation	0	2
-standard deviation	0	3
 natural image	0	7
-high frequency	0	3
-persistent homology	0	2
-distance function	0	2
-topological information	0	2
-smooth functions	0	5
-topological features	0	2
-tuning parameters	0	4
-label propagation	0	4
-euclidean space	0	5
-local neighborhood	0	3
-subspace learning	0	5
-locally linear embedding	0	3
-face database	0	2
-weighted graph	0	3
-user defined	0	4
-weighted graphs	0	4
-motion patterns	0	2
-indexing scheme	0	3
 moving objects	0	7
-variable sized	0	2
-semantic analysis	0	3
 similarity measures	0	7
-variable size	0	3
 feature vectors	0	8
 random walks	0	10
-countably infinite	0	2
-transition matrices	0	2
-pairwise constraints	0	3
-data analytics	0	5
 alternating direction method of multipliers admm	0	7
-noisy data	0	3
-amazon mechanical turk	0	5
-video frames	0	4
 youtube videos	0	6
-video summarization	0	4
 image processing	0	6
 image classification	0	23
-image captioning	0	4
-neural machine translation	0	2
-restricted boltzmann machine	0	4
-deep belief nets	0	3
-input vector	0	3
 spectral clustering	0	17
-speech separation	0	2
 global optimum	0	6
-maximal cliques	0	3
-local search	0	3
-local minimum	0	4
-attributed graphs	0	4
-camera position	0	4
-video sequence	0	3
 coreference resolution	0	6
-n gram	0	5
-significant performance improvements	0	2
 submodular maximization	0	6
-spl times	0	2
 high resolution	0	7
-super resolution	0	2
 statistical machine translation	0	7
-phrase based	0	3
-translation quality	0	3
-carefully selected	0	2
-hamiltonian monte carlo	0	4
-gaussian distribution	0	5
-conditional likelihood	0	3
 tree structured	0	6
-map inference	0	3
-naive bayes	0	2
 hidden units	0	10
-statistically significant	0	5
 multi layer	0	14
 knowledge discovery	0	9
 uncertain data	0	6
-acm sigkdd	0	4
-communication overhead	0	5
 divide and conquer	0	8
-distributed algorithms	0	2
 sampling method	0	6
-memory usage	0	2
-distributed computing	0	4
-information loss	0	5
-feasible solution	0	2
-implementation details	0	2
-disk based	0	3
-constraint based	0	5
 mining frequent	0	7
 unlabeled data	0	21
-class conditional densities	0	3
-handwritten digits	0	4
 semi supervised learning	0	17
 gaussian process	0	20
 posterior probabilities	0	6
 statistical model	0	10
-protein sequences	0	4
-large document collections	0	3
 statistical analysis	0	7
-image stitching	0	2
-panoramic images	0	2
-cost functions	0	5
-gradient domain	0	2
 sparse representation	0	8
-recent developments	0	5
 high dimensionality	0	9
-singular vector	0	2
 sparse coding	0	10
-learning rate	0	4
-classification algorithms	0	5
 cost function	0	11
-regularization parameters	0	3
 hidden layer	0	7
-joint diagonalization	0	2
-moment matching	0	3
 independent component analysis	0	6
 canonical correlation analysis	0	7
 sample complexity	0	19
 tree structures	0	8
 tree structure	0	9
-bio informatics	0	2
-conserved regions	0	2
-entropy based	0	2
 similarity measure	0	11
-biological sequences	0	2
-language modeling	0	5
-multi step	0	2
-character level	0	5
-image generation	0	4
-linear programming	0	5
-linear classifiers	0	2
 microarray data	0	13
 l1 norm	0	9
-principal components analysis	0	2
-dense correspondence	0	2
 order statistics	0	6
 deep networks	0	18
-batch size	0	2
 auto encoders	0	11
-rectified linear units	0	4
-parameter values	0	4
-batch normalization	0	2
 graph regularized	0	6
-markov decision process	0	5
-budget allocation	0	4
 contextual information	0	7
-binary matrices	0	5
-bipartite graphs	0	5
-equivalence classes	0	4
-stochastic processes	0	4
 latent feature	0	8
 indian buffet process	0	8
-stochastic process	0	4
-research papers	0	4
 research topic	0	6
-early stage	0	2
 empirical evaluations	0	7
 data structure	0	9
-aggregation functions	0	2
 studied extensively	0	7
-online analytical processing	0	2
-data cube	0	5
-texture synthesis	0	2
-image synthesis	0	3
-discriminatively trained	0	5
 markov random field	0	13
 local features	0	7
-external memory	0	2
-invariant feature	0	2
-stereo matching	0	5
-stereo correspondence	0	5
-research areas	0	3
-future research	0	2
-sensor networks	0	2
 information sources	0	8
-social sciences	0	5
-biologically meaningful	0	2
-transcription factor binding sites	0	2
-binding sites	0	2
-presence absence	0	2
-false positive	0	4
-pattern matching	0	2
 semantically meaningful	0	6
 image features	0	11
-microarray gene expression data	0	3
-compressed sensing	0	5
-cancer classification	0	3
 expectation maximization em algorithm	0	9
-crf model	0	2
-weak learners	0	2
 compares favorably	0	9
 biological data	0	6
-complex diseases	0	3
-functional annotations	0	2
-dynamic memory	0	2
 restricted boltzmann machines	0	14
 generalization performance	0	9
-deep convolutional	0	3
-background clutter	0	2
-weak supervision	0	5
-activity recognition	0	3
-video clips	0	2
-video retrieval	0	2
-deep boltzmann machine	0	2
 human motion	0	8
-ensemble learning	0	4
 multi label	0	10
 objective functions	0	8
-generalization ability	0	5
-label correlations	0	3
-multi label learning	0	2
-low frequency	0	4
 kernel matrix	0	9
-sentence pairs	0	2
-document level	0	3
 web pages	0	13
-close proximity	0	2
-user profiles	0	4
 case study	0	14
-customer segmentation	0	3
-mobile communication	0	4
-urban planning	0	2
-satellite images	0	2
 deep belief networks	0	10
-evaluation metrics	0	5
 pattern recognition	0	9
-invariant features	0	5
-word alignments	0	2
-cross lingual	0	3
 language models	0	13
-graph representation	0	3
-graph theoretical	0	2
-global optimality	0	3
-medical imaging	0	3
-cutting plane	0	3
-functional dependencies	0	3
-optical character recognition	0	3
-feature vector	0	4
-demographic information	0	2
-social relationships	0	3
-mobile network	0	3
-social circles	0	2
-prior distribution	0	4
 bayesian nonparametric	0	15
-video content	0	3
-tensor decomposition	0	3
-signal to noise ratio	0	3
-signal processing	0	5
-human face	0	2
-theoretical analyses	0	3
-magnetoencephalography meg	0	2
-unsupervised clustering	0	2
 class labels	0	11
 text classification	0	9
 class label	0	6
-entity extraction	0	2
-fixed point	0	2
-discrete space	0	2
-online forums	0	3
-word vectors	0	2
-website http	0	2
 supplementary information	0	6
-interacting proteins	0	2
-supplementary materials	0	3
-protein protein interactions	0	2
-weighting scheme	0	2
-regularized regression	0	3
 structured sparsity	0	7
-leaf nodes	0	2
-prediction errors	0	2
 mixture models	0	13
-textual content	0	2
-event based	0	2
-life cycles	0	2
-coordinate ascent	0	3
-location information	0	3
-frequent itemset mining	0	3
 empirical study	0	18
-data warehouses	0	3
-hyper parameters	0	2
 previously reported	0	6
-hyper parameter	0	2
-variational approximation	0	5
-expert knowledge	0	3
 probabilistic inference	0	8
 test set	0	10
-user grouping	0	2
-human behavior	0	3
-data intensive	0	2
-meta information	0	2
-directed acyclic graph	0	2
-sparsity inducing	0	3
-greedy heuristics	0	3
 decision trees	0	7
-error bound	0	4
-nystrom approximation	0	2
-riemannian manifold	0	2
-x ray	0	2
-log log	0	2
 computational complexity	0	18
-autonomous agents	0	2
-kdd cup	0	2
-cross entropy	0	2
-particle physics	0	2
 squared error	0	8
 fully automatic	0	6
 scene understanding	0	7
-expression patterns	0	2
-single source	0	2
-protein interaction	0	3
-potentially interesting	0	2
-special issue	0	2
-spectral decomposition	0	3
 spectral methods	0	11
 latent topic	0	10
-sufficient condition	0	2
 vector space	0	7
 data collection	0	13
-small sample	0	4
-linear dimensionality reduction	0	4
 case studies	0	8
-weakly labeled	0	3
-hand coded	0	2
-receptive fields	0	2
-multi layered	0	2
-spatial locality	0	3
 high performance	0	8
 unsupervised feature learning	0	7
-randomized algorithm	0	3
-previous research	0	4
 communication networks	0	6
-subspace clustering	0	5
-sparse matrix	0	4
-convex relaxations	0	3
-attributed graph	0	2
-united states	0	2
-human error	0	2
-image databases	0	3
-chance constraint	0	2
 hinge loss	0	7
-estimation procedure	0	2
-interval valued	0	2
 clustering algorithms	0	13
-agglomerative hierarchical clustering	0	2
-normalized cut	0	5
-affinity matrix	0	4
-conventional wisdom	0	2
-natural scene	0	2
-scene segmentation	0	2
-pitman yor	0	4
 label information	0	6
 power law	0	15
-face verification	0	2
 face detection	0	6
-motion compensated	0	2
 depth estimation	0	6
 depth maps	0	6
-view interpolation	0	5
-globally optimal	0	4
-variational bayesian inference	0	2
-tree edit distance	0	2
 extensively studied	0	8
-massive datasets	0	2
 open problem	0	13
-edit distance	0	4
 nonparametric regression	0	6
-joint sparsity	0	2
-soft thresholding	0	3
-data items	0	4
 pair wise	0	8
-riemannian metric	0	2
-low distortion	0	2
-wikipedia articles	0	3
-fully connected	0	3
-deep convolutional neural network cnn	0	2
-image sets	0	3
-image collections	0	2
-outbreak detection	0	2
-marker genes	0	2
-expression profiles	0	2
-probability measures	0	3
-decision theoretic	0	4
-group sparsity	0	4
-job completion	0	2
-influence spread	0	2
-heuristic algorithms	0	5
 social influence	0	6
 learning algorithms	0	18
 network structure	0	14
-daily life	0	4
-neighboring nodes	0	3
 random walk	0	18
-edge strength	0	2
-low power	0	3
 deep neural networks	0	19
-permutation invariant	0	2
-training sets	0	3
-chromatic number	0	2
-graph kernels	0	2
-audio classification	0	2
-hierarchical representations	0	2
 collapsed gibbs sampling	0	6
-proteinprotein interaction	0	2
-cytoscape plugin	0	2
-http sourceforge net projects	0	2
-software tool	0	3
 significant speedups	0	7
 submodular functions	0	6
-combinatorial optimization	0	5
-conditional probability	0	3
-linear complexity	0	3
-web scale	0	4
-narrative structure	0	2
-user preference	0	4
-content based	0	4
-human diseases	0	2
-carefully designed	0	4
-virus propagation	0	4
-hamming distance	0	3
 semantic similarity	0	8
-laplace beltrami	0	2
-graph laplacian	0	4
 graph partitioning	0	8
-compact binary codes	0	4
-scoring functions	0	2
-scoring function	0	2
-binding affinity	0	2
-adaptive learning	0	3
 categorical data	0	7
-knowledge transfer	0	2
-l1 l2	0	3
 unified framework	0	16
-genome wide association studies	0	3
 significantly outperform	0	9
-user experience	0	4
 mobile devices	0	6
-web databases	0	3
-autonomous helicopter	0	2
-irrelevant features	0	3
 expectation propagation	0	6
-multi instance learning	0	2
-bounding box	0	5
-object proposals	0	4
 discriminative power	0	7
 feature representation	0	6
-context sensitive	0	3
-marginal distribution	0	3
-theoretical justification	0	2
-quality score	0	2
-search logs	0	3
-search strategies	0	2
-fine tuned	0	3
-multi relational	0	5
-pre trained	0	5
 relational data	0	9
-faster convergence	0	2
-probabilistic matrix factorization	0	3
-weight matrix	0	2
-query interface	0	2
-text collections	0	2
 loopy belief propagation	0	8
-collective classification	0	2
-bipartite matching	0	2
-max weight	0	2
-feature matching	0	2
 bayesian network	0	6
-indoor scenes	0	3
-monocular vision	0	2
-feature detection	0	2
-city scale	0	4
-cell phone	0	4
-data quality	0	4
-growing exponentially	0	2
 greedy algorithms	0	6
-provably optimal	0	3
-cardinality constrained	0	2
-cardinality constraint	0	3
 object classes	0	6
 visual features	0	11
-feature spaces	0	2
-social events	0	4
-computational problem	0	2
 information theoretic	0	11
 clustering algorithm	0	13
-social relations	0	3
-invited talks	0	2
-workshop report	0	2
 graph based	0	23
-graph analytics	0	2
-web site	0	3
-feature engineering	0	5
-content extraction	0	2
-wrapper induction	0	2
-sensory data	0	2
-inverse reinforcement learning	0	2
-reward function	0	5
-partial information	0	2
 energy function	0	6
-reconstruction error	0	3
-massive scale	0	2
-moving object	0	2
-visual cues	0	2
-visual information	0	2
-integer programming	0	5
-dis similarity	0	2
-face image	0	4
-scientific articles	0	4
-text summarization	0	2
 data sources	0	11
 multiple sources	0	13
-prediction model	0	4
-convex functions	0	2
-uniform sampling	0	5
-convex function	0	3
-strongly convex	0	3
-web usage mining	0	2
-semantic features	0	3
-user models	0	2
-personalized recommendations	0	3
-training dataset	0	2
-international conference	0	4
-web mining	0	3
-multiple kernel learning	0	5
-object categorization	0	3
-mixed norm	0	3
-mirror descent	0	4
 algorithm outperforms	0	13
 multi modal	0	10
-probability estimates	0	2
-ensemble classifiers	0	2
 high degree	0	6
-human mobility	0	3
-location based	0	5
-huji ac il	0	2
-differentially expressed genes	0	3
 support vector machine	0	11
-finite dimensional	0	2
 learning process	0	9
-association rule mining	0	3
 classification methods	0	8
-rule mining	0	2
-statistical methods	0	4
 mixed membership	0	6
-privacy preserving data mining	0	3
-coefficient matrix	0	3
-image pixels	0	2
-frequent pattern	0	4
-strongly correlated	0	4
-computationally prohibitive	0	2
 pruning techniques	0	6
-transactional databases	0	2
-mining association rules	0	2
-frequent itemsets	0	3
-targeted advertising	0	2
-cognitive process	0	2
-performance improvement	0	5
-discriminative features	0	3
-image sequence	0	3
-state variables	0	3
-protein interaction networks	0	3
-protein interactions	0	2
 gene regulatory networks	0	6
-stochastic blockmodel	0	3
-training samples	0	4
-classification scheme	0	2
-natural scene images	0	2
 natural scenes	0	6
-parse tree	0	2
-multi modality	0	4
-degree distributions	0	2
-heavy tails	0	5
-semi definite	0	2
-unit sphere	0	2
-query logs	0	3
-data types	0	4
-query suggestion	0	3
 special cases	0	8
-scientific literature	0	2
-personalized pagerank	0	4
-online reviews	0	2
-mobile phones	0	2
-product reviews	0	3
-matrix inversion	0	2
-higher accuracy	0	5
-deep boltzmann machines	0	3
-object shape	0	4
-image regions	0	4
-single step	0	3
-unstructured data	0	3
-dirichlet distribution	0	2
-million tweets	0	2
 k means clustering	0	9
 blog posts	0	6
-similarity metric	0	4
-online media	0	4
-news media	0	3
-probabilistic latent semantic analysis plsa	0	2
-global consistency	0	3
 previous studies	0	11
 social network analysis	0	11
 naturally occurring	0	6
-dirichlet process mixtures	0	3
-regression models	0	2
-predictive modeling	0	2
 bayesian optimization	0	7
-independent components	0	3
-optimization framework	0	4
-entity mentions	0	3
-textual information	0	4
-scientific publications	0	3
 domain specific	0	8
-entity recognition	0	4
 hand crafted	0	6
-image restoration	0	3
-content aware	0	2
-heavy tailed	0	5
-piecewise smooth	0	2
-user oriented	0	3
-element wise	0	2
 ad hoc	0	16
-network architectures	0	2
-gated recurrent	0	2
 long short term memory lstm	0	6
-feedforward neural networks	0	4
 bayesian inference	0	25
-theoretical framework	0	2
-problem formulation	0	4
-local optimum	0	4
-randomized algorithms	0	2
-performance degradation	0	2
-ac kr	0	3
-degree distribution	0	3
-super exponential	0	2
-matrix multiplication	0	3
 structural properties	0	7
-kronecker product	0	3
-mathematically tractable	0	2
-edit operations	0	2
-recognizing textual entailment	0	2
-linguistic features	0	2
-textual entailment	0	3
-ranking functions	0	2
-clustering techniques	0	4
-ranking function	0	3
-breadth first search	0	2
-keyword search	0	4
-knowledge extraction	0	3
-syntactic dependencies	0	2
 part of speech tagging	0	6
-vector spaces	0	3
-context dependent	0	3
-token based	0	2
-translation invariant	0	2
-information systems	0	4
-query results	0	3
-manually labeled	0	3
 knowledge base	0	8
-knowledge graph	0	4
-data association	0	2
-geometric reasoning	0	2
-visual similarity	0	3
-structure from motion sfm	0	2
-image pairs	0	3
-approximation algorithm	0	5
-data sharing	0	2
-skyline queries	0	3
-change point detection	0	2
-fully automated	0	4
-lexical semantic	0	2
-frequency domain	0	2
-synthetic images	0	4
-image registration	0	3
-public health	0	2
-object tracking	0	2
 video sequences	0	7
-object appearance	0	3
 nonnegative matrix factorization	0	7
-spoken language	0	4
-user rating	0	2
-domain experts	0	3
-confidence measures	0	2
-intrusion detection	0	3
-automatic differentiation	0	3
-object detector	0	3
-multi object tracking	0	2
-object detectors	0	3
 network flow	0	6
-reproducing kernel hilbert spaces	0	5
-research community	0	4
-sequential pattern	0	3
-performance improvements	0	2
-image content	0	2
-image matching	0	2
-low resolution	0	3
 sufficient conditions	0	6
-complex systems	0	5
-random graphs	0	2
 bayesian computation	0	6
-mass distribution	0	2
-international relations	0	2
-user intent	0	2
-keyword based	0	2
-benchmark problems	0	4
-single layer	0	3
 face images	0	6
-pixel intensities	0	2
 community detection	0	16
-bernoulli process	0	2
-social networking	0	4
-valuable information	0	2
 web sites	0	6
-life cycle	0	2
-source codes	0	2
-regulatory networks	0	3
-drosophila melanogaster	0	2
-gene regulation	0	5
-semantic segmentation	0	3
-experimental data	0	4
-slowly changing	0	2
-particle filter	0	2
 text documents	0	9
-preconditioned conjugate gradient	0	2
-ridge regression	0	3
 binary classification	0	6
-i d	0	5
 linear combination	0	11
-sentence processing	0	2
-average case	0	2
-graph search	0	2
-disk resident	0	4
-online algorithms	0	2
-local maxima	0	3
-gaussian mixtures	0	2
-finite mixture models	0	2
-image compression	0	3
-denoising autoencoders	0	5
-relative importance	0	2
-e 3	0	2
-apprenticeship learning	0	2
-prostate cancer	0	3
 human brain	0	6
-grammar induction	0	2
-independence assumption	0	4
-blind source separation	0	2
-pre training	0	3
-attribute based	0	2
-text based	0	4
-health informatics	0	2
-classification task	0	4
-depth camera	0	2
 multi source	0	9
-mixture distributions	0	2
 optimization algorithms	0	8
-formally defined	0	2
-online social	0	4
-parameter settings	0	2
-kernel regression	0	2
-pairwise interactions	0	4
-kernel density estimation	0	2
-planar surfaces	0	2
-manhattan world	0	2
-depth map	0	3
-building interiors	0	2
-indoor environments	0	2
-piece wise	0	3
-neural net	0	5
-visual attention	0	2
-diminishing returns	0	4
-exemplar based	0	4
-microarray studies	0	2
-microarray datasets	0	3
-urban environment	0	2
-sampling distribution	0	2
-subset selection	0	4
 frequent patterns	0	8
-quality measure	0	3
-nonzero entries	0	2
-iterative algorithms	0	2
-low order	0	2
-density estimator	0	4
-relevance ranking	0	2
-gene selection	0	2
-salient objects	0	2
-ms coco	0	3
-caption generation	0	4
-binary data	0	3
-sufficient statistics	0	4
-nonnegative matrix	0	2
-graph regularization	0	2
 clustering methods	0	9
-incremental learning	0	3
 data stream	0	8
-concept drift	0	4
-infinite length	0	2
-human action recognition	0	3
 classification accuracy	0	13
-input sequences	0	3
-fixed length	0	2
-design choices	0	2
-scene categorization	0	5
-compact representation	0	4
-statistical learning	0	4
-lower complexity	0	2
-semantic matching	0	2
-graph structures	0	3
-optimal policy	0	2
-large state spaces	0	2
-building block	0	5
-network topology	0	5
-finer granularity	0	4
-consistently outperform	0	2
-proximity measures	0	2
 unsupervised feature selection	0	7
-transition probability matrix	0	2
 factor graph	0	7
-partially labeled	0	5
-user interaction	0	3
 high order	0	11
-multi aspect	0	2
 chinese restaurant process	0	6
-auxiliary variables	0	2
-street view	0	2
-image feature	0	4
-user activity	0	3
-bayesian decision theory	0	2
-monte carlo tree search	0	3
-correlation matrix	0	2
-soft clustering	0	3
-linear projection	0	4
-structural features	0	2
-key frames	0	2
-privacy requirements	0	2
 interesting patterns	0	6
-private data	0	2
-research directions	0	3
-high risk	0	3
-max pooling	0	3
-activation function	0	4
-arbitrarily shaped	0	2
-multi faceted	0	3
-hash table	0	2
-web applications	0	5
-unsupervised segmentation	0	3
-sum product	0	4
 dynamical systems	0	7
-fold cross validation	0	4
-unbiased estimator	0	4
 multi level	0	6
-citation recommendation	0	2
-free energies	0	3
-web page	0	4
-spam detection	0	2
-computationally feasible	0	3
-quadratically constrained quadratic program qcqp	0	2
-graph laplacians	0	2
-random field	0	3
-partial observability	0	3
-vision based	0	2
 deep neural network	0	6
-learning environment	0	2
-markov random walk	0	2
-iterative algorithm	0	3
-pairwise similarities	0	2
-special effects	0	2
-stereo reconstruction	0	4
 energy minimization	0	6
-path planning	0	2
-convolutional neural network	0	4
-graph embedding	0	3
-information processing	0	2
-ranking svm	0	3
-support vectors	0	2
-microarray analysis	0	2
-automatic relevance determination	0	3
-accept reject	0	2
-computationally infeasible	0	3
-central limit theorem	0	2
-step sizes	0	3
-step size	0	3
-social activity	0	2
-online social network	0	2
-multimedia objects	0	2
-temporal information	0	3
-quantitative analysis	0	3
-feature points	0	3
-rigid motion	0	2
-labeled instances	0	2
-visual object recognition	0	2
-gaussian noise	0	5
-structured output prediction	0	3
-linear transformation	0	5
-nearest neighbor classification	0	2
-training images	0	2
-building blocks	0	4
-use cases	0	2
-cost effective	0	4
-data warehousing	0	2
-business intelligence	0	3
-data warehouse	0	2
-widely deployed	0	2
-fisher discriminant analysis	0	2
-kernel discriminant analysis kda	0	2
-discriminant analysis	0	5
-fisher linear discriminant	0	4
-unresolved issues	0	2
 community structure	0	7
-community structures	0	5
-context aware	0	4
-location based service	0	2
-convex programming	0	2
-matrix decomposition	0	2
 lower dimensional	0	6
-tensor product	0	2
-aggregate queries	0	2
-privacy guarantees	0	3
-background knowledge	0	2
-sensitive data	0	3
-decision tree	0	4
-multidimensional data	0	3
 kernel machines	0	6
-equivalence class	0	4
-high speed	0	3
-human experts	0	4
-semantic knowledge	0	2
 vice versa	0	6
-multiple instance	0	2
-cpu implementation	0	2
-parallel algorithm	0	2
-fold speedup	0	2
-cross platform	0	4
-point cloud	0	2
-published papers	0	2
-research topics	0	3
-transductive learning	0	2
-empirical data	0	3
-drinking water	0	2
-location based social networks lbsns	0	3
-graph construction	0	3
-mobile users	0	3
-poi recommendation	0	2
-downward closure property	0	3
-positive examples	0	2
-frontal faces	0	2
-lower order	0	2
-exploratory data analysis	0	2
-proximity based	0	2
-unsupervised image segmentation	0	2
-join queries	0	3
-policy search	0	5
-robotic manipulation	0	3
-significantly lower	0	2
-theoretically justified	0	2
-control policies	0	2
-m 1	0	2
-privacy preservation	0	5
-stream mining	0	2
-slow convergence	0	3
-human expert	0	2
-natural gradient	0	4
-mixture components	0	4
-variational em	0	3
-mixture modeling	0	2
-named entity recognition	0	2
-classification tasks	0	3
-internet scale	0	2
-personalized ranking	0	2
-rapidly growing	0	2
-hybrid generative discriminative	0	2
-asymptotically optimal	0	2
-asymptotic analysis	0	4
-parametric models	0	3
-classification accuracies	0	2
-nearest neighbour	0	3
-feature descriptor	0	2
-haar wavelet	0	2
-weight update	0	2
-hidden states	0	4
-random variable	0	5
-pixel intensity	0	3
 multiple modalities	0	6
-multimedia applications	0	2
-summary statistics	0	2
-prohibitively expensive	0	3
-image representations	0	4
-person detection	0	2
-semantically related	0	3
 exact inference	0	12
-wake sleep	0	3
 stationary distribution	0	6
-critical points	0	2
-saddle points	0	3
-frequent subgraphs	0	2
-noisy labels	0	3
-social bookmarking	0	2
-del icio	0	2
-vector space model	0	2
-deep convolutional networks	0	2
-human interaction	0	2
 statistical models	0	7
-hierarchical classification	0	2
-visual appearance	0	3
-supervised dimensionality reduction	0	3
-word sense disambiguation	0	2
-semantic parsing	0	3
-relational learning	0	3
-chinese restaurant	0	2
-poor performance	0	2
-dramatically reduces	0	2
 latent class	0	6
-multi armed bandits	0	2
-multi armed bandit	0	2
-human visual perception	0	2
-data processing	0	4
-randomly distributed	0	2
-genotype data	0	3
-relational structures	0	2
-easily interpretable	0	3
-feature interactions	0	3
-tensor based	0	3
-image analysis	0	4
-server logs	0	2
-quadratic programming	0	2
-feature values	0	3
-locality preserving	0	3
 speed ups	0	6
-range queries	0	4
-approximate answers	0	3
-real numbers	0	2
-query optimization	0	3
 information gain	0	6
-gaussian mixture	0	2
-pattern discovery	0	5
-parallel corpora	0	2
-sentence level	0	3
-exact recovery	0	3
-visualization tool	0	3
-data storage	0	2
 heterogeneous networks	0	6
-item recommendation	0	3
-concept drifting data streams	0	3
-test instances	0	2
 training instances	0	6
-phase locking	0	2
-motor imagery	0	2
-significant differences	0	2
-brain computer interfaces bci	0	2
-proximal gradient	0	5
-multiple layers	0	4
 bayes rule	0	6
-variational bayes	0	5
-kalman filter	0	3
-evolutionary trees	0	2
-independence assumptions	0	2
-computational models	0	2
-information theory	0	2
-enron email	0	2
-malware detection	0	2
-fp tree	0	2
-itemset mining	0	2
-partial order	0	2
-moving average	0	2
-hot topic	0	2
 truth discovery	0	8
-latent semantic indexing	0	2
-contrastive divergence	0	5
-written text	0	2
-node selection	0	2
-specially designed	0	3
-association rules	0	5
-lower layers	0	3
-long short term memory	0	2
-internal representations	0	2
 latent topics	0	7
-computationally tractable	0	4
-mobile communications	0	2
-singular value decomposition svd	0	2
-convex combination	0	4
-qr decomposition	0	3
 gaussian mixture models	0	6
-pac learning	0	2
-low degree	0	2
 knowledge bases	0	9
-pre existing	0	2
-query optimizer	0	2
-global constraints	0	2
-voting scheme	0	2
-feature correspondences	0	2
-higher level	0	4
-database management systems	0	2
-locally adaptive	0	2
-chi squared	0	2
-online community	0	4
-entity mention	0	2
-kernel ridge regression	0	5
-gaussian kernels	0	2
-obstacle avoidance	0	2
-video segmentation	0	2
-object segmentation	0	2
-min cost flow	0	3
-actor critic	0	2
-motor control	0	2
-inverse optimal control	0	2
-robotic systems	0	2
-convolutional neural network cnn	0	2
-microscopy images	0	2
-measurement matrix	0	2
-camera motion	0	2
 image sequences	0	6
-complex networks	0	4
-inverted index	0	2
-accelerated proximal gradient	0	4
-background subtraction	0	2
-human subjects	0	3
-brain activity	0	2
-gaussian approximation	0	2
-independent and identically distributed	0	3
-phone calls	0	2
-nonlinear dimensionality reduction	0	3
-image based rendering	0	3
-view dependent	0	2
-excess risk	0	2
-english wikipedia	0	2
-finite sample	0	3
-distance metric	0	4
 metric learning	0	9
-mathematical model	0	2
-single user	0	2
-elastic net	0	2
-saliency detection	0	2
-computer vision tasks	0	2
-candidate genes	0	2
-expression levels	0	3
-negatively correlated	0	3
-mirna target	0	2
-sample sizes	0	5
 genome wide	0	8
-disease association	0	2
-random effects	0	3
-fisher kernel	0	3
-selection problem	0	2
-graph theory	0	3
-point clouds	0	3
-mobile robot	0	2
-single machine	0	2
-cpu cores	0	2
-main memory	0	5
-data cleaning	0	2
 network analysis	0	9
-dirichlet process mixture	0	4
-human behaviors	0	2
-vector quantization	0	3
-basis functions	0	4
-randomly chosen	0	3
 predictive models	0	6
-decision boundaries	0	2
-bayesian nonparametric models	0	3
-plan recognition	0	2
-human machine	0	2
-euclidean distance	0	5
-template based	0	2
-online algorithm	0	5
-boltzmann machine	0	5
 task specific	0	6
-matching score	0	2
-information propagation	0	4
-graph isomorphism	0	2
-hash functions	0	4
-event extraction	0	3
-cross validated	0	2
-clustering and classification	0	3
-marginal likelihoods	0	2
 marginal likelihood	0	7
-similarity matrix	0	5
-heterogeneous databases	0	2
-video stream	0	2
-partial orders	0	2
-click logs	0	3
-biological networks	0	3
-skyline computation	0	2
-ab initio	0	2
-locally optimal	0	3
-hilbert schmidt independence criterion	0	3
-q learning	0	2
-policy gradient	0	4
-human pose	0	2
-pose estimation	0	4
-unlabeled images	0	3
-object parts	0	3
-principal components	0	4
-light fields	0	2
-fronto parallel	0	2
-privacy concerns	0	3
-sparse approximation	0	2
-linear combinations	0	2
-error reduction	0	2
 relative error	0	8
-bayesian statistics	0	2
-community discovery	0	4
-user actions	0	2
-social contexts	0	2
-stock prices	0	2
-bleu score	0	2
-propagation model	0	2
-noise free	0	2
-stereo pairs	0	3
-binary classifier	0	2
-human faces	0	2
-text document	0	2
-visual words	0	3
-histone modifications	0	2
-human pose estimation	0	4
-image categorization	0	2
-interior point methods	0	2
-maximization problem	0	2
-spanning tree	0	2
-gradient method	0	5
-tangent plane	0	2
-user modeling	0	3
-information overload	0	2
-micro blogging	0	2
-gps traces	0	2
-road networks	0	2
-black box optimization	0	2
-answer questions	0	5
-local minima	0	5
-word similarity	0	2
-bilingual word	0	2
-relational databases	0	3
-privacy protection	0	2
-dynamic time warping dtw	0	2
-time series analysis	0	4
-artificial neural networks	0	5
-matching problem	0	2
-estimation methods	0	2
-entity linking	0	2
-outdoor environments	0	2
-control policy	0	2
-autonomous driving	0	2
-partial occlusions	0	2
-workshop summary	0	2
-principle component analysis	0	2
-widely applied	0	4
-topic hierarchies	0	4
-arbitrarily large	0	2
-graph connectivity	0	2
-query interfaces	0	2
-deep web	0	2
-information integration	0	2
-positively correlated	0	3
-schema matching	0	2
-retrieval tasks	0	2
-greatly reduce	0	2
-geo tagged	0	3
-exact solutions	0	2
-generative adversarial networks	0	4
-joint inference	0	3
-database schema	0	2
-interface design	0	2
-web interface	0	2
-sparse graphs	0	2
-mcmc sampler	0	3
-poisson process	0	3
-sampling technique	0	2
-partial derivatives	0	2
-norm minimization	0	2
-social interactions	0	2
-social networking sites	0	2
-likelihood maximization	0	3
-regulatory proteins	0	2
-reverse engineer	0	2
-protein degradation	0	2
-gene gene interactions	0	2
-unstructured text	0	3
-failure probability	0	2
-data center	0	4
-functional connectivity	0	2
-memory footprint	0	2
-random projection	0	2
-monotone submodular	0	3
-semantic relations	0	2
-object classification	0	4
-sensitive information	0	2
-k 1	0	2
-leaf node	0	2
-brain networks	0	2
-semantically similar	0	4
-entity types	0	3
-sensor data	0	3
-cyber physical	0	2
-feature maps	0	3
-object category	0	4
-distance metric learning	0	3
-alternating minimization	0	3
-asymptotic normality	0	2
-visual object	0	3
-iterative learning	0	4
-matrix vector multiplication	0	3
-widely recognized	0	2
-visual content	0	2
-distance measures	0	3
-distance measure	0	2
-original image	0	2
-user ratings	0	2
 movie recommendation	0	6
-spatial information	0	3
-online communities	0	2
-textured surfaces	0	2
-social groups	0	4
-decision support	0	3
-class distributions	0	2
-genome scale	0	3
-protein binding	0	2
-neighborhood structure	0	2
-video collections	0	3
-content based image retrieval	0	4
-index structures	0	2
-multimedia retrieval	0	2
-diffusion process	0	4
-expressive power	0	4
-hyperparameter tuning	0	2
-olap queries	0	2
-scientific papers	0	2
-dependency trees	0	2
-easily implementable	0	2
-entity matching	0	2
-hawkes process	0	2
-cluster sizes	0	2
-sparse matrices	0	3
-locally linear embedding lle	0	2
-laplacian eigenmaps	0	2
-tv shows	0	3
-undirected graphs	0	2
-gaussian copula	0	2
-log data	0	3
-blind deconvolution	0	2
-blur kernel	0	3
-blurred image	0	2
-hilbert space	0	5
-shift invariant	0	2
-map estimation	0	2
-locality sensitive hashing	0	2
-language understanding	0	2
-semi infinite	0	2
-streaming data	0	4
-data cubes	0	2
-manifold regularization	0	2
-overlapping community detection	0	3
-overlapping communities	0	2
-nuclear norm	0	3
-linear systems	0	2
-kalman filters	0	2
-temporal dependencies	0	2
-layer wise	0	3
-automatic annotation	0	2
-statistical inference	0	5
-steady state	0	2
-inductive bias	0	2
-cancer subtypes	0	2
-clinically meaningful	0	2
-markov decision processes	0	5
-transition probabilities	0	2
-maximum likelihood estimator	0	2
-mixed integer programming	0	2
-users preferences	0	2
-dimensionality curse	0	2
-global convergence	0	3
-low bitrate	0	2
-semantic concept	0	2
-database management	0	3
-benchmark dataset	0	2
-image patches	0	3
-social communities	0	2
-pixel level	0	3
-disease progression	0	2
-laplace approximation	0	2
-local optima	0	3
-point correspondences	0	4
-solution quality	0	4
-graph cuts	0	2
-random initialization	0	2
-fisher vector	0	2
-true positive rates	0	2
-approximate query processing	0	3
-dimensional space	0	2
-low cost	0	2
-local optimization	0	2
-query execution	0	2
-user intervention	0	2
-linearly solvable	0	2
-higher precision	0	2
-news article	0	2
-automatically extracted	0	3
-dependency structures	0	3
-biological systems	0	2
-dot product	0	2
-positive semi definite	0	3
-display advertising	0	3
-motion estimation	0	2
-multi stage	0	4
-density function	0	2
-labeled training data	0	5
-background modeling	0	2
-mini batch	0	3
-highly relevant	0	2
-model fitting	0	2
-domain independent	0	3
-spatial temporal	0	4
-multi agent	0	2
-high utility	0	2
-semi structured	0	3
-user groups	0	2
-singular vectors	0	2
-dna microarray	0	2
-constituent parts	0	2
-text descriptions	0	2
-linear prediction	0	2
-widely studied	0	3
-text corpus	0	4
-combinatorial structures	0	2
-mcmc sampling	0	4
-finite set	0	2
-world wide web	0	2
-feedback controllers	0	2
-social tags	0	2
-explosive growth	0	3
-distributed memory	0	2
-attracted considerable attention	0	2
-semantic similarities	0	2
-biased sampling	0	3
-uniform random	0	2
-web application	0	2
-spectral graph theory	0	2
-data visualization	0	3
-mahalanobis distance	0	2
-von mises	0	2
-highly desirable	0	2
-query answers	0	2
-mass spectrometry	0	2
-skip gram	0	3
-complex objects	0	2
-gene clusters	0	2
-bioinformatics research	0	2
-doubly stochastic	0	3
-action spaces	0	2
-gene functions	0	2
-shortest paths	0	3
-data reduction	0	2
-nlp tasks	0	3
-web news	0	2
-kernel function	0	5
-text search	0	2
-end user	0	2
-hamming space	0	2
-yahoo answers	0	3
-sparse sampling	0	2
-view synthesis	0	2
-visual feature	0	2
-sampling techniques	0	3
-syntactic structure	0	2
-random matrix	0	2
-newton method	0	2
-factor graphs	0	3
-evaluation methodology	0	2
-nonrigid motion	0	2
-optical flow	0	3
-image search	0	2
-fisher criterion	0	2
-convolutional encoder	0	2
-edge detection	0	2
-hidden markov	0	2
-random fields	0	2
-spatial pyramid	0	3
-histone modification	0	2
-chip seq	0	2
-genome size	0	2
-piecewise constant	0	2
-local feature	0	3
-regret bounds	0	2
-low density	0	2
-stochastic block model	0	3
-predictive accuracy	0	2
-social networking websites	0	2
-gps trajectories	0	2
-road segments	0	2
-sampling rates	0	2
-detection algorithm	0	2
-gene prediction	0	2
-genomic data	0	3
-storage capacity	0	2
-context information	0	2
-foreign language	0	2
-equivalence relation	0	3
-fisher score	0	2
-sequence reads	0	2
-entity ranking	0	3
-image recognition	0	5
-monte carlo methods	0	2
-multitask learning	0	2
-sufficiently small	0	2
-global optima	0	2
-low complexity	0	2
-a 20	0	2
-feature descriptors	0	2
-berkeley segmentation dataset	0	2
-spatial domain	0	2
-motion cues	0	3
-natural image statistics	0	2
-forward backward	0	2
-age estimation	0	3
-utility based	0	2
-query answering	0	3
-language pairs	0	2
-imputation methods	0	2
-canonical correlations	0	2
-multidimensional scaling	0	2
-gene discovery	0	2
-short text	0	2
-short texts	0	2
-personal interests	0	2
-behavior patterns	0	2
-power consumption	0	2
-generalization bounds	0	2
-spatial join	0	2
-data centers	0	2
-region based	0	2
-percentage points	0	2
-road network	0	2
-greatly improve	0	3
-epistatic interactions	0	2
-lbl gov	0	2
-prediction models	0	2
-image descriptors	0	2
-adaptive sampling	0	2
-natural languages	0	2
-behave differently	0	2
-product review	0	2
-transaction databases	0	2
-candidate set	0	3
-candidate generation	0	2
-age gender	0	2
-utility function	0	2
-selective sampling	0	2
-linux cluster	0	2
-target object	0	2
-kernel pca	0	2
-load balancing	0	2
-spectral analysis	0	2
-variant calling	0	2
-human genome	0	2
-inference engine	0	2
-memory management	0	2
-noise levels	0	2
-noise level	0	2
-floor plans	0	2
-candidate regions	0	2
-projected gradient	0	2
-piecewise linear	0	2
-pricing schemes	0	2
-highly scalable	0	5
-syntactic dependency	0	2
-distance functions	0	3
-location prediction	0	2
-dependency parsing	0	2
-word level	0	2
-word representations	0	3
-massive graphs	0	2
-tv series	0	3
-multiclass classification	0	2
-analytical solutions	0	2
-multiple instance learning	0	2
-dynamic range	0	2
-kernel discriminant analysis	0	2
-weak classifiers	0	2
-appli cations	0	2
-video scene	0	2
-input variables	0	2
-nonlinear dynamics	0	2
-conditional independencies	0	2
-activation functions	0	2
-approximate nearest neighbor search	0	2
-informative genes	0	2
-sequential decision making	0	2
-key factors	0	2
-diffusion maps	0	2
-meta data	0	2
-microarray dataset	0	2
-spatial coherence	0	2
-lower cost	0	2
-spatial relationships	0	2
-face alignment	0	3
-boltzmann machines	0	2
-data acquisition	0	2
 dong zhang	1	3
 daniel gatica-perez	1	4
 samy bengio	1	29
 iain a. mccowan	1	3
 jiawei han	1	134
-ying lu	1	2
 jian pei	1	46
 nitish srivastava	1	3
 geoffrey e. hinton	1	28
@@ -2375,19 +597,14 @@ ruslan salakhutdinov	1	33
 ziyu guan	1	5
 shulong tan	1	3
 deng cai	1	17
-james martens	1	2
 manish gupta	1	8
-rui li	1	2
 zhijun yin	1	6
 max welling	1	9
 michal rosen-zvi	1	5
 yee whye teh	1	24
-vignesh ramanathan	1	2
 congcong li	1	4
 jia deng	1	3
 wei han	1	3
-zhen li	1	2
-yang song	1	2
 li fei-fei	1	10
 jilles vreeken	1	3
 b. aditya prakash	1	14
@@ -2407,8 +624,6 @@ maria-florina balcan	1	7
 fei sha	1	26
 kaushik chakrabarti	1	6
 surajit chaudhuri	1	6
-venkatesh ganti	1	2
-arnd christian könig	1	2
 dong xin	1	10
 pengtao xie	1	5
 zoubin ghahramani	1	72
@@ -2419,31 +634,21 @@ xifeng yan	1	31
 emily b. fox	1	3
 ryan p. adams	1	8
 ben taskar	1	18
-christopher r. genovese	1	2
-jeff g. schneider	1	2
 larry wasserman	1	14
 marina meila	1	9
-x. wang	1	2
-xing wang deng	1	2
 lei li	1	18
 wen jin	1	10
-cewu lu	1	2
 hao chen	1	5
 heung-yeung shum	1	5
 richard szeliski	1	40
 lei xu	1	6
-maosong sun	1	2
-huanbo luan	1	2
 wei chu	1	4
 mladen kolar	1	9
 beng chin ooi	1	6
 hanghang tong	1	30
-jingrui he	1	2
 wei-ying ma	1	3
-janarthanan rajendran	1	2
 mitesh m. khapra	1	4
 sarath chandar	1	3
-balaraman ravindran	1	2
 philip s. yu	1	111
 frank mcsherry	1	4
 flavio chierichetti	1	5
@@ -2456,15 +661,12 @@ eric p. xing	1	71
 wei dai	1	5
 christian szegedy	1	3
 wei liu	1	6
-yangqing jia	1	2
 scott e. reed	1	9
 dragomir anguelov	1	3
 dumitru erhan	1	6
 amit kumar	1	5
 karol gregor	1	4
 andriy mnih	1	6
-charles blundell	1	2
-laurent el ghaoui	1	2
 michael i. jordan	1	100
 gert r. g. lanckriet	1	4
 jing gao	1	32
@@ -2473,22 +675,14 @@ pang-ning tan	1	3
 jieping ye	1	7
 ravi janardan	1	5
 qi li	1	15
-fumin shen	1	2
-shaoting zhang	1	2
 yang yang	1	21
 heng tao shen	1	3
 deepayan chakrabarti	1	14
-shinya suzumura	1	2
 masayuki karasuyama	1	5
 ichiro takeuchi	1	9
 xinghao pan	1	3
-stephen tu	1	2
-dimitris s. papailiopoulos	1	2
-ce zhang	1	2
-kannan ramchandran	1	2
 christopher ré	1	3
 benjamin recht	1	4
-pannagadatta k. shivaswamy	1	2
 alexander j. smola	1	21
 vasudeva varma	1	4
 stefanie jegelka	1	17
@@ -2496,19 +690,14 @@ shuicheng yan	1	6
 trevor darrell	1	5
 charu c. aggarwal	1	26
 joel l. wolf	1	3
-kun zhang	1	2
 chao liu	1	10
 bo liu	1	17
-ozan sener	1	2
 hyun oh song	1	4
 ashutosh saxena	1	14
 silvio savarese	1	6
 bryan hooi	1	4
-hyun ah song	1	2
 alex beutel	1	6
-kijung shin	1	2
 yue wang	1	12
-daniel kifer	1	2
 liangyue li	1	4
 jie tang	1	13
 wei fan	1	30
@@ -2519,7 +708,6 @@ maxim rabinovich	1	3
 daniel n. klein	1	13
 chih hua tai	1	3
 ming syan chen	1	4
-noah snavely	1	2
 steven m. seitz	1	7
 roland memisevic	1	7
 dafna shahaf	1	7
@@ -2535,27 +723,21 @@ chun ta lu	1	6
 xiaokai wei	1	3
 hao wu	1	3
 chi wang	1	21
-joydeep ghosh	1	2
 jimeng sun	1	19
 jeff a. bilmes	1	4
-yiming yang	1	2
 geir kjetil sandve	1	3
 steve hanneke	1	6
 gunhee kim	1	12
 sung ju hwang	1	3
 ronan collobert	1	3
 ian j. goodfellow	1	3
-mehdi mirza	1	2
 sherjil ozair	1	3
 aaron c. courville	1	12
 yoshua bengio	1	59
 ning chen	1	6
-fangqiu han	1	2
 mudhakar srivatsa	1	4
 lawrence k. saul	1	6
 guillaume obozinski	1	10
-jean-philippe vert	1	2
-mengqiu wang	1	2
 ryan kiros	1	5
 yukun zhu	1	3
 richard s. zemel	1	7
@@ -2563,10 +745,8 @@ antonio torralba	1	9
 raquel urtasun	1	5
 sanja fidler	1	4
 sihong xie	1	10
-jiangtao ren	1	2
 simon lacoste-julien	1	15
 martin jaggi	1	3
-edward snelson	1	2
 ni lao	1	3
 oriol vinyals	1	7
 alexander toshev	1	6
@@ -2580,99 +760,72 @@ xiaoxiao shi	1	5
 amit gruber	1	3
 asja fischer	1	3
 kyunghyun cho	1	17
-nebojsa jojic	1	2
 junyoung chung	1	3
 shai avidan	1	3
-p. anandan	1	2
 zhiting hu	1	7
 bin cui	1	4
-francesco gullo	1	2
 carlotta domeniconi	1	21
-andrea tagarelli	1	2
-laurent charlin	1	2
 hugo larochelle	1	18
-bai zhang	1	2
 robert clarke	1	4
 zhen zhang	1	6
 ie ming shih	1	3
 jianhua xuan	1	3
-joonseok lee	1	2
-guy lebanon	1	2
-yoram singer	1	2
 xin jin	1	11
-jiebo luo	1	2
 xiao yu	1	7
 jacob steinhardt	1	6
 percy liang	1	22
 benjamin taskar	1	6
 francis r. bach	1	23
-romain thibaux	1	2
-xueqing liu	1	2
 yanglei song	1	3
 tina eliassi-rad	1	7
-kriste krstovski	1	2
-david a. smith	1	2
 sergey levine	1	8
 pieter abbeel	1	23
 sonal gupta	1	4
 bo zhang	1	14
 cristian danescu-niculescu-mizil	1	5
 bin zhao	1	8
-guoqiang yu	1	2
 hongbo deng	1	6
 yi chang	1	5
 hongyuan zha	1	7
 s. sathiya keerthi	1	3
 ming-hsuan yang	1	3
-ross b. girshick	1	2
 julien mairal	1	5
 xi zhang	1	4
-xiaofang zhou	1	2
 nan du	1	13
-kang li	1	2
 aidong zhang	1	5
 shixiang gu	1	3
 qingbo hu	1	3
 weixiang shao	1	3
 jingyuan zhang	1	4
 zaiqing nie	1	3
-ji-rong wen	1	2
 meng jiang	1	4
 peng cui	1	7
 shiqiang yang	1	4
 yuan yao	1	3
-jian lu	1	2
 kun-lung wu	1	5
 martin ester	1	5
 xiaofei he	1	15
-yueting zhuang	1	2
-jingchao ni	1	2
 xiang zhang	1	3
 zhenjie zhang	1	4
-ruichu cai	1	2
 dimitris papadias	1	3
 salah rifai	1	3
 pascal vincent	1	12
 xavier muller	1	3
 yann n. dauphin	1	5
 xavier glorot	1	5
-francisco j. r. ruiz	1	2
 jianyong wang	1	16
 george karypis	1	4
 jon mcauliffe	1	6
 mehryar mohri	1	3
 ameet talwalkar	1	8
-lavanya sita tekumalla	1	2
 quanquan gu	1	21
 zhaoran wang	1	4
 han liu	1	12
 xi chen	1	28
 john d. lafferty	1	8
-long nguyen	1	2
 laks v. s. lakshmanan	1	6
 nicolas ballas	1	3
 yin zheng	1	3
-sungjin ahn	1	2
 julian mcauley	1	13
 tibério s. caetano	1	8
 xuanlong nguyen	1	5
@@ -2685,9 +838,7 @@ jingjing wang	1	6
 magdalena balazinska	1	3
 alex graves	1	3
 navdeep jaitly	1	7
-jason d. lee	1	2
 nathan srebro	1	4
-jaroslav m. fowkes	1	2
 charles sutton	1	11
 jianxin wu	1	3
 yu zhang	1	26
@@ -2697,47 +848,28 @@ alice x. zheng	1	3
 andrew mccallum	1	4
 thomas hofmann	1	17
 katherine a. heller	1	8
-dilan görür	1	2
-jeremy maitin-shepard	1	2
 ui-gum kang	1	9
-ching-yung lin	1	2
-yuqi wang	1	2
-hongzhan huang	1	2
-peter b. mcgarvey	1	2
-cathy h. wu	1	2
-yi zhang	1	2
 quan yuan	1	10
 sriram sankararaman	1	3
 sing bing kang	1	10
 stan sclaroff	1	3
-hoifung poon	1	2
 kristina toutanova	1	7
 takafumi kanamori	1	3
-shohei hido	1	2
 masashi sugiyama	1	4
 jason weston	1	9
 nicolas usunier	1	6
-longhui zhang	1	2
 tao li	1	3
 yan duan	1	3
 rein houthooft	1	3
 john schulman	1	5
-ravi b. konuru	1	2
-ching yung lin	1	2
 jure leskovec	1	34
-yu-jin zhang	1	2
 wei wang	1	13
 daniel zoran	1	3
-frédéric chazal	1	2
-brittany terese fasy	1	2
 fabrizio lecci	1	3
-bertrand michel	1	2
 alessandro rinaldo	1	5
-yuto yamaguchi	1	2
 leman akoglu	1	20
 mary mcglohon	1	3
 yufei tao	1	4
-bin liu	1	2
 richard socher	1	10
 christopher d. manning	1	14
 david a. knowles	1	6
@@ -2746,324 +878,185 @@ leonid sigal	1	5
 hwanjo yu	1	9
 le song	1	42
 ankur p. parikh	1	4
-yu su	1	2
-david salesin	1	2
 marie-catherine de marneffe	1	4
 baharan mirzasoleiman	1	6
 andreas krause	1	7
 hong chen	1	8
 song chun zhu	1	4
-bing zhao	1	2
 spiros papadimitriou	1	11
 wei-lun chao	1	6
 aaditya ramdas	1	4
 brian curless	1	6
 zhihua zhang	1	29
-lise getoor	1	2
-jianfei chen	1	2
 ada wai-chee fu	1	3
 ke wang	1	6
-qi he	1	2
 yiming ma	1	3
 jaewon yang	1	3
 chen wang	1	4
-yongtai zhu	1	2
 baile shi	1	5
-krzysztof koperski	1	2
-giovanni b. marchisio	1	2
 assaf zomet	1	3
 hujun bao	1	4
-duo zhang	1	2
 chengxiang zhai	1	4
-anastasia podosinnikova	1	2
-guo-qiang zhang	1	2
 jiong yang	1	7
-ying zhang	1	2
 saizheng zhang	1	4
 chao zhang	1	13
-william a. p. smith	1	2
 devansh arpit	1	3
-yingbo zhou	1	2
 venu govindaraju	1	3
-mengting wan	1	2
 lance m. kaplan	1	5
 qihang lin	1	3
 dengyong zhou	1	4
 thomas l. griffiths	1	10
 cuiping li	1	4
-shan wang	1	2
 chuan li	1	3
-michael wand	1	2
-chongxuan li	1	2
 daniel scharstein	1	5
 ramin zabih	1	3
-wenjie fu	1	2
 hang su	1	4
-yinpeng dong	1	2
 li-jia li	1	4
 dit-yan yeung	1	9
 jie yang	1	3
 jae-gil lee	1	4
 david jurgens	1	4
-mohammad taher pilehvar	1	2
-benigno uria	1	2
 iain murray	1	7
 joshua b. tenenbaum	1	5
 michail vlachos	1	6
-vittorio castelli	1	2
 honglak lee	1	29
 chuan shi	1	3
 xiangnan kong	1	12
-bai wang	1	2
 hyungsul kim	1	3
-dongqing yang	1	2
-shiwei tang	1	2
-xin chen	1	2
 thorsten joachims	1	4
-yasemin altun	1	2
 dit yan yeung	1	6
-yuxiao dong	1	2
 nitesh v. chawla	1	3
 douglas eck	1	3
-huan gui	1	2
 alan s. willsky	1	3
-sandeep panem	1	2
-romil bansal	1	2
 zhilin yang	1	3
 william w. cohen	1	4
 alberto paccanaro	1	3
 wei zhang	1	4
 james bergstra	1	3
-tommi s. jaakkola	1	2
-lei zhang	1	2
 ling liu	1	9
 calton pu	1	3
 david buttler	1	3
-henrique paques	1	2
-wei tang	1	2
 yasushi sakurai	1	5
 yasuko matsubara	1	5
 shusen wang	1	3
-hui qian	1	2
 chen chen	1	13
 eric horvitz	1	3
 lars backstrom	1	6
 daxin jiang	1	4
-diederik p. kingma	1	2
 tim salimans	1	3
 rafal jozefowicz	1	3
-yining wang	1	2
 lifang he	1	7
 ann b. ragin	1	4
-zhifeng hao	1	2
 ting wang	1	3
-aditya khosla	1	2
 jon m. kleinberg	1	10
-sendhil mullainathan	1	2
-robert f. murphy	1	2
-sahely bhadra	1	2
 aharon ben-tal	1	5
 yves grandvalet	1	4
 andrew tomkins	1	4
 longbing cao	1	3
-alex shyr	1	2
-rajeev ranjan	1	2
-vishal m. patel	1	2
-rama chellappa	1	2
 jacob eisenstein	1	12
-panos kalnis	1	2
-indrajit bhattacharya	1	2
-jimmy lei ba	1	2
-neeraja j. yadwadkar	1	2
-bharath hariharan	1	2
 joseph gonzalez	1	3
-randy h. katz	1	2
 wei chen	1	3
-fredrik d. johansson	1	2
-devdatt p. dubhashi	1	2
 jaime g. carbonell	1	4
 pu wang	1	3
 kathryn blackmond laskey	1	3
 li chen	1	3
-guixiang ma	1	2
-linlin shen	1	2
 sangkyum kim	1	3
-liangliang cao	1	2
-reynold cheng	1	2
 yizhou sun	1	18
 pascale fung	1	3
-dario bertero	1	2
 yan wan	1	3
 anik dey	1	3
 ricky ho yin chan	1	3
 farhad bin siddique	1	3
-chien-sheng wu	1	2
 ruixi lin	1	3
 rob fergus	1	3
-tapani raiko	1	2
 david cohn	1	5
-kriti puniyani	1	2
 daniel barbará	1	3
 neil houlsby	1	3
 josé miguel hernández-lobato	1	8
 nan zhang	1	4
-jianfei cai	1	2
-behnam neyshabur	1	2
 mohammad mahdian	1	6
-bo pang	1	2
 sergei vassilvitskii	1	3
 antoine bordes	1	10
 arun tejasvi chaganty	1	3
 himabindu lakkaraju	1	5
-alexandre de brébisson	1	2
-mark steyvers	1	2
-padhraic smyth	1	2
 david m. chen	1	6
-georges baatz	1	2
-kevin köser	1	2
 sam s. tsai	1	5
 marc pollefeys	1	4
 bernd girod	1	5
 radek grzeszczuk	1	8
-jeffrey a. cruz	1	2
-linda j. savage	1	2
-david m. kramer	1	2
 jin chen	1	3
 duen horng chau	1	6
-baback moghaddam	1	2
-soravit changpinyo	1	2
 boqing gong	1	4
 wei lu	1	5
-smriti bhagat	1	2
 jia-yu pan	1	4
-rok sosič	1	2
 tim weninger	1	4
 yu zheng	1	3
-xiuli ma	1	2
-stuart j. russell	1	2
 guillaume alain	1	3
 zhenhui li	1	5
 ming ji	1	5
 lu an tang	1	4
 yintao yu	1	5
-roland kays	1	2
 senzhang wang	1	3
 li wei	1	4
-haesun park	1	2
 sean gerrish	1	3
-v. glenn tarcea	1	2
-terry e. weymouth	1	2
-barbara mirel	1	2
 h. v. jagadish	1	4
 jiawei zhang	1	7
-xiaolong wang	1	2
-xuan wang	1	2
-jun xu	1	2
-yanzan zhou	1	2
 bamshad mobasher	1	3
-minmin chen	1	2
 kilian q. weinberger	1	4
-sankaran raman	1	2
 jennifer g. dy	1	3
-feng liang	1	2
-seth a. myers	1	2
-naftali kaminski	1	2
 peter l. bartlett	1	3
 xinchen yan	1	3
 jimei yang	1	5
-xin xu	1	2
 patrick flaherty	1	4
 hong cheng	1	17
-bin zhang	1	2
 mari ostendorf	1	3
 shu tao	1	3
 simon osindero	1	5
 edoardo m. airoldi	1	3
 abhimanu kumar	1	3
-chris dyer	1	2
-rakesh shivanna	1	2
 michael r. lyu	1	3
 irwin king	1	3
-xiaoqian jiang	1	2
 yaroslav ganin	1	3
 victor s. lempitsky	1	3
 chen yanover	1	3
 jianguo zhang	1	3
-cordelia schmid	1	2
 xuanhui wang	1	3
-lauren a. hannah	1	2
-warren b. powell	1	2
 mohammad taha bahadori	1	3
-guannan liu	1	2
 hui xiong	1	4
-hengshu zhu	1	2
 xiang ren	1	12
 ahmed el-kishky	1	6
 heng ji	1	8
-neel joshi	1	2
 c. lawrence zitnick	1	3
-bryan perozzi	1	2
 yadong wang	1	4
-wojciech zaremba	1	2
 david lo	1	3
-romain paulus	1	2
 yarin gal	1	4
 rong ge	1	3
-bruno f. ribeiro	1	2
-youngdae kim	1	2
 seung-won hwang	1	3
 wook-shin han	1	4
-yu shi	1	2
-lu qin	1	2
 jeffrey xu yu	1	5
 chengqi zhang	1	3
-xuemin lin	1	2
-charalampos e. tsourakakis	1	2
-ana paula appel	1	2
 jie zhang	1	3
-shengqi yang	1	2
 yinghui wu	1	3
 jian wu	1	3
 sudipta n. sinha	1	4
 drew steedly	1	4
-rui chen	1	2
 vipin kumar	1	4
-james h. faghmous	1	2
-eric fosler-lussier	1	2
-yeqing li	1	2
 junzhou huang	1	3
-naren ramakrishnan	1	2
-arik azran	1	2
-nando de freitas	1	2
 yi yang	1	6
-jianguo li	1	2
 tao wang	1	14
-yimin zhang	1	2
-xiangyu chen	1	2
 matthew d. hoffman	1	4
 daniel jurafsky	1	4
 stephan günnemann	1	3
 seunghak lee	1	4
-jin kyu kim	1	2
 xun zheng	1	3
 qirong ho	1	5
-alexander g. de g. matthews	1	2
-james hensman	1	2
-visesh chari	1	2
 ivan laptev	1	3
 josef sivic	1	3
 kenji fukumizu	1	4
-nilgun donmez	1	2
-aoying zhou	1	2
-shuigeng zhou	1	2
-zengping tian	1	2
 zi huang	1	3
-junjun jiang	1	2
-chao liang	1	2
 john c. duchi	1	3
 lester w. mackey	1	3
 razvan pascanu	1	5
-danilo jimenez rezende	1	2
 koray kavukcuoglu	1	4
 tamara broderick	1	3
 guang dai	1	8
@@ -3072,300 +1065,145 @@ john william paisley	1	3
 hanna m. wallach	1	4
 arijit khan	1	4
 sebastian nowozin	1	4
-zhaoming wu	1	2
 amar shah	1	5
 daniel ramage	1	4
 junhyuk oh	1	3
-xiao lin	1	2
 zheng shao	1	3
 brian sallans	1	3
-minos n. garofalakis	1	2
 purnamrita sarkar	1	5
-andrew w. moore	1	2
-linxi fan	1	2
 manuel gomez rodriguez	1	4
 liang chen	1	8
-hongyu zhao	1	2
 alexandre bouchard-côté	1	8
-norman poh	1	2
-yuanhua lv	1	2
-mingjun zhong	1	2
-nigel goddard	1	2
 zeynep akata	1	4
 bernt schiele	1	5
 zhengzheng xing	1	3
 eamonn j. keogh	1	4
-andrew w. fitzgibbon	1	2
-j. saketha nath	1	2
 zhigang zhu	1	3
 xinran he	1	4
 david kempe	1	4
-yonatan belinkov	1	2
-wei-ning hsu	1	2
-mitra mohtarami	1	2
-james r. glass	1	2
 benjamin sapp	1	6
 yasutaka furukawa	1	3
-nati srebro	1	2
 ashwinkumar badanidiyuru	1	3
 amin karbasi	1	5
-qing liu	1	2
-jing wang	1	2
 dong wang	1	4
 chenguang wang	1	5
-zheng guo	1	2
-tian fang	1	2
 honghui zhang	1	3
 qinping zhao	1	4
-long quan	1	2
 kristen grauman	1	8
 arnaud doucet	1	3
 chi jin	1	5
 sham m. kakade	1	5
 praneeth netrapalli	1	3
-aaron sidford	1	2
-animashree anandkumar	1	2
 bo dai	1	3
 bo xie	1	5
-jimmy ba	1	2
-ruslan salakhudinov	1	2
 lei han	1	4
-chris h. q. ding	1	2
 mohammad m. masud	1	4
 latifur khan	1	4
 bhavani m. thuraisingham	1	4
 daphne koller	1	4
 min li	1	8
-dawei yin	1	2
-changsung kang	1	2
-meiyu lu	1	2
-divyakant agrawal	1	2
 ming zhou	1	3
 enhong chen	1	3
-mingyuan zhou	1	2
 v. s. subrahmanian	1	3
 honglei zhuang	1	3
-yongjie cai	1	2
-ping ji	1	2
-qing he	1	2
 gal chechik	1	4
-amir globerson	1	2
-naftali tishby	1	2
 keith henderson	1	3
 christopher j. pal	1	5
-jianying hu	1	2
 shahram ebadollahi	1	3
 caglar gulcehre	1	4
 daniel ting	1	3
 erik b. sudderth	1	4
-nilesh n. dalvi	1	2
 shebuti rayana	1	4
 xiaoxiao guo	1	3
 richard l. lewis	1	3
 satinder p. singh	1	4
-sam t. roweis	1	2
-nicholas c. valler	1	2
-michalis faloutsos	1	2
-yi wu	1	2
 qi liu	1	3
 qiang yang	1	9
 francesco falciani	1	3
-sebastian j. vollmer	1	2
 mehrdad farajtabar	1	6
 manuel gomez-rodriguez	1	5
-isabel valera	1	2
 ye liu	1	4
 fenglong ma	1	3
 lu su	1	6
-ravindran kannan	1	2
 xiaowu chen	1	4
-bin zhou	1	2
-umar syed	1	2
-yi wang	1	2
-lizhu zhou	1	2
-chanhyun kang	1	2
-jinoh oh	1	2
-huishuai zhang	1	2
-yingbin liang	1	2
 vinod nair	1	7
 agma j. m. traina	1	5
 caetano traina	1	4
-christoph lippert	1	2
 karsten m. borgwardt	1	3
 mrinmaya sachan	1	4
-eduard h. hovy	1	2
-seungwhan moon	1	2
 liping liu	1	4
 thomas g. dietterich	1	3
-kyle kastner	1	2
 rajat raina	1	3
-david f. gleich	1	2
 zhoujun li	1	4
 james tin-yau kwok	1	3
 frank wood	1	3
-jan gasthaus	1	2
 meng qu	1	4
-eric p. bennett	1	2
 matthew t. uyttendaele	1	3
-kobi levi	1	2
 jan puzicha	1	3
 bolin ding	1	9
-guillaume desjardins	1	2
-karen simonyan	1	2
 wu-jun li	1	6
-justin ma	1	2
-stefan savage	1	2
-geoffrey m. voelker	1	2
-jeffrey regier	1	2
-andrew c. miller	1	2
-dustin lang	1	2
-david j. schlegel	1	2
-prabhat	1	2
 yutian chen	1	3
-dino sejdinovic	1	2
-anuj goyal	1	2
-p. punitha	1	2
-frank hopfgartner	1	2
-joemon m. jose	1	2
 stephan mandt	1	4
 arthur gretton	1	5
-hector garcia-molina	1	2
 yuting zhang	1	4
-hervé bourlard	1	2
-urvashi khandelwal	1	2
-brandon norick	1	2
 hongzhi yin	1	3
 ling chen	1	3
-yan liu	1	2
-lillian lee	1	2
-abhinav gupta	1	2
-larry s. davis	1	2
 dimitrios gunopulos	1	6
-sundararajan sellamanickam	1	2
-yichuan zhang	1	2
 xiaojun chang	1	3
 mingsheng long	1	4
 jianmin wang	1	5
-huan chang	1	2
 yaliang li	1	5
 bo zhao	1	11
-yu-ru lin	1	2
-nan cao	1	2
-shixia liu	1	2
-randall davis	1	2
 kevin p. murphy	1	3
 yuan yuan	1	4
-zhiwei zhang	1	2
 holger schwenk	1	4
 trapit bansal	1	3
 chandra kambhamettu	1	3
-david s. rosenblum	1	2
 olivier delalleau	1	4
 nicolas le roux	1	6
-feifei li	1	2
 raymond t. ng	1	3
-jing peng	1	2
-xin huang	1	2
 fangbo tao	1	3
 clare r. voss	1	4
-guyue zhou	1	2
-kang yang	1	2
-volodymyr mnih	1	2
-timothy p. lillicrap	1	2
-chelsea finn	1	2
-lo"ic barrault	1	2
 jason yosinski	1	3
 rodolphe jenatton	1	4
-lei zheng	1	2
 evangelos e. papalexakis	1	5
 tom m. mitchell	1	4
 partha pratim talukdar	1	4
 nicholas d. sidiropoulos	1	3
-adway mitra	1	2
-soma biswas	1	2
 hanjun dai	1	3
 pedro o. s. vaz de melo	1	3
 antonio alfredo ferreira loureiro	1	3
-marios hadjieleftheriou	1	2
-tianyi wu	1	2
-amrita saha	1	2
-edouard grave	1	2
-adarsh kowdle	1	2
 tsuhan chen	1	4
 minghui qiu	1	3
-marina sokolova	1	2
 hema swetha koppula	1	3
-alp kucukelbir	1	2
 dustin tran	1	4
 rajesh ranganath	1	7
-andrew gelman	1	2
-yazhou ren	1	2
-guoji zhang	1	2
 wenwu zhu	1	3
-vinayak rao	1	2
 tong zhang	1	4
 robert nishihara	1	3
-jian cheng	1	2
-hanqing lu	1	2
-shengcai liao	1	2
-zhen lei	1	2
 stan z. li	1	3
-xiaoxin yin	1	2
-jingyi guo	1	2
-prabhakar raghavan	1	2
-jing zhang	1	2
-juanzi li	1	2
 houping xiao	1	3
 zhi-hua zhou	1	3
-novi quadrianto	1	2
-ashesh jain	1	2
-amir roshan zamir	1	2
 david j. weiss	1	3
-roger b. grosse	1	2
 jialu liu	1	5
-qing zhang	1	2
-evimaria terzi	1	2
-frédéric blain	1	2
-tahira naseem	1	2
-benjamin snyder	1	2
-regina barzilay	1	2
 sinead a. williamson	1	3
-partha niyogi	1	2
 yuhuai wu	1	3
-spence green	1	2
-michael a. gelbart	1	2
 matthew w. hoffman	1	3
 junwei luo	1	3
 jianxin wang	1	4
 fang-xiang wu	1	4
 jordan l. boyd-graber	1	4
-jean-baptiste alayrac	1	2
-william l. hamilton	1	2
-joelle pineau	1	2
-de-nian yang	1	2
-ming-syan chen	1	2
 chengtao li	1	4
 suvrit sra	1	6
-taylor cassidy	1	2
 luo luo	1	3
-yan li	1	2
-srinivasan parthasarathy	1	2
 kaiqi huang	1	3
 tieniu tan	1	3
 kai zhang	1	3
-pengyuan wang	1	2
-yuan qi	1	2
-bin he	1	2
 gabriel takacs	1	4
 vijay chandrasekhar	1	4
 aris anagnostopoulos	1	3
 jonathan chang	1	5
-rakshit trivedi	1	2
 shi zhi	1	4
-gholamreza haffari	1	2
-claudia rangel	1	2
-andrew gordon wilson	1	2
-donghui yan	1	2
 ling huang	1	4
 joseph k. bradley	1	3
 zhenghao chen	1	3
@@ -3373,206 +1211,41 @@ pang wei koh	1	3
 yangqiu song	1	5
 dan roth	1	3
 ming zhang	1	4
-guofei jiang	1	2
 léon bottou	1	3
 jie zhou	1	5
-yang zhou	1	2
 adriana romero	1	3
-sanjiv kumar	1	2
-matt revelle	1	2
-aditya johri	1	2
 gang chen	1	3
-meihui zhang	1	2
-hongyan liu	1	2
 marina danilevsky	1	4
 haixun wang	1	5
-finale doshi-velez	1	2
-yabo xu	1	2
-rong she	1	2
-aurelien lucchi	1	2
 bo long	1	3
 zhongfei zhang	1	3
-lu chen	1	2
 christian s. jensen	1	3
-shakir mohamed	1	2
-siyuan liu	1	2
-jonas paulsen	1	2
-eivind hovig	1	2
-bernhard schoelkopf	1	2
 kihyuk sohn	1	7
-nanning zheng	1	2
 junming yin	1	3
-patrick gallinari	1	2
-hao ding	1	2
-bryan catanzaro	1	2
-mike chrzanowski	1	2
-erich elsen	1	2
-jesse engel	1	2
-awni y. hannun	1	2
-yang liu	1	2
-sanjeev satheesh	1	2
-shubho sengupta	1	2
 yan xie	1	3
 man lan	1	3
-frédo durand	1	2
-jun yan	1	2
-zheng chen	1	2
-sajid m. siddiqi	1	2
-geoffrey j. gordon	1	2
-xiaoyun wu	1	2
 ee-peng lim	1	3
-deepak s. turaga	1	2
-pierre-antoine manzagol	1	2
-matei zaharia	1	2
 lidan wang	1	3
 ting chen	1	3
 slav petrov	1	3
-david hallac	1	2
-stephen p. boyd	1	2
-yuriy reznik	1	2
-hau chan	1	2
-junhua mao	1	2
-alan l. yuille	1	2
-simon baker	1	2
 shuang li	1	3
-hang li	1	2
-carlo gatta	1	2
-ke zhang	1	2
-jérôme louradour	1	2
-xiang cheng	1	2
-bistra n. dilkina	1	2
 jingbo shang	1	4
 wenzhu tong	1	3
-jian peng	1	2
-chao shen	1	2
-changshui zhang	1	2
 emanuel todorov	1	4
 rion snow	1	4
-de-chuan zhan	1	2
-yuan jiang	1	2
-juhua hu	1	2
-johan ugander	1	2
 virginia smith	1	3
-martin takáč	1	2
-jonathan terhorst	1	2
-fei-fei li	1	2
-cheng sheng	1	2
-fabio fumarola	1	2
-talya meltzer	1	2
-myunghwan kim	1	2
-jun wang	1	2
-xin li	1	2
 bing liu	1	5
-william fithian	1	2
 sida i. wang	1	3
-h. ma	1	2
-hong ge	1	2
-nello cristianini	1	2
-jian tang	1	2
 qiaozhu mei	1	7
-tanwistha saha	1	2
-huzefa rangwala	1	2
-niao he	1	2
 sivaraman balakrishnan	1	3
-shiwan zhao	1	2
-xiatian zhang	1	2
-jiajun bu	1	2
-renaud delbru	1	2
-nickolai toupikov	1	2
-michele catasta	1	2
-giovanni tummarello	1	2
-bernhard schölkopf	1	2
-ying wei	1	2
-yi zhen	1	2
-ben liblit	1	2
-alex aiken	1	2
-roy frostig	1	2
-sujith ravi	1	2
-haibin ling	1	2
-yun s. song	1	2
 wenling shang	1	3
-shuyang lin	1	2
-jianhua yin	1	2
-yuanyuan liu	1	2
-fanhua shang	1	2
-james cheng	1	2
-alexandre lacoste	1	2
 mario marchand	1	3
-françois laviolette	1	2
 cindy xide lin	1	3
-george brova	1	2
-yoshiki suzuki	1	2
-edward choi	1	2
-jiaguang sun	1	2
-abhimanyu das	1	2
-yen-chi chen	1	2
-c.-c. jay kuo	1	2
-sridhar mahadevan	1	2
-nikos karampatziakis	1	2
 jian xu	1	3
-xiaoyuan wang	1	2
-olexa bilaniuk	1	2
-robert laganière	1	2
 dale schuurmans	1	4
-marcin moczulski	1	2
-misha denil	1	2
-runsheng chen	1	2
-yong rui	1	2
-congfu xu	1	2
-pascal germain	1	2
-ambuj k. singh	1	2
-hyung-jeong yang	1	2
-pinar duygulu	1	2
-alex kulesza	1	2
-limsoon wong	1	2
-fengjiao wang	1	2
-hadi daneshmand	1	2
 kuzman ganchev	1	3
-joão graça	1	2
-jennifer gillenwater	1	2
-yann lecun	1	2
-mrinal kanti das	1	2
-fan guo	1	2
-david a. patterson	1	2
-eran halperin	1	2
-zhengzhang chen	1	2
-fabian l. wauthier	1	2
-atsushi shibagaki	1	2
-yao zhang	1	2
-adam p. arkin	1	2
-william stafford noble	1	2
-lawrence carin	1	2
 fernando pereira	1	3
-zografoula vagena	1	2
-luming zhang	1	2
-timothee cour	1	2
 kirthevasan kandasamy	1	3
-akshay krishnamurthy	1	2
-barnabás póczos	1	2
-li yao	1	2
-yue cao	1	2
-chowdhury farhan ahmed	1	2
-syed khairuzzaman tanbeer	1	2
-byeong-soo jeong	1	2
-young-koo lee	1	2
-brendan j. frey	1	2
-junjie yan	1	2
-ning yang	1	2
-aik choon tan	1	2
-daniel q. naiman	1	2
-donald geman	1	2
-raimond l. winslow	1	2
-robert b. west	1	2
-fuzhen zhuang	1	2
-bin wu	1	2
-jingen liu	1	2
-mubarak shah	1	2
-charles dugas	1	2
-claude nadeau	1	2
-rené garcia	1	2
-dian yu	1	2
-michael brudno	1	2
-mohammad norouzi	1	2
 computer vision and pattern recognition	2	164
 international conference on management of data	2	120
 journal of machine learning research	2	106
