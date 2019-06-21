@@ -40,7 +40,7 @@ argsDict['data_sub'] = 'toy'
 argsDict['query_file'] = 'intermediate/query.json'
 argsDict['meta_json'] = 'intermediate/meta.json'
 argsDict['network_file'] = 'intermediate/network.json'
-argsDict['data_dir'] = '../data/'
+argsDict['data_dir'] = 'data/'
 argsDict['contrast_q'] = 'intermediate/contrast_q.json'
 argsDict['contrast_n'] = 'intermediate/contrast_n.json'
 def make_dir(data_name):
