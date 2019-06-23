@@ -1,13 +1,12 @@
-def data_config(data_name):
-    argsDict = {}
-    argsDict['meta_json'] = 'intermediate/meta.json'
-    argsDict['pickle_file'] = 'intermediate/data.pickle'
+def data_config(args, dataset='dblp'):
+    args['data_dir'] = 'data/'
+    args['data_name'] = dataset
+    args['meta_file'] = args['data_dir'] + args['data_name'] + '/' + 'meta.dat'
+    args['node_file'] = args['data_dir'] + args['data_name'] + '/' + 'node.dat'
+    args['link_file'] = args['data_dir'] + args['data_name'] + '/' + 'link.dat'
+    args['label_file'] = args['data_dir'] + args['data_name'] + '/' + 'label.dat'
 
-    argsDict['data_dir'] = 'data/'
-    argsDict['data_name'] = data_name
-    argsDict['meta_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + 'meta.dat'
-    argsDict['node_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + 'node.dat'
-    argsDict['link_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + 'link.dat'
-    argsDict['label_file'] = argsDict['data_dir'] + argsDict['data_name'] + '/' + 'label.dat'
-
-    return argsDict
+args = {}
+args['meta_json'] = 'intermediate/meta.json'
+args['query_json'] = 'intermediate/query.json'
+args['data_pickle'] = 'intermediate/data.pickle'

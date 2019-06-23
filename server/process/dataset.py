@@ -80,9 +80,8 @@ class Dataset(object):
 		del self.nodes_tmp
 
 	def load(self):
-		if os.path.isfile(self.args['pickle_file']):
-			file = open(self.args['pickle_file'], 'rb')
-			# tmp = pickle.load(open(args['pickle_file'], 'r'))
+		if os.path.isfile(self.args['data_pickle']):
+			file = open(self.args['data_pickle'], 'rb')
 			tmp = pickle.load(file, encoding='latin1')
 			self.__dict__.update(tmp)
 			return True
@@ -90,7 +89,7 @@ class Dataset(object):
 			return False
 
 	def save(self):
-		pickle.dump(self.__dict__, open(self.args['pickle_file'], 'wb'))
+		pickle.dump(self.__dict__, open(self.args['data_pickle'], 'wb'))
 
 
 def test(args):

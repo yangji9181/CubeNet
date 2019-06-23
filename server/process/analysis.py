@@ -1,4 +1,9 @@
+import json
 from collections import defaultdict
+
+import networkx as nx
+from networkx.readwrite import json_graph
+
 
 def exploration(query, data):
     network = {}
@@ -12,14 +17,12 @@ def exploration(query, data):
                 nodes[t] |= set(data.labels[t][label])
         else:
             nodes[t] = set(data.nodes[t].keys())
-
         for n in nodes[t]:
             supernode[n] = n
         if 'merges' in query and t in query['merges'].keys():
             for label in query['merges'][t]:
                 for n in data.labels[t][label]:
                     supernode[n] = 's/'+t+'/'+label
-
 
     #compute filters by intersection
     for t in nodes.keys():
@@ -30,7 +33,6 @@ def exploration(query, data):
                     if n in data.links[link_t].keys():
                         tmp |= set(data.links[link_t][n].keys())
                 nodes[data.meta['link'][link_t][1]] &= tmp
-
 
     #extract links
     links = defaultdict(int)
@@ -66,6 +68,57 @@ def exploration(query, data):
                 network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.meta['label'][t][n.split('/')[2]][0], 'size': node_size[n]})
 
     return network
+
+def properties(dim):
+    NUM_PROPERTIES = 3
+    from server.process.config import args
+    meta = json.load(open(args['meta_json'], 'r'))
+    from server.process.dataset import Dataset
+    data = Dataset(args)
+    query = json.load(open(args['query_json'], 'r'))
+
+    # remove the contrasted node type from the subnetworks
+    if dim in query['nodes']:
+        query['nodes'].remove(dim)
+
+    # remove the contrasted node type from filters
+    if dim in query['filters']:
+        query['filters'].pop(dim)
+
+    # initialize property list
+    prop = [{} for i in range(NUM_PROPERTIES)]
+    prop[0]['name'] = 'size'
+    prop[1]['name'] = 'radius'
+    prop[2]['name'] = 'density'
+    prop[0]['labels'] = []
+    prop[1]['labels'] = []
+    prop[2]['labels'] = []
+
+    for i in meta['label'][dim]:
+        # retrieve network connected to the contrasted node
+        query['filters'][dim] = [i]
+        network = exploration(query, data)
+        
+        sub_graph = json_graph.node_link_graph(network)
+        gen = nx.connected_component_subgraphs(sub_graph)
+
+        if len(network['nodes']) > 0:
+            connected_graph = max(gen, key=len)
+            prop[0]['labels'].append({'name': meta['label'][dim][i][0], 'val': len(network['nodes'])})
+            prop[1]['labels'].append({'name': meta['label'][dim][i][0], 'val': nx.radius(connected_graph)})
+            prop[2]['labels'].append({'name': meta['label'][dim][i][0], 'val': nx.density(connected_graph)})
+        else:
+            prop[0]['labels'].append({'name': meta['label'][dim][i][0], 'val': 0})
+            prop[1]['labels'].append({'name': meta['label'][dim][i][0], 'val': 0})
+            prop[2]['labels'].append({'name': meta['label'][dim][i][0], 'val': 0})
+
+        query['filters'].pop(dim)
+
+    results = {}
+    results['node_type'] = meta['node'][dim]
+    results['properties'] = prop
+
+    return results
 
 '''
 def test(args):

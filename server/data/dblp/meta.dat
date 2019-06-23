@@ -9,33 +9,38 @@ l	1	0	1	studied by (phrase-paper-author)
 l	2	0	2	appear in (phrase-paper-venue)
 l	3	0	3	appear in (phrase-paper-year)
 l	4	1	1	co-author (author-paper-author)
-l	5	1	2	publish in (author-paper-venue)
-l	6	1	3	active in (author--paper-year)
+l	5	1	0	study (author-paper-phrase)
+l	6	1	2	publish in (author-paper-venue)
+l	7	1	3	active in (author--paper-year)
+l	8	2	0	include (venue-paper-phrase)
+l	9	2	1	include (venue-paper-author)
+l	10	3	0	include (year-paper-phrase)
+l	11	3	1	include (year-paper-author)
 #label	node_type	label_id	parent_id	label_name
 s	0	0	0	method
 s	0	1	1	application
 s	0	2	2	metric
-s	1	0	0	group_andrew_ng
-s	1	1	1	group_christos_faloutsos
-s	1	2	2	group_david_blei
-s	1	3	3	group_eric_xing
-s	1	4	4	group_geoffrey_hinton
-s	1	5	5	group_jiawei_han
-s	1	6	6	group_john_lafferty
-s	1	7	7	group_jon_kleinberg
-s	1	8	8	group_jure_leskovec
-s	1	9	9	group_michael_jordan
-s	1	10	10	group_philip_yu
-s	1	11	11	group_yoshua_bengio
-s	2	0	0	data mining
-s	2	1	1	machine learning
-s	2	2	2	database
-s	2	3	3	information retrieval
-s	2	4	4	natural language processing
-s	2	5	5	computer vision
-s	2	6	6	artificial intelligence
-s	2	7	7	bioinformatics
-s	3	0	0	2000
-s	3	1	1	2005
-s	3	2	2	2010
-s	3	3	3	2015
+s	1	0	0	Andrew Ng
+s	1	1	1	Christos Faloutsos
+s	1	2	2	David Blei
+s	1	3	3	Eric Xing
+s	1	4	4	Geoffrey Hinton
+s	1	5	5	Jiawei Han
+s	1	6	6	John Lafferty
+s	1	7	7	Jon Kleinberg
+s	1	8	8	Jure Leskovec
+s	1	9	9	Michael Jordan
+s	1	10	10	Philip Yu
+s	1	11	11	Yoshua Bengio
+s	2	0	0	Data Mining
+s	2	1	1	Machine Learning
+s	2	2	2	Database
+s	2	3	3	Information Retrieval
+s	2	4	4	NLP
+s	2	5	5	Computer Vision
+s	2	6	6	Artificial Intelligence
+s	2	7	7	Bioinformatics
+s	3	0	0	2000's
+s	3	1	1	2005's
+s	3	2	2	2010's
+s	3	3	3	2015's
