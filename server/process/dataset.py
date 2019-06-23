@@ -28,6 +28,10 @@ class Dataset(object):
 				self.meta['link'][tokens[1]] = (tokens[2], tokens[3])
 			elif tokens[0] == 's':
 				self.meta['label'][tokens[1]][tokens[2]] = (tokens[4], tokens[3])
+		json.dump(self.meta,
+			      open(self.args['meta_json'], 'w'),
+			      indent=4,
+		          separators=(',', ': '))
 
 	def read_node(self):
 		self.nodes = defaultdict(dict)
@@ -71,8 +75,8 @@ class Dataset(object):
 					unused.append(tokens[0])
 			else:
 				unused.append(tokens[0])
-		print('unused labels:' + str(unused))
-		print('unlabeled nodes:' + str(unlabeled))
+		#print('unused labels:' + str(unused))
+		#print('unlabeled nodes:' + str(unlabeled))
 		del self.nodes_tmp
 
 	def load(self):

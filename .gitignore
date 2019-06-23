@@ -1,3 +1,10 @@
 *.DS_Store
+*.Trashes
 *.pyc
 *__pycache__*
+.idea
+.env
+.venv
+env/
+venv/
+ENV/

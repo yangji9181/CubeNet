@@ -1,52 +1,27 @@
 import os
 
 from flask import Flask, request, json, render_template, jsonify
+from server.process.dataset import Dataset
+from server.process.config import data_config
+from server.process.analysis import exploration
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def get():
+    print("Initialization success!")
+    return render_template('index.html')
 
 @app.route('/query', methods=['POST'])
 def post():
     req_data = request.get_json()
-    data_name = req_data['dataset']
-    data_name_record = open('intermediate/dataname.txt', 'w')
-    data_name_record.write(data_name)
-    data_name_record.close()
-    # print("req_data" + str(req_data))
-    # print(req_data)
-    # from server.process.test_import import Dataset
-    # data = Dataset()
-    # data.test_func()
-    # with open(os.path.join('intermediate/', 'short_text.txt')) as f:
-    #     print(f)
-    # # return "hi from server"
-    #
-    json.dump(req_data['query'], open(os.path.join('intermediate/', 'query.json'), 'w'))
-    from server.process.dataset import Dataset
-    from server.process.config import args, make_dir
-    make_dir(data_name)
+    query = req_data['query']
+    dataname = query['dataset']
+    args = data_config(dataname)
     data = Dataset(args)
-    from server.process.analysis import analysis
-    analysis(data, args)
-    # d = {"status": "success"}
-    res_network = open(os.path.join('intermediate/', 'network.json'), 'r')
-    res = json.load(res_network)
-    # print (res)
-    print('success return')
-    return jsonify(res)
-
-# @app.route('/test', methods=['POST', 'GET'])
-# def test():
-#     req_data = request.get_json(force=True)
-#     print("req_data" + str(request.data))
-#     print("from test")
-#     return "success"
-
-@app.route('/', methods=['GET'])
-def get():
-    print("get!!")
-    return render_template('index.html')
-
+    network = exploration(req_data['query'], data)
+    print(network)
+    return jsonify(network)
 
 @app.route('/contrast', methods=['POST'])
 def contrast():
