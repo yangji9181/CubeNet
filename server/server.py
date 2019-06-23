@@ -20,7 +20,6 @@ def post():
     args = data_config(dataname)
     data = Dataset(args)
     network = exploration(req_data['query'], data)
-    print(network)
     return jsonify(network)
 
 @app.route('/contrast', methods=['POST'])
