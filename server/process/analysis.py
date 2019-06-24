@@ -45,7 +45,7 @@ def exploration(query, data):
                     node_size[supernode[n1]] += len(n2set)
                     for n2 in n2set:
                         links[supernode[n1]+'_'+supernode[n2]] += int(data.links[link_t][n1][n2])
-                        node_size[supernode[n2]] += 1
+                        #node_size[supernode[n2]] += 1
 
     #collect links
     network['links'] = []
@@ -77,9 +77,9 @@ def properties(dim):
     data = Dataset(args)
     query = json.load(open(args['query_json'], 'r'))
 
-    # remove the contrasted node type from the subnetworks
-    if dim in query['nodes']:
-        query['nodes'].remove(dim)
+    # add the contrasted node type to the subnetworks
+    if dim not in query['nodes']:
+        query['nodes'].append(dim)
 
     # remove the contrasted node type from filters
     if dim in query['filters']:
@@ -119,6 +119,76 @@ def properties(dim):
     results['properties'] = prop
 
     return results
+
+def patterns(dim):
+    THRESH_POP = 0.3
+    THRESH_DIS = 0.2
+    THRESH_INT = 2
+    from server.process.config import args
+    meta = json.load(open(args['meta_json'], 'r'))
+    from server.process.dataset import Dataset
+    data = Dataset(args)
+    query = json.load(open(args['query_json'], 'r'))
+
+    # add the contrasted node type to the subnetworks
+    if dim not in query['nodes']:
+        query['nodes'].append(dim)
+
+    # remove the contrasted node type from filters
+    if dim in query['filters']:
+        query['filters'].pop(dim)
+
+    counts = defaultdict(dict)
+    node_type = {}
+    node_name = {}
+    for i in meta['label'][dim]:
+        # retrieve network connected to the contrasted node
+        query['filters'][dim] = [i]
+        query['merges'][dim] = [i]
+        network = exploration(query, data)
+        links = {}
+        for link in network['links']:
+            links[link['source']+'_'+link['target']] = link['weight']
+        for node in network['nodes']:
+            if node['id'] not in node_type:
+                node_type[node['id']] = node['type']
+                node_name[node['id']] = node['name']
+            if (node['id']+'_s/'+dim+'/'+i) in links:
+                counts[node['id']][i] = links[node['id']+'_s/'+dim+'/'+i]
+                if 'total' in counts[node['id']]:
+                    counts[node['id']]['total'] += links[node['id']+'_s/'+dim+'/'+i]
+                else:
+                    counts[node['id']]['total'] = links[node['id']+'_s/'+dim+'/'+i]
+
+    networks = {}
+    for i in meta['label'][dim]:
+        networks[i] = {'nodes':[], 'links':[]}
+        for node_id in counts.keys():
+            if i in counts[node_id]:
+                if counts[node_id]['total'] > THRESH_POP * len(meta['label'][dim]) \
+                        and counts[node_id][i] > THRESH_DIS * counts[node_id]['total']:
+                    networks[i]['nodes'].append({
+                                                 'id': node_id,
+                                                 'type': node_type[node_id],
+                                                 'name': node_name[node_id],
+                                                 'size': counts[node_id][i]})
+        for node_1 in networks[i]['nodes']:
+            for node_2 in networks[i]['nodes']:
+                if node_1['id'] != node_2['id']:
+                    if (node_1['id']+'_'+node_2['id']) in links or \
+                            (i in counts[node_1['id']] and \
+                            i in counts[node_2['id']] and \
+                            counts[node_1['id']][i] > THRESH_INT and \
+                            counts[node_2['id']][i] > THRESH_INT):
+                        weight = min(counts[node_1['id']][i], counts[node_2['id']][i])
+                        if (node_1['id']+'_'+node_2['id']) in links:
+                            weight = max(links[node_1['id']+'_'+node_2['id']], weight)
+                        networks[i]['links'].append({
+                                                     'source': node_1['id'],
+                                                     'target': node_2['id'],
+                                                     'weight': weight})
+
+    return(networks)
 
 '''
 def test(args):

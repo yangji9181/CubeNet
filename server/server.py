@@ -3,7 +3,7 @@ import os
 from flask import Flask, request, json, render_template, jsonify
 from server.process.dataset import Dataset
 from server.process.config import data_config
-from server.process.analysis import exploration, properties
+from server.process.analysis import exploration, properties, patterns
 
 app = Flask(__name__)
 
