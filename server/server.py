@@ -12,6 +12,9 @@ def get():
     print("Initialization success!")
     return render_template('index.html')
 
+@app.route('/meta', methods=['POST'])
+#
+
 @app.route('/query', methods=['POST'])
 def post():
     req_data = request.get_json()
