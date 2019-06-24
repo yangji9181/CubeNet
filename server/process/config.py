@@ -5,6 +5,7 @@ def data_config(args, dataset='dblp'):
     args['node_file'] = args['data_dir'] + args['data_name'] + '/' + 'node.dat'
     args['link_file'] = args['data_dir'] + args['data_name'] + '/' + 'link.dat'
     args['label_file'] = args['data_dir'] + args['data_name'] + '/' + 'label.dat'
+    args['init_file'] = args['data_dir'] + args['data_name'] + '/' + 'init.dat'
 
 args = {}
 args['meta_json'] = 'intermediate/meta.json'

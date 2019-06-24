@@ -1,9 +1,21 @@
 {
     "node": {
-        "0": "phrase",
-        "1": "author",
-        "2": "venue",
-        "3": "year"
+        "0": {
+            "name": "phrase",
+            "cube": false
+        },
+        "1": {
+            "name": "author",
+            "cube": true
+        },
+        "2": {
+            "name": "venue",
+            "cube": true
+        },
+        "3": {
+            "name": "year",
+            "cube": true
+        }
     },
     "link": {
         "0": [

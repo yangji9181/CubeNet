@@ -1,8 +1,7 @@
 import os
 
 from flask import Flask, request, json, render_template, jsonify
-from server.process.dataset import Dataset
-from server.process.config import data_config
+from server.process.dataset import Dataset, initialization
 from server.process.analysis import exploration, properties, patterns
 
 app = Flask(__name__)
@@ -12,19 +11,28 @@ def get():
     print("Initialization success!")
     return render_template('index.html')
 
-@app.route('/meta', methods=['POST'])
-#
+@app.route('/init', methods=['POST'])
+def init():
+    req_data = request.get_json()
+    obj = initialization(req_data['dataset'])
+    print(obj)
+    return jsonify(obj)
+
 
 @app.route('/query', methods=['POST'])
-def post():
+def query():
     req_data = request.get_json()
     query = req_data['query']
     from server.process.config import args
-    data_config(args, query['dataset'])
-    json.dump(query, open(args['query_json'], 'w'))
+    json.dump(query,
+              open(args['query_json'], 'w'),
+              indent=4,
+              separators=(',', ': '))
+    from server.process.dataset import Dataset
     data = Dataset(args)
     network = exploration(req_data['query'], data)
     return jsonify(network)
+
 
 @app.route('/contrast', methods=['POST'])
 def contrast():
@@ -32,6 +40,12 @@ def contrast():
     results = properties(req_data['node'])
     return jsonify(results)
 
+
+@app.route('/pattern', methods=['POST'])
+def pattern():
+    req_data = request.get_json()
+    results = patterns(req_data['node'])
+    return jsonify(results)
 
 if __name__ == '__main__':
    app.run(debug = True)

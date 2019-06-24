@@ -12,7 +12,7 @@ def exploration(query, data):
     #initialize node sets of each type
     for t in data.meta['node'].keys():
         nodes[t] = set()
-        if t in query['filters'].keys():
+        if 'filters' in query and t in query['filters'].keys():
             for label in query['filters'][t]:
                 nodes[t] |= set(data.labels[t][label])
         else:
@@ -61,11 +61,11 @@ def exploration(query, data):
             sup = set()
             for n in nodes[t]:
                 if supernode[n] == n:
-                    network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.nodes[t][n], 'size': node_size[n]})
+                    network['nodes'].append({'id': n, 'type': data.meta['node'][t]['name'], 'name': data.nodes[t][n], 'size': node_size[n]})
                 else:
                     sup.add(supernode[n])
             for n in sup:
-                network['nodes'].append({'id': n, 'type': data.meta['node'][t], 'name': data.meta['label'][t][n.split('/')[2]][0], 'size': node_size[n]})
+                network['nodes'].append({'id': n, 'type': data.meta['node'][t]['name'], 'name': data.meta['label'][t][n.split('/')[2]][0], 'size': node_size[n]})
 
     return network
 
@@ -73,9 +73,9 @@ def properties(dim):
     NUM_PROPERTIES = 3
     from server.process.config import args
     meta = json.load(open(args['meta_json'], 'r'))
+    query = json.load(open(args['query_json'], 'r'))
     from server.process.dataset import Dataset
     data = Dataset(args)
-    query = json.load(open(args['query_json'], 'r'))
 
     # add the contrasted node type to the subnetworks
     if dim not in query['nodes']:
@@ -115,7 +115,7 @@ def properties(dim):
         query['filters'].pop(dim)
 
     results = {}
-    results['node_type'] = meta['node'][dim]
+    results['node_type'] = meta['node'][dim]['name']
     results['properties'] = prop
 
     return results
@@ -124,11 +124,12 @@ def patterns(dim):
     THRESH_POP = 0.3
     THRESH_DIS = 0.2
     THRESH_INT = 2
+
     from server.process.config import args
     meta = json.load(open(args['meta_json'], 'r'))
+    query = json.load(open(args['query_json'], 'r'))
     from server.process.dataset import Dataset
     data = Dataset(args)
-    query = json.load(open(args['query_json'], 'r'))
 
     # add the contrasted node type to the subnetworks
     if dim not in query['nodes']:

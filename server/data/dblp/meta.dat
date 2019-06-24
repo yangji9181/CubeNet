@@ -1,8 +1,8 @@
-#node	id	node_type
-n	0	phrase
-n	1	author
-n	2	venue
-n	3	year
+#node	id	node_type	as_dim
+n	0	phrase	0
+n	1	author	1
+n	2	venue	1
+n	3	year	1
 #link	id	node_type_1	node_type_2	link_type
 l	0	0	0	co-occur (phrase-paper-phrase)
 l	1	0	1	studied by (phrase-paper-author)
