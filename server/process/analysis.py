@@ -126,10 +126,10 @@ def patterns(dim):
     THRESH_INT = 2
 
     from server.process.config import args
-    meta = json.load(open(args['meta_json'], 'r'))
     query = json.load(open(args['query_json'], 'r'))
     from server.process.dataset import Dataset
     data = Dataset(args)
+    meta = data.meta
 
     # add the contrasted node type to the subnetworks
     if dim not in query['nodes']:
@@ -163,18 +163,18 @@ def patterns(dim):
 
     networks = {}
     for i in meta['label'][dim]:
-        networks[i] = {'nodes':[], 'links':[]}
+        networks[meta['label'][dim][i][0]] = {'nodes':[], 'links':[]}
         for node_id in counts.keys():
             if i in counts[node_id]:
                 if counts[node_id]['total'] > THRESH_POP * len(meta['label'][dim]) \
                         and counts[node_id][i] > THRESH_DIS * counts[node_id]['total']:
-                    networks[i]['nodes'].append({
+                    networks[meta['label'][dim][i][0]]['nodes'].append({
                                                  'id': node_id,
                                                  'type': node_type[node_id],
                                                  'name': node_name[node_id],
                                                  'size': counts[node_id][i]})
-        for node_1 in networks[i]['nodes']:
-            for node_2 in networks[i]['nodes']:
+        for node_1 in networks[meta['label'][dim][i][0]]['nodes']:
+            for node_2 in networks[meta['label'][dim][i][0]]['nodes']:
                 if node_1['id'] != node_2['id']:
                     if (node_1['id']+'_'+node_2['id']) in links or \
                             (i in counts[node_1['id']] and \
@@ -184,12 +184,45 @@ def patterns(dim):
                         weight = min(counts[node_1['id']][i], counts[node_2['id']][i])
                         if (node_1['id']+'_'+node_2['id']) in links:
                             weight = max(links[node_1['id']+'_'+node_2['id']], weight)
-                        networks[i]['links'].append({
+                        networks[meta['label'][dim][i][0]]['links'].append({
                                                      'source': node_1['id'],
                                                      'target': node_2['id'],
                                                      'weight': weight})
 
-    return(networks)
+    return networks
+
+
+def cell_color(query, data):
+    filter_labels = defaultdict(list)
+    for dim in data.meta['node']:
+        if data.meta['node'][dim]['cube']:
+            for label in data.meta['label'][dim]:
+                filter_labels[dim].append(label)
+
+    assert len(filter_labels) == 3
+
+    if 'filters' in query:
+        for dim in query['filters']:
+            if dim in filter_labels:
+                filter_labels[dim] = list(set(filter_labels[dim]) & set(query['filters'][dim]))
+    keys = list(filter_labels.keys())
+    filter_cells = []
+    for i in filter_labels[keys[0]]:
+        for j in filter_labels[keys[1]]:
+            for k in filter_labels[keys[2]]:
+                filter_cells.append({keys[0]: i, keys[1]: j, keys[2]: k})
+
+    merge_cells = []
+    if 'merges' in query:
+        for key in keys:
+            if key in query['merges']:
+                for cell in filter_cells:
+                    if key in cell and cell[key] in query['merges'][key]:
+                        merge_cells.append(cell)
+
+    obj = {'filters': filter_cells, 'merges': merge_cells}
+    return obj
+
 
 '''
 def test(args):

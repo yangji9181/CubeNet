@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, request, json, render_template, jsonify
 from server.process.dataset import Dataset, initialization
-from server.process.analysis import exploration, properties, patterns
+from server.process.analysis import exploration, properties, patterns, cell_color
 
 app = Flask(__name__)
 
@@ -18,7 +18,6 @@ def init():
     print(obj)
     return jsonify(obj)
 
-
 @app.route('/query', methods=['POST'])
 def query():
     req_data = request.get_json()
@@ -31,15 +30,15 @@ def query():
     from server.process.dataset import Dataset
     data = Dataset(args)
     network = exploration(req_data['query'], data)
-    return jsonify(network)
-
+    cube = cell_color(req_data['query'], data)
+    cube_net = {'network': network, 'cube': cube}
+    return jsonify(cube_net)
 
 @app.route('/contrast', methods=['POST'])
 def contrast():
     req_data = request.get_json()
     results = properties(req_data['node'])
     return jsonify(results)
-
 
 @app.route('/pattern', methods=['POST'])
 def pattern():
