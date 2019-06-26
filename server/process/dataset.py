@@ -3,7 +3,7 @@ import os.path
 import json
 from collections import defaultdict
 
-from server.process.config import data_config
+from .config import data_config
 
 class Dataset(object):
     def __init__(self, args):
