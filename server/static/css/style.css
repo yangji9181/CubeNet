@@ -2,6 +2,31 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
+#charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chart {
+  justify-content: center;
+}
+
+.pattern_title {
+  text-align: center;
+}
+#subnetworks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.subnetwork {
+  display: inline-block;
+  bor
+}
+
 .menu  { 
   margin-top: 20px; 
 } 
@@ -9,7 +34,9 @@ body {
 #main {
   vertical-align:top;
   display: inline-block;
-  width:700px;
+  /*width:700px;*/
+  width:70%;
+
 }
 
 fieldset.group  { 
@@ -70,7 +97,7 @@ a, a:visited {
 }
 
 #container {
-  width: 940px;
+  width: 1160px;
   padding: 5px 0 10px 0;
   margin: auto;
 }

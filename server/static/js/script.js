@@ -101,165 +101,99 @@
 // probably want to split filters for each type of nodes (looks confusing right now)
 // hardcoded labels
 
-const dblp_node = [ {
-          id: '0',
-          label: 'Phrase'
-        }, {
-          id: '1',
-          label: 'Author'
-        }, {
-          id: '2',
-          label: 'Venue',
-        }, {
-          id: '3',
-          label: 'Year',
-        } ]
 
-const dblp_label = [ {
-          id: '0',
-          label: 'Phrase',
-          children: [ {
-            id: '0.1',
-            label: 'Method'
-          }, {
-            id: '0.2',
-            label: 'Metric'
-          }, {
-            id: '0.3',
-            label: 'Application'
-          }]
-        }, {
-          id: '1',
-          label: 'Author',
-          children: [ {
-            id: '1.0',
-            label: 'Non-Han'
-          }, {
-            id: '1.1',
-            label: 'Han'
-          }]
-        }, {
-          id: '2',
-          label: 'Venue',
-          children: [ {
-            id: '2.0',
-            label: 'Data Mining'
-          }, {
-            id: '2.1',
-            label: 'Machine Learning'
-          }, {
-            id: '2.2',
-            label: 'Database'
-          }, {
-            id: '2.3',
-            label: 'Information Retrieval'
-          }]
-        }, {
-          id: '3',
-          label: 'Year',
-          children: [ {
-            id: '3.0',
-            label: '2000'
-          }, {
-            id: '3.1',
-            label: '2005'
-          }, {
-            id: '3.2',
-            label: '2010'
-          }, {
-            id: '3.3',
-            label: '2015'
-          }]
-        } ]
+// const yelp_node = [ {
+//           id: '0',
+//           label: 'Business'
+//         }, {
+//           id: '1',
+//           label: 'Location'
+//         }, {
+//           id: '2',
+//           label: 'Stars'
+//         }, {
+//           id: '3',
+//           label: 'Phrase'
+//         } ]
 
-const yelp_node = [ {
-          id: '0',
-          label: 'Business'
-        }, {
-          id: '1',
-          label: 'Location'
-        }, {
-          id: '2',
-          label: 'Stars'
-        }, {
-          id: '3',
-          label: 'Phrase'
-        } ]
+// const yelp_bus_labels = [ {
+//           id: '0.4',
+//           label: 'Restaurants',
+//           children: [ {
+//             id: '0.8',
+//             label: 'Breakfast & Brunch',
+//           }, {
+//             id: '0.5',
+//             label: 'Italian',
+//           }, {
+//             id: '0.6',
+//             label: 'Asian Fusion',
+//           }, {
+//             id: '0.7',
+//             label: 'American (New)',
+//           } ],
+//         }, {
+//           id: '0.9',
+//           label: 'Active Life',
+//           children: [ {
+//             id: '0.11', // 0.9.11 -> add 9 and 11 to query
+//             label: 'Mountain Biking',
+//           }, {
+//             id: '0.10',
+//             label: 'Soccer',
+//           }, {
+//             id: '0.12',
+//             label: 'Bowling',
+//           } , {
+//             id: '0.13',
+//             label: 'Fitness & Instruction',
+//             children: [{
+//               id: '0.14',
+//               label: 'Boxing',
+//             }, {
+//               id: '0.15',
+//               label: 'Yoga',
+//             } ]
+//           }],
+//         }, {
+//           id: '0.0',
+//           label: 'Shopping',
+//           children: [ {
+//             id: '0.2',
+//             label: 'Arts & Crafts',
+//           }, {
+//             id: '0.1',
+//             label: 'Computers',
+//           }, {
+//             id: '0.3',
+//             label: 'Cosmatics & Beauty Supply',
+//           } ],
+//         } ]
 
-const yelp_bus_labels = [ {
-          id: '0.4',
-          label: 'Restaurants',
-          children: [ {
-            id: '0.8',
-            label: 'Breakfast & Brunch',
-          }, {
-            id: '0.5',
-            label: 'Italian',
-          }, {
-            id: '0.6',
-            label: 'Asian Fusion',
-          }, {
-            id: '0.7',
-            label: 'American (New)',
-          } ],
-        }, {
-          id: '0.9',
-          label: 'Active Life',
-          children: [ {
-            id: '0.11', // 0.9.11 -> add 9 and 11 to query
-            label: 'Mountain Biking',
-          }, {
-            id: '0.10',
-            label: 'Soccer',
-          }, {
-            id: '0.12',
-            label: 'Bowling',
-          } , {
-            id: '0.13',
-            label: 'Fitness & Instruction',
-            children: [{
-              id: '0.14',
-              label: 'Boxing',
-            }, {
-              id: '0.15',
-              label: 'Yoga',
-            } ]
-          }],
-        }, {
-          id: '0.0',
-          label: 'Shopping',
-          children: [ {
-            id: '0.2',
-            label: 'Arts & Crafts',
-          }, {
-            id: '0.1',
-            label: 'Computers',
-          }, {
-            id: '0.3',
-            label: 'Cosmatics & Beauty Supply',
-          } ],
-        } ]
-
-const yelp_label = [{
-          id: '0',
-          label: 'Business',
-          children: yelp_bus_labels
-        }, {
-          id: '1',
-          label: 'Location'
-        }, {
-          id: '2',
-          label: 'Stars',
-        }, {
-          id: '3',
-          label: 'Phrase',
-        } ]
+// const yelp_label = [{
+//           id: '0',
+//           label: 'Business',
+//           children: yelp_bus_labels
+//         }, {
+//           id: '1',
+//           label: 'Location'
+//         }, {
+//           id: '2',
+//           label: 'Stars',
+//         }, {
+//           id: '3',
+//           label: 'Phrase',
+//         } ]
 
 
 // current global states
-var dataset_info = {nodes: dblp_node, labels: dblp_label};
+// var dataset_info = {nodes: dblp_node, labels: dblp_label};
+var node_info = []
+var label_info = []
 var query_json = {"dataset": "dblp","query": {"dataset": "dblp", "merges": {}, "nodes": [], "filters": {}}};
 var contrast_json = {"node": null};
+var pattern_json = {"node": null};
+
 
 // register the component
 Vue.component('treeselect', VueTreeselect.Treeselect)
@@ -291,17 +225,49 @@ var contrast_select = new Vue({
             // if ($.inArray(this.options[i].id, currTypes)) {
             if (currTypes.includes(this.options[i].id)) {
 
-              // console.log("in", this.options[i].id);
-              // newOptions[i].isDisabled = false;
-              Vue.set(contrast_select.options[i], "isDisabled", false);
+              // // console.log("in", this.options[i].id);
+              // // newOptions[i].isDisabled = false;
+              // Vue.set(contrast_select.options[i], "isDisabled", false);
             } else {
-              // console.log("not in", this.options[i].id);
-              // newOptions[i].isDisabled = true;
-              Vue.set(contrast_select.options[i], "isDisabled", true);
+              // // console.log("not in", this.options[i].id);
+              // // newOptions[i].isDisabled = true;
+              // Vue.set(contrast_select.options[i], "isDisabled", true);
             }
           }
           // Vue.set(contrast_select, "options", newOptions);
           // Vue.nextTick();
+        }
+      }
+    });
+
+var pattern_select = new Vue({
+      el: '#pattern',
+      data: {
+        // define default value
+        value: null,
+        // define options
+        options: [],
+      },
+      watch: {
+        value: function (val) {
+          console.log("pattern value changes");
+          pattern_json.node = val;
+        }
+      },
+      methods: {
+        updateOptions: function () {
+          // var newOptions = $.extend(true, [], dataset_node);
+          var currTypes = node_select.value;
+          // console.log("updateOptions", currTypes);
+          Vue.set(pattern_select, "value", null);
+
+          for (var i = 0; i < this.options.length; i++) {
+            if (currTypes.includes(this.options[i].id)) {
+              // Vue.set(pattern_select.options[i], "isDisabled", false);
+            } else {
+              // Vue.set(pattern_select.options[i], "isDisabled", true);
+            }
+          }
         }
       }
     });
@@ -373,7 +339,7 @@ var node_select = new Vue({
       watch: {
         value: function (val) {
           query_json.query.nodes = val;
-          contrast_select.updateOptions();
+          // contrast_select.updateOptions();
         }
       }
     })
@@ -381,26 +347,28 @@ var node_select = new Vue({
 
 var clearValues = function () {
   contrast_select.value = null;
+  pattern_select.value = null;
+
   filter_select.value = [];
   merge_select.value = [];
   node_select.value = [];
 };
 
 // change dataset
+init_json = {'dataset': ''}
 $(".select-dataset").dropdown({
  onChange: function(data) {
     console.log('change dataset', data)
     clearValues();
+
     switch (data) {
       case 'dblp':
-        query_json.dataset = "dblp";
-        dataset_info.nodes = dblp_node;
-        dataset_info.labels = dblp_label;
+        // query_json.dataset = "dblp";
+        init_json.dataset = "dblp";
         break;
       case 'yelp':
-        query_json.dataset = "yelp";
-        dataset_info.nodes = yelp_node;
-        dataset_info.labels = yelp_label;
+        // query_json.dataset = "yelp";
+        init_json.dataset = "yelp";
         break;
       case 'freebase':
         
@@ -409,18 +377,100 @@ $(".select-dataset").dropdown({
         
         break;
     }
-    node_select.options = dataset_info.nodes;
-    contrast_select.options = $.extend(true, [], dataset_info.nodes);
-    for (var i = 0; i < contrast_select.options.length; i++) {
-      Vue.set(contrast_select.options[i], "isDisabled", true);
-    }
-    filter_select.options = dataset_info.labels;
-    merge_select.options = $.extend(true, [], dataset_info.labels);
-    for (var i = 0; i < merge_select.options.length; i++) {
-      Vue.set(merge_select.options[i], "isDisabled", true);
-    }
- }
+    // node_select.options = dataset_info.nodes;
+    // contrast_select.options = $.extend(true, [], dataset_info.nodes);
+    // for (var i = 0; i < contrast_select.options.length; i++) {
+    //   Vue.set(contrast_select.options[i], "isDisabled", true);
+    // }
+    // filter_select.options = dataset_info.labels;
+    // merge_select.options = $.extend(true, [], dataset_info.labels);
+    // for (var i = 0; i < merge_select.options.length; i++) {
+    //   Vue.set(merge_select.options[i], "isDisabled", true);
+    // }
+
+    // fetch meta from server
+    $.ajax({
+       type: "POST",
+       url: "/init",
+       data: JSON.stringify(init_json),
+       dataType: "json",
+       contentType : "application/json"
+     }).done(function(data)  {
+        console.log("success");
+        contrast_select.value = null; // reset contrast dropdown
+        pattern_select.value = null; // reset pattern dropdown
+
+        clearContrastGraph();
+        clearPatternGraph();
+
+        console.log(data);
+
+        // read meta and set all selection lists
+        // meta.node
+        for (var node_id in data.meta.node) {
+          node_info.push({id: node_id, label: data.meta.node[node_id].name})
+          label_info.push({
+            id: node_id, 
+            label: data.meta.node[node_id].name,
+            children: []
+          });
+        }
+        // console.log(node_info);
+        
+        for (var node_id in data.meta.label) {
+          var parent_node = label_info[parseInt(node_id, 10)];
+          for (var child_id in data.meta.label[node_id]) {
+            parent_node.children.push({id: node_id + '.' + child_id, label: data.meta.label[node_id][child_id][0]});
+          }
+
+        }
+        // console.log(label_info);
+
+        node_select.options = node_info;
+        contrast_select.options = node_info;
+        pattern_select.options = node_info;
+        
+        filter_select.options = label_info;
+        merge_select.options = label_info;
+        
+
+        // set default query
+        query_json.dataset = data.query.dataset;
+        query_json.query = data.query;
+
+        // set the default checkbox
+        // debugger
+        for (var node_id in query_json.query.filters) {
+          node_labels = filter_select.options[node_id].children;
+          for (var child_id in query_json.query.filters[node_id]) {
+            filter_select.value.push(node_id + '.' + child_id);
+          }
+          
+        }
+
+        for (var node_id in query_json.query.merges) {
+          node_labels = merge_select.options[node_id].children;
+          for (var child_id in query_json.query.merges[node_id]) {
+            merge_select.value.push(node_id + '.' + child_id);
+          }
+          
+        }
+
+        
+        for (var node_id in query_json.query.nodes) {
+          node_select.value.push(node_id);   
+        }
+
+
+     }).fail(function()  {
+       alert("Sorry. Server unavailable. ");
+     });
+     console.log("click query");
+     }
 });
+
+
+
 
 var graphConstructed = false;
 const query_button = document.getElementById('query_btn');
@@ -435,9 +485,13 @@ $("#query_btn").click(function(){
  }).done(function(data)  {
     console.log("success");
     contrast_select.value = null; // reset contrast dropdown
+    pattern_select.value = null; // reset pattern dropdown
+
     clearContrastGraph();
+    clearPatternGraph();
+
    // console.log(data);
-   updateNetwork(data);
+   updateNetwork(data.network);
  }).fail(function()  {
    alert("Sorry. Server unavailable. ");
  });
@@ -476,26 +530,83 @@ $("#contrast_btn").click(function(){
 
 });
 
+const pattern_button = document.getElementById('pattern_btn');
+$("#pattern_btn").click(function(){
+  if (!graphConstructed) {
+    alert("Please construct graph first.");
+
+  } else if (pattern_json.node == null) {
+    alert("Please select node type to do pattern mining.");
+  } else {
+    $.ajax({
+       type: "POST",
+       url: "/pattern",
+       data: JSON.stringify(pattern_json),
+       dataType: "json",
+       contentType : "application/json"
+     }).done(function(data)  {
+      console.log("pattern button clicked success");
+      console.log(data);
+      clearPatternGraph();
+      createPatternDivs(data);
+      createPatternSubnetwork(data);
+     }).fail(function()  {
+       alert("Sorry. Server unavailable. ");
+     });
+  }
+  console.log("click pattern");
+
+});
+
+function createPatternDivs(data) {
+  for (var key in data) {
+    var div = document.createElement("div");
+    div.className = "subnetwork";
+    div.id = key;
+    document.getElementById("subnetworks").appendChild(div);
+
+    var title = document.createElement("h3");
+    title.className = "pattern_title"
+    title.innerHTML = key;
+    document.getElementById(key).appendChild(title);
+
+    var network_div = document.createElement("div");
+    network_div.className = "pattern_network";
+    network_div.id = key + "Pattern";
+    document.getElementById(key).appendChild(network_div);
+
+  }
+}
+
+function clearPatternGraph() {
+  // TODO
+  [...document.getElementsByClassName("subnetwork")].map(n => n && n.remove());
+}
+
 function clearContrastGraph() {
   [...document.getElementsByClassName("chart")].map(n => n && n.remove());
   var title = document.getElementById("histogram_title");
   if (title != null) {
     title.remove();
   }
+
+  var charts = document.getElementById("charts");
+  if (charts != null) {
+    charts.remove();
+  }
+
   
 }
 
 function barChart(div_id, data, node_type){
     // var svg = foo;
     //this reefers to the bars' SVG
-    var numBars = data.length;
+    var numBars = data.labels.length;
     // var margin = {top: 40, right: 20, bottom: 30, left: 70};
     var margin = {top: 30, right: 40, bottom: 50, left: 50};
-    width = 220 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
 
-    // width = d3.max(300, numBars * 15) - margin.left - margin.right,
-    // height = d3.max(250, numBars * 15) - margin.top - margin.bottom;
+    width = 55 * numBars - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
@@ -533,7 +644,7 @@ function barChart(div_id, data, node_type){
 
     svg.append("g")
        .attr("class", "x axis")
-       .attr("transform", "translate(0," + height + ")")
+       .attr("transform", "translate(0," + (height) + ")")
        .call(xAxis)
          .selectAll("text")  
          .style("text-anchor", "end")
@@ -587,7 +698,13 @@ function drawHistogram(contrast_res) {
     title.id = "histogram_title";
     title.style.textAlign = "center";
     title.innerHTML = "Contrast Analysis on " + contrast_res.node_type.charAt(0).toUpperCase() + contrast_res.node_type.slice(1);
+    // document.getElementById("main").appendChild(title);
+
     document.getElementById("main").appendChild(title);
+
+    var charts = document.createElement("div");
+    charts.id = "charts";
+    document.getElementById("main").appendChild(charts);
 
     for (var i = 0; i < contrast_res.properties.length; i++) {
     // var i = 0;
@@ -602,7 +719,9 @@ function drawHistogram(contrast_res) {
       chart_div.className = "chart";
       chart_div.id = "chart" + i;
 
-      document.getElementById("main").appendChild(chart_div);
+      // document.getElementById("main").appendChild(chart_div);
+      document.getElementById("charts").appendChild(chart_div);
+
       barChart(chart_div.id, contrast_res.properties[i], contrast_res.node_type);
     }
 }

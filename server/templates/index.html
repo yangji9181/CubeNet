@@ -40,14 +40,14 @@
 
 <body>
 
-  <div id="container" class="container">
+  <div id="container" >
     <header>
       <h1>Cube Network Demo</h1>
     </header>
 
     <div class="column menu" style="width:25%;display: inline-block;border: 1px #b5a2a2 solid;padding: 10px;">
 
-      <h3>Step 1: Choose a dataset</h3>
+      <h3>Dataset</h3>
       <div class="ui selection dropdown select-dataset" style="width: 100%">
           <input name="dataset" type="hidden">
           <div class="default text">Dataset</div>
@@ -60,40 +60,44 @@
           </div>
       </div>
 
-      <h3>Step 2: Construct the netowrk</h3>
+      <h3>Exploration</h3>
       <div>
-        <h5>Filter</h5>
+        <h5>Selection</h5>
         <div id="filter">
           <treeselect v-model="value" :multiple="true" :options="options" :searchable="false" :value-consists-of="valueConsistsOf"/>
         </div>
       </div>
       
       <div style="padding-top: 25px">
-        <h5>Merge</h5>
+        <h5>Aggregation</h5>
         <div id="merge">
           <treeselect v-model="value" :multiple="true" :options="options" :searchable="false" :flat="true"/>
         </div>
       </div>
       
 
-      <h3>Step 3: Choose node types and visualize</h3>
+      <h3>Visualization</h3>
       <div id="nodes">
         <treeselect v-model="value" :multiple="true" :options="options" :searchable="false" />
       </div>
+      <button class="btn" id="query_btn" style="margin-top: 25px">Go</button>
 
-      <button class="btn" id="query_btn" style="margin-top: 25px">query</button>
 
-
-      <h3>Step 4: Contrast Analysis</h3>
+      <h3>Contrastive Analysis</h3>
       <div>
         <div id="contrast">
           <treeselect v-model="value" :options="options" :disable-branch-nodes="true" :show-count="true" placeholder="Select..."/>
         </div>
-
-
       </div>
+      <button class="btn" id="contrast_btn" style="margin-top: 25px">Go</button>
 
-      <button class="btn" id="contrast_btn" style="margin-top: 25px">Analysis</button>
+      <h3>Pattern Mining</h3>
+      <div>
+        <div id="pattern">
+          <treeselect v-model="value" :options="options" :disable-branch-nodes="true" :show-count="true" placeholder="Select..."/>
+        </div>
+      </div>
+      <button class="btn" id="pattern_btn" style="margin-top: 25px">Go</button>
 
     </div>
 
@@ -215,6 +219,10 @@
     <div id="main" role="main">
       <div id="vis"></div>
       <!-- <h3 id="histogram_title" style="text-align: center"> Contrast Analysis</h3> -->
+      <!-- <div id="charts"></div> -->
+      <!-- <div id="subnetworktitles"></div> -->
+
+      <div id="subnetworks"></div>
     </div>
   </div> 
   <!--! end of #container -->

@@ -1,12 +1,12 @@
 
 # $ ?= require 'jquery' # For Node.js compatibility
 root = exports ? this
-
-Network = () ->
+tooltip = Tooltip("vis-tooltip", 230)
+Network = (width, height) ->
   # variables we want to access
   # in multiple places of Network
-  width = 700
-  height = 800
+  # width = 700
+  # height = 800
   # allData will store the unfiltered data
   allData = []
   curLinksData = []
@@ -34,7 +34,7 @@ Network = () ->
   # color function used to color nodes
   nodeColors = d3.scale.category10()
   # tooltip used to display details
-  tooltip = Tooltip("vis-tooltip", 230)
+  # tooltip = Tooltip("vis-tooltip", 230)
 
   # max weight of links, for link width calculation
   maxLinkWeight = 0.0
@@ -264,8 +264,8 @@ Network = () ->
   return network
 
 $ ->
-  myNetwork = Network()
-
+  myNetwork = Network(900, 800)
+  # subNetwork = Network(200,200)
   $("#network_select").on "change", (e) ->
     networkFile = $(this).val()
     d3.json "../static/data/#{networkFile}", (json) ->
@@ -283,4 +283,25 @@ $ ->
     #   myNetwork.updateData(json)
     # d3.json "../static/data/test_data.json", (json) ->
     #   myNetwork.updateData(json)
+
+  window.createPatternSubnetwork = (json) ->
+    # subNetwork = Network(200,200)
+
+    console.log("createPatternSubnetwork in coffee");
+    for key, value of json
+      subNetwork = Network(200,200)
+      # title = $ "<h3>"
+      # title.html key
+      # $("#subnetworktitles").append title
+
+      # sub_div = $ "<div>"
+      # sub_div.addClass "subnetwork"
+
+      # sub_title = $ "<h3>"
+      # $("#subnetworks").append sub_div
+
+      # sub_div.attr "id", key
+      # $("#subnetworks").append sub_div
+      subNetwork("#" + key + "Pattern", json[key])
+
 
