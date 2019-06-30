@@ -123,13 +123,14 @@ def properties(dim):
 def patterns(dim):
     THRESH_POP = 0.3
     THRESH_DIS = 0.2
-    THRESH_INT = 2
+    THRESH_INT = 10
 
     from server.process.config import args
     query = json.load(open(args['query_json'], 'r'))
     from server.process.dataset import Dataset
     data = Dataset(args)
     meta = data.meta
+    print(meta['node'])
 
     # add the contrasted node type to the subnetworks
     if dim not in query['nodes']:
@@ -142,6 +143,7 @@ def patterns(dim):
     counts = defaultdict(dict)
     node_type = {}
     node_name = {}
+    networks = {}
     for i in meta['label'][dim]:
         # retrieve network connected to the contrasted node
         query['filters'][dim] = [i]
@@ -151,19 +153,30 @@ def patterns(dim):
         for link in network['links']:
             links[link['source']+'_'+link['target']] = link['weight']
         for node in network['nodes']:
-            if node['id'] not in node_type:
-                node_type[node['id']] = node['type']
-                node_name[node['id']] = node['name']
-            if (node['id']+'_s/'+dim+'/'+i) in links:
-                counts[node['id']][i] = links[node['id']+'_s/'+dim+'/'+i]
-                if 'total' in counts[node['id']]:
-                    counts[node['id']]['total'] += links[node['id']+'_s/'+dim+'/'+i]
-                else:
-                    counts[node['id']]['total'] = links[node['id']+'_s/'+dim+'/'+i]
+            if node['type'] != meta['node'][dim]['name']:
+                if node['id'] not in node_type:
+                    node_type[node['id']] = node['type']
+                    node_name[node['id']] = node['name']
+                if (node['id']+'_s/'+dim+'/'+i) in links:
+                    #print(node)
+                    counts[node['id']][i] = links[node['id']+'_s/'+dim+'/'+i]
+                    if 'total' in counts[node['id']]:
+                        counts[node['id']]['total'] += links[node['id']+'_s/'+dim+'/'+i]
+                    else:
+                        counts[node['id']]['total'] = links[node['id']+'_s/'+dim+'/'+i]
 
-    networks = {}
+    query['merges'].pop(dim)
     for i in meta['label'][dim]:
         networks[meta['label'][dim][i][0]] = {'nodes':[], 'links':[]}
+        query['filters'][dim] = [i]
+        network = exploration(query, data)
+        print(network['nodes'])
+        links = {}
+        for link in network['links']:
+            links[link['source']+'_'+link['target']] = link['weight']
+        for node in network['nodes']:
+            if node['type'] == meta['node'][dim]['name']:
+                networks[meta['label'][dim][i][0]]['nodes'].append(node)
         for node_id in counts.keys():
             if i in counts[node_id]:
                 if counts[node_id]['total'] > THRESH_POP * len(meta['label'][dim]) \
@@ -176,18 +189,11 @@ def patterns(dim):
         for node_1 in networks[meta['label'][dim][i][0]]['nodes']:
             for node_2 in networks[meta['label'][dim][i][0]]['nodes']:
                 if node_1['id'] != node_2['id']:
-                    if (node_1['id']+'_'+node_2['id']) in links or \
-                            (i in counts[node_1['id']] and \
-                            i in counts[node_2['id']] and \
-                            counts[node_1['id']][i] > THRESH_INT and \
-                            counts[node_2['id']][i] > THRESH_INT):
-                        weight = min(counts[node_1['id']][i], counts[node_2['id']][i])
-                        if (node_1['id']+'_'+node_2['id']) in links:
-                            weight = max(links[node_1['id']+'_'+node_2['id']], weight)
+                    if (node_1['id']+'_'+node_2['id']) in links:
                         networks[meta['label'][dim][i][0]]['links'].append({
                                                      'source': node_1['id'],
                                                      'target': node_2['id'],
-                                                     'weight': weight})
+                                                     'weight': links[node_1['id']+'_'+node_2['id']]})
 
     return networks
 

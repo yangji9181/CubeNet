@@ -34,7 +34,7 @@ def query():
     cube = cell_color(req_data['query'], data)
     cube_net = {'network': network, 'cube': cube}
     return jsonify(cube_net)
-
+    
 @app.route('/contrast', methods=['POST'])
 def contrast():
     req_data = request.get_json()
