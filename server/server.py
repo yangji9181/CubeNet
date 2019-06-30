@@ -1,8 +1,8 @@
 import os
 
 from flask import Flask, request, json, render_template, jsonify
-from process.dataset import Dataset, initialization
-from process.analysis import exploration, properties, patterns, cell_color
+from server.process.dataset import Dataset, initialization
+from server.process.analysis import exploration, properties, patterns, cell_color
 
 
 app = Flask(__name__)
@@ -23,12 +23,12 @@ def init():
 def query():
     req_data = request.get_json()
     query = req_data['query']
-    from process.config import args
+    from server.process.config import args
     json.dump(query,
               open(args['query_json'], 'w'),
               indent=4,
               separators=(',', ': '))
-    from process.dataset import Dataset
+    from server.process.dataset import Dataset
     data = Dataset(args)
     network = exploration(req_data['query'], data)
     cube = cell_color(req_data['query'], data)
