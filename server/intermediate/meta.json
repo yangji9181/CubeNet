@@ -1,187 +1,151 @@
 {
     "node": {
         "0": {
-            "name": "phrase",
-            "cube": false
+            "name": "business",
+            "cube": true
         },
         "1": {
-            "name": "author",
+            "name": "location",
             "cube": true
         },
         "2": {
-            "name": "venue",
+            "name": "stars",
             "cube": true
         },
         "3": {
-            "name": "year",
-            "cube": true
+            "name": "phrase",
+            "cube": false
         }
     },
     "link": {
         "0": [
             "0",
-            "0"
+            "1"
         ],
         "1": [
-            "0",
-            "1"
+            "1",
+            "0"
         ],
         "2": [
             "0",
-            "2"
-        ],
-        "3": [
-            "0",
             "3"
         ],
+        "3": [
+            "3",
+            "0"
+        ],
         "4": [
-            "1",
-            "1"
+            "0",
+            "2"
         ],
         "5": [
-            "1",
+            "2",
             "0"
         ],
         "6": [
-            "1",
-            "2"
-        ],
-        "7": [
-            "1",
+            "3",
             "3"
-        ],
-        "8": [
-            "2",
-            "0"
-        ],
-        "9": [
-            "2",
-            "1"
-        ],
-        "10": [
-            "3",
-            "0"
-        ],
-        "11": [
-            "3",
-            "1"
         ]
     },
     "label": {
         "0": {
             "0": [
-                "method",
+                "Shopping",
                 "0"
             ],
             "1": [
-                "application",
-                "1"
+                "Computers",
+                "0"
             ],
             "2": [
-                "metric",
-                "2"
+                "Arts & Crafts",
+                "0"
+            ],
+            "3": [
+                "Cosmetics & Beauty Supply",
+                "0"
+            ],
+            "4": [
+                "Restaurants",
+                "4"
+            ],
+            "5": [
+                "Italian",
+                "4"
+            ],
+            "6": [
+                "Asian Fusion",
+                "4"
+            ],
+            "7": [
+                "American (New)",
+                "4"
+            ],
+            "8": [
+                "Breakfast & Brunch",
+                "4"
+            ],
+            "9": [
+                "Active Life",
+                "9"
+            ],
+            "10": [
+                "Soccer",
+                "9"
+            ],
+            "11": [
+                "Mountain Biking",
+                "9"
+            ],
+            "12": [
+                "Bowling",
+                "9"
+            ],
+            "13": [
+                "Fitness & Instruction",
+                "9"
+            ],
+            "14": [
+                "Boxing",
+                "13"
+            ],
+            "15": [
+                "Yoga",
+                "13"
             ]
         },
         "1": {
             "0": [
-                "Andrew Ng",
+                "USA",
                 "0"
-            ],
-            "1": [
-                "Christos Faloutsos",
-                "1"
-            ],
-            "2": [
-                "David Blei",
-                "2"
-            ],
-            "3": [
-                "Eric Xing",
-                "3"
-            ],
-            "4": [
-                "Geoffrey Hinton",
-                "4"
-            ],
-            "5": [
-                "Jiawei Han",
-                "5"
-            ],
-            "6": [
-                "John Lafferty",
-                "6"
-            ],
-            "7": [
-                "Jon Kleinberg",
-                "7"
-            ],
-            "8": [
-                "Jure Leskovec",
-                "8"
-            ],
-            "9": [
-                "Michael Jordan",
-                "9"
-            ],
-            "10": [
-                "Philip Yu",
-                "10"
-            ],
-            "11": [
-                "Yoshua Bengio",
-                "11"
             ]
         },
         "2": {
             "0": [
-                "Data Mining",
+                "1-Star",
                 "0"
             ],
             "1": [
-                "Machine Learning",
+                "2-Star",
                 "1"
             ],
             "2": [
-                "Database",
+                "3-Star",
                 "2"
             ],
             "3": [
-                "Information Retrieval",
+                "4-Star",
                 "3"
             ],
             "4": [
-                "NLP",
+                "5-Star",
                 "4"
-            ],
-            "5": [
-                "Computer Vision",
-                "5"
-            ],
-            "6": [
-                "Artificial Intelligence",
-                "6"
-            ],
-            "7": [
-                "Bioinformatics",
-                "7"
             ]
         },
         "3": {
             "0": [
-                "2000's",
+                "comment",
                 "0"
-            ],
-            "1": [
-                "2005's",
-                "1"
-            ],
-            "2": [
-                "2010's",
-                "2"
-            ],
-            "3": [
-                "2015's",
-                "3"
             ]
         }
     }

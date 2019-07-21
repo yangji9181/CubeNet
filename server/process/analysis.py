@@ -14,6 +14,10 @@ def exploration(query, data):
         nodes[t] = set()
         if 'filters' in query and t in query['filters'].keys():
             for label in query['filters'][t]:
+                # prevent key error if data is not sufficient
+                # revised by Dai
+                if label not in data.labels[t]:
+                    break
                 nodes[t] |= set(data.labels[t][label])
         else:
             nodes[t] = set(data.nodes[t].keys())
