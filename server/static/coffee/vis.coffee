@@ -2,6 +2,8 @@
 # $ ?= require 'jquery' # For Node.js compatibility
 root = exports ? this
 tooltip = Tooltip("vis-tooltip", 230)
+# color function used to color nodes
+nodeColors = d3.scale.category10()
 Network = (width, height) ->
   # variables we want to access
   # in multiple places of Network
@@ -31,8 +33,6 @@ Network = (width, height) ->
     .charge(-240)
     .linkDistance(50)
     .size([width, height]);
-  # color function used to color nodes
-  nodeColors = d3.scale.category10()
   # tooltip used to display details
   # tooltip = Tooltip("vis-tooltip", 230)
 
@@ -285,23 +285,9 @@ $ ->
     #   myNetwork.updateData(json)
 
   window.createPatternSubnetwork = (json) ->
-    # subNetwork = Network(200,200)
-
     console.log("createPatternSubnetwork in coffee");
     for key, value of json
       subNetwork = Network(200,200)
-      # title = $ "<h3>"
-      # title.html key
-      # $("#subnetworktitles").append title
-
-      # sub_div = $ "<div>"
-      # sub_div.addClass "subnetwork"
-
-      # sub_title = $ "<h3>"
-      # $("#subnetworks").append sub_div
-
-      # sub_div.attr "id", key
-      # $("#subnetworks").append sub_div
-      subNetwork("#" + key + "Pattern", json[key])
+      subNetwork("#" + key + "Pattern", value)
 
 

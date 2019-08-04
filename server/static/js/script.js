@@ -408,8 +408,6 @@ function animate() {
 }
 
 
-
-
 // current global states
 // var dataset_info = {nodes: dblp_node, labels: dblp_label};
 var node_info = []
@@ -690,7 +688,7 @@ $(".select-dataset").dropdown({
      }).fail(function()  {
        alert("Sorry. Server unavailable. ");
      });
-     console.log("click query");
+     console.log("click init");
      }
 });
 
@@ -708,22 +706,20 @@ $("#query_btn").click(function(){
    dataType: "json",
    contentType : "application/json"
  }).done(function(data)  {
-    console.log("success");
     contrast_select.value = null; // reset contrast dropdown
     pattern_select.value = null; // reset pattern dropdown
 
     clearContrastGraph();
     clearPatternGraph();
 
-   // console.log(data);
+   console.log("cube");
+   console.log(data.cube);
    updateNetwork(data.network);
    // TODO: highlight cube
 
  }).fail(function()  {
    alert("Sorry. Server unavailable. ");
  });
- console.log("click query");
-
 });
 
 const contrast_button = document.getElementById('contrast_btn');
@@ -741,11 +737,6 @@ $("#contrast_btn").click(function(){
        dataType: "json",
        contentType : "application/json"
      }).done(function(data)  {
-        console.log("success");
-       // console.log(data);
-       // delete old contrast graphs
-       // console.log("to remove", document.getElementsByClassName("chart"));
-       // [...document.getElementsByClassName("chart")].map(n => n && n.remove());
        clearContrastGraph();
        // document.getElementsByClassName("chart").remove();
        drawHistogram(data);
@@ -753,8 +744,6 @@ $("#contrast_btn").click(function(){
        alert("Sorry. Server unavailable. ");
      });
   }
-  console.log("click contrast");
-
 });
 
 const pattern_button = document.getElementById('pattern_btn');
