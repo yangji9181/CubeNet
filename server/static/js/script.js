@@ -848,7 +848,7 @@ function barChart(div_id, data, node_type){
 
     var svg = d3.select("#" + div_id).append("svg")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("height", height + margin.top + margin.bottom + 50)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
