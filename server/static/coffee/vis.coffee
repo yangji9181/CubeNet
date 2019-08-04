@@ -264,8 +264,8 @@ Network = (width, height) ->
   return network
 
 $ ->
-  myNetwork = Network(900, 800)
-  # subNetwork = Network(200,200)
+  # myNetwork = Network(900, 800)
+  myNetwork = Network(500, 500)
   $("#network_select").on "change", (e) ->
     networkFile = $(this).val()
     d3.json "../static/data/#{networkFile}", (json) ->

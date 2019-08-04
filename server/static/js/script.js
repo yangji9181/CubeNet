@@ -186,6 +186,230 @@
 //         } ]
 
 
+
+
+
+// CUBE
+
+var cube_dim = [3,3,3]
+var dim_labels = [["2005", "2010", "2015"],["DM", "ML", "DB"],["Metric",  "Method", "App"]]
+const CUBE_WIDTH = 30
+const CUBE_GAP = 5
+const basicMaterial = new THREE.MeshLambertMaterial( {color: 0xffffff} ); 
+const highlightMaterial = new THREE.MeshLambertMaterial( {color: 0xffea75} ); 
+
+var camera, scene, renderer;
+var geometry, material, mesh;
+
+
+initCube(cube_dim, dim_labels);
+animate();
+
+function highlightCubes () {
+
+}
+
+function initCube(cube_dim, dim_labels) {
+
+  // SCENE
+  scene = new THREE.Scene();
+
+  // CAMERA
+  // var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
+  var SCREEN_WIDTH = 300, SCREEN_HEIGHT = 300;
+
+  var VIEW_ANGLE = 45, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 20000;
+  camera = new THREE.PerspectiveCamera(70, 2, 1, 1000);
+  
+  scene.add(camera);
+  camera.position.set(-150,250,-400);
+  camera.lookAt(scene.position); 
+
+  container = document.getElementById( 'canvas' );
+  const {left, right, top, bottom, width, height} =
+  container.getBoundingClientRect();
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize( 300, 600 );
+  container.appendChild( renderer.domElement );
+
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+ 
+  const positiveYUpBottom = renderer.domElement.clientHeight - bottom;
+  renderer.setScissor(left, positiveYUpBottom, width, height);
+ 
+  renderer.render(scene, camera);
+
+  // LIGHTS
+  var light = new THREE.PointLight(0xffffff);
+  light.position.set(-150,250,-400);
+  camera.add(light);
+
+  // CONTROLS
+  controls = new THREE.OrbitControls( camera, renderer.domElement );
+  controls.enableZoom = false;
+
+
+  // CUBES
+  geometry = new THREE.CubeGeometry( CUBE_WIDTH, CUBE_WIDTH, CUBE_WIDTH);
+  var material = new THREE.MeshNormalMaterial();
+  
+  for (var i = 0; i < cube_dim[0]; i++) {
+    for (var j = 0; j < cube_dim[1]; j++) {
+      for (var k = 0; k < cube_dim[2]; k++) {
+        mesh = new THREE.Mesh( geometry, basicMaterial );
+        scene.add( mesh );
+        mesh.position.set(i * (CUBE_WIDTH + CUBE_GAP), j * (CUBE_WIDTH + CUBE_GAP), k * (CUBE_WIDTH + CUBE_GAP));
+
+      }
+    }
+  }
+
+  // axes = buildAxes( 1000 );
+  // scene.add(axes);
+
+  for (var i = 0; i < cube_dim[0]; i++) {
+    var spritey = makeTextSprite( dim_labels[0][i], 
+      { fontsize: 32, borderColor: {r:255, g:0, b:0, a:1.0}, backgroundColor: {r:255, g:100, b:100, a:0.8} } );
+    spritey.position.set(i * (CUBE_WIDTH + CUBE_GAP),-25,0);
+    scene.add( spritey );
+  }
+
+  for (var i = 0; i < cube_dim[1]; i++) {
+    var spritey = makeTextSprite( dim_labels[1][i], 
+      { fontsize: 32, borderColor: {r:255, g:0, b:0, a:1.0}, backgroundColor: {r:255, g:100, b:100, a:0.8} } );
+    spritey.position.set(cube_dim[0] * (CUBE_WIDTH + CUBE_GAP) + 25, i * (CUBE_WIDTH + CUBE_GAP),0);
+    scene.add( spritey );
+  }
+
+  for (var i = 0; i < cube_dim[2]; i++) {
+    var spritey = makeTextSprite( dim_labels[2][i], 
+      { fontsize: 32, borderColor: {r:255, g:0, b:0, a:1.0}, backgroundColor: {r:255, g:100, b:100, a:0.8} } );
+    spritey.position.set(cube_dim[0] * (CUBE_WIDTH + CUBE_GAP) + 25, cube_dim[1] * (CUBE_WIDTH + CUBE_GAP) + 25, i * (CUBE_WIDTH + CUBE_GAP));
+    scene.add( spritey );
+  }
+}
+
+function buildAxes( length ) {
+    var axes = new THREE.Object3D();
+
+    axes.add( buildAxis( new THREE.Vector3( 0, 0, 0 ), new THREE.Vector3( length, 0, 0 ), 0xFF0000, false ) ); // +X
+    axes.add( buildAxis( new THREE.Vector3( 0, 0, 0 ), new THREE.Vector3( -length, 0, 0 ), 0xFF0000, true) ); // -X
+    axes.add( buildAxis( new THREE.Vector3( 0, 0, 0 ), new THREE.Vector3( 0, length, 0 ), 0x00FF00, false ) ); // +Y
+    axes.add( buildAxis( new THREE.Vector3( 0, 0, 0 ), new THREE.Vector3( 0, -length, 0 ), 0x00FF00, true ) ); // -Y
+    axes.add( buildAxis( new THREE.Vector3( 0, 0, 0 ), new THREE.Vector3( 0, 0, length ), 0x0000FF, false ) ); // +Z
+    axes.add( buildAxis( new THREE.Vector3( 0, 0, 0 ), new THREE.Vector3( 0, 0, -length ), 0x0000FF, true ) ); // -Z
+
+    return axes;
+
+}
+
+function buildAxis( src, dst, colorHex, dashed ) {
+    var geom = new THREE.Geometry(),
+        mat; 
+
+    if(dashed) {
+        mat = new THREE.LineDashedMaterial({ linewidth: 3, color: colorHex, dashSize: 3, gapSize: 3 });
+    } else {
+        mat = new THREE.LineBasicMaterial({ linewidth: 3, color: colorHex });
+    }
+
+    geom.vertices.push( src.clone() );
+    geom.vertices.push( dst.clone() );
+    geom.computeLineDistances(); // This one is SUPER important, otherwise dashed lines will appear as simple plain lines
+
+    var axis = new THREE.Line( geom, mat, THREE.LinePieces );
+
+    return axis;
+
+}
+
+function makeTextSprite( message, parameters )
+{
+  if ( parameters === undefined ) parameters = {};
+  
+  var fontface = parameters.hasOwnProperty("fontface") ? 
+    parameters["fontface"] : "Arial";
+  
+  var fontsize = parameters.hasOwnProperty("fontsize") ? 
+    parameters["fontsize"] : 18;
+  
+  var borderThickness = parameters.hasOwnProperty("borderThickness") ? 
+    parameters["borderThickness"] : 4;
+  
+  var borderColor = parameters.hasOwnProperty("borderColor") ?
+    parameters["borderColor"] : { r:0, g:0, b:0, a:1.0 };
+  
+  var backgroundColor = parameters.hasOwnProperty("backgroundColor") ?
+    parameters["backgroundColor"] : { r:255, g:255, b:255, a:1.0 };
+  //var spriteAlignment = parameters.hasOwnProperty("alignment") ?
+  //  parameters["alignment"] : THREE.SpriteAlignment.topLeft;
+  var spriteAlignment = THREE.SpriteAlignment.topLeft;
+    
+  var canvas = document.createElement('canvas');
+  var context = canvas.getContext('2d');
+  context.font = "Bold " + fontsize + "px " + fontface;
+    
+  // get size data (height depends only on font size)
+  var metrics = context.measureText( message );
+  var textWidth = metrics.width;
+  
+  // background color
+  context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + ","
+                  + backgroundColor.b + "," + backgroundColor.a + ")";
+  // border color
+  context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + ","
+                  + borderColor.b + "," + borderColor.a + ")";
+  context.lineWidth = borderThickness;
+  roundRect(context, borderThickness/2, borderThickness/2, textWidth + borderThickness, fontsize * 1.4 + borderThickness, 6);
+  // 1.4 is extra height factor for text below baseline: g,j,p,q.
+  
+  // text color
+  context.fillStyle = "rgba(0, 0, 0, 1.0)";
+  context.fillText( message, borderThickness, fontsize + borderThickness);
+  
+  // canvas contents will be used for a texture
+  var texture = new THREE.Texture(canvas) 
+  texture.needsUpdate = true;
+  var spriteMaterial = new THREE.SpriteMaterial( 
+    { map: texture, useScreenCoordinates: false, alignment: spriteAlignment } );
+  var sprite = new THREE.Sprite( spriteMaterial );
+  sprite.scale.set(100,50,1.0);
+  // sprite.center.set(0.5,0.5);
+
+  return sprite;  
+}
+
+
+// function for drawing rounded rectangles
+function roundRect(ctx, x, y, w, h, r) 
+{
+    ctx.beginPath();
+    ctx.moveTo(x+r, y);
+    ctx.lineTo(x+w-r, y);
+    ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+    ctx.lineTo(x+w, y+h-r);
+    ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+    ctx.lineTo(x+r, y+h);
+    ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+    ctx.lineTo(x, y+r);
+    ctx.quadraticCurveTo(x, y, x+r, y);
+    ctx.closePath();
+    ctx.fill();
+  ctx.stroke();   
+}
+
+function animate() {
+  requestAnimationFrame( animate );
+  renderer.render( scene, camera );
+  controls.update();
+
+}
+
+
+
+
 // current global states
 // var dataset_info = {nodes: dblp_node, labels: dblp_label};
 var node_info = []
@@ -397,13 +621,13 @@ $(".select-dataset").dropdown({
        contentType : "application/json"
      }).done(function(data)  {
         console.log("success");
+        console.log("init respond");
+        console.log(data);
         contrast_select.value = null; // reset contrast dropdown
         pattern_select.value = null; // reset pattern dropdown
 
         clearContrastGraph();
         clearPatternGraph();
-
-        console.log(data);
 
         // read meta and set all selection lists
         // meta.node
@@ -416,16 +640,14 @@ $(".select-dataset").dropdown({
           });
         }
         // console.log(node_info);
-        
         for (var node_id in data.meta.label) {
           var parent_node = label_info[parseInt(node_id, 10)];
           for (var child_id in data.meta.label[node_id]) {
             parent_node.children.push({id: node_id + '.' + child_id, label: data.meta.label[node_id][child_id][0]});
           }
-
         }
-        // console.log(label_info);
 
+        // console.log(label_info);
         node_select.options = node_info;
         contrast_select.options = node_info;
         pattern_select.options = node_info;
@@ -461,6 +683,9 @@ $(".select-dataset").dropdown({
           node_select.value.push(node_id);   
         }
 
+        // TODO: highlight cubes
+
+
 
      }).fail(function()  {
        alert("Sorry. Server unavailable. ");
@@ -492,6 +717,8 @@ $("#query_btn").click(function(){
 
    // console.log(data);
    updateNetwork(data.network);
+   // TODO: highlight cube
+
  }).fail(function()  {
    alert("Sorry. Server unavailable. ");
  });
@@ -726,40 +953,4 @@ function drawHistogram(contrast_res) {
     }
 }
 
-// to test
-// draw histogram
-var contrast_graph_fake = 
-{
-  "node_type": "year",
-  "properties": [
-    {
-      "name": "density",
-      "labels": [
-        {
-          "name": "2000",
-          "val": 20
-        },
-        {
-          "name": "2005",
-          "val": 30
-        }
-      ]
-    },
-    {
-      "name": "prop2",
-      "labels": [
-        {
-          "name": "2000",
-          "val": 1
-        },
-        {
-          "name": "2005",
-          "val": 2
-        }
-      ]
-    }
-  ]
-}
-
-// drawHistogram(contrast_graph_fake);
 

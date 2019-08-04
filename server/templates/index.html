@@ -45,7 +45,7 @@
       <h1>Cube Network Demo</h1>
     </header>
 
-    <div class="column menu" style="width:25%;display: inline-block;border: 1px #b5a2a2 solid;padding: 10px;">
+    <div class="column menu" style="width:20%;display: inline-block;border: 1px #b5a2a2 solid;padding: 10px;">
 
       <h3>Dataset</h3>
       <div class="ui selection dropdown select-dataset" style="width: 100%">
@@ -76,7 +76,7 @@
       </div>
       
 
-      <h3>Visualization</h3>
+      <h5>Visualization</h3>
       <div id="nodes">
         <treeselect v-model="value" :multiple="true" :options="options" :searchable="false" />
       </div>
@@ -217,7 +217,13 @@
     </fieldset>  -->
 
     <div id="main" role="main">
+      <!-- <canvas id="c"></canvas> -->
+      <div id="networkCube">
+        <div id="canvas">
+      </div>
       <div id="vis"></div>
+      
+      
       <!-- <h3 id="histogram_title" style="text-align: center"> Contrast Analysis</h3> -->
       <!-- <div id="charts"></div> -->
       <!-- <div id="subnetworktitles"></div> -->
@@ -236,6 +242,13 @@
   <script defer src="../static/js/script.js"></script>
   <script src="../static/js/libs/coffee-script.js"></script>
   <script src="../static/js/libs/d3.v2.js"></script>
+
+  <script src="../static/js/libs/Three.js"></script>
+  <script src="../static/js/libs/THREEx.KeyboardState.js"></script>
+  <script src="../static/js/libs/THREEx.FullScreen.js"></script>
+  <script src="../static/js/libs/THREEx.WindowResize.js"></script>
+  <script src="../static/js/libs/OrbitControls.js"></script>
+
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <script src="../static/js/Tooltip.js"></script>
   <script type="text/coffeescript" src="../static/coffee/vis.coffee"></script>

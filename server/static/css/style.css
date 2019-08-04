@@ -3,6 +3,34 @@ body {
 }
 
 
+
+/*#c {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: -1;
+}*/
+
+
+#networkCube {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#canvas {
+    width: 300px;
+    height: 600px;
+    border-right: : 2px solid black;
+    padding: 0px;
+    position: static; /* fixed or static */
+    top: 100px;
+    left: 100px;
+}
+
 #charts {
   display: flex;
   flex-wrap: wrap;
@@ -97,7 +125,7 @@ a, a:visited {
 }
 
 #container {
-  width: 1160px;
+  width: 95%;
   padding: 5px 0 10px 0;
   margin: auto;
 }
