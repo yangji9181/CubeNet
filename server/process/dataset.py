@@ -20,6 +20,7 @@ class Dataset(object):
         self.meta['node'] = {}
         self.meta['link'] = {}
         self.meta['label'] = defaultdict(dict)
+        print(self.args['meta_file'])
         f = open(self.args['meta_file'], 'r')
         for line in f:
             tokens = line.strip().split('\t')
