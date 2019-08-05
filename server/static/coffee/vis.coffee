@@ -271,23 +271,18 @@ $ ->
     d3.json "../static/data/#{networkFile}", (json) ->
       myNetwork.updateData(json)
 
-  console.log("hello")
-
-  d3.json "../static/data/network1.json", (json) ->
-    myNetwork("#vis", json)
-
+  myNetwork("#vis", {"nodes": [], "links": []})
   window.updateNetwork = (json) ->
     console.log("update network in coffee")
     myNetwork.updateData(json)
-    # d3.json "../intermediate/network.json", (json) ->
-    #   myNetwork.updateData(json)
-    # d3.json "../static/data/test_data.json", (json) ->
-    #   myNetwork.updateData(json)
 
   window.createPatternSubnetwork = (json) ->
     console.log("createPatternSubnetwork in coffee");
     for key, value of json
+      console.log("subnet value:" + key)
+      console.log(value)
       subNetwork = Network(200,200)
       subNetwork("#" + key + "Pattern", value)
+    
 
 
