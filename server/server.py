@@ -15,6 +15,7 @@ def get():
 @app.route('/init', methods=['POST'])
 def init():
     req_data = request.get_json()
+    print(req_data)
     obj = initialization(req_data['dataset'])
     print(obj)
     return jsonify(obj)

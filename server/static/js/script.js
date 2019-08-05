@@ -593,10 +593,10 @@ $(".select-dataset").dropdown({
         init_json.dataset = "yelp";
         break;
       case 'freebase':
-        
+        init_json.dataset = "freebase";
         break;
       case 'pubmed':
-        
+        init_json.dataset = "pubmed";
         break;
     }
     // node_select.options = dataset_info.nodes;
