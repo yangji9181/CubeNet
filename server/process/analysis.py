@@ -130,7 +130,7 @@ def patterns(dim):
     from server.process.dataset import Dataset
     data = Dataset(args)
     meta = data.meta
-    print(meta['node'])
+    # print(meta['node'])
 
     # add the contrasted node type to the subnetworks
     if dim not in query['nodes']:
@@ -170,7 +170,7 @@ def patterns(dim):
         networks[meta['label'][dim][i][0]] = {'nodes':[], 'links':[]}
         query['filters'][dim] = [i]
         network = exploration(query, data)
-        print(network['nodes'])
+        # print(network['nodes'])
         links = {}
         for link in network['links']:
             links[link['source']+'_'+link['target']] = link['weight']
