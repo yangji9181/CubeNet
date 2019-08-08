@@ -2,6 +2,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.label {
+  margin: 5px;
+}
+#label_filter {
+  background-color:#2ABFB8;
+}
+
+#label_filter_merge {
+  background-color:#fc7b03;
+}
 
 
 /*#c {

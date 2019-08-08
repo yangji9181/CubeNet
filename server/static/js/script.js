@@ -8,9 +8,9 @@ var geometry, material, mesh;
 var light1;
 var cubes  = []; // meshes
 const BASE_COLOR = 0xffffff;
-const FILTER_COLOR = 0xffea75;
-const MERGE_COLOR = 0x2ABFB8;
-const OVERLAP_COLOR = 0x2ABF3E;
+const FILTER_COLOR = 0x2ABFB8;
+const MERGE_COLOR = 0xfc7b03; // to delete
+const OVERLAP_COLOR = 0xfc7b03;
 
 initScene();
 function setCubeColor(i, j, k, color) {
@@ -18,7 +18,6 @@ function setCubeColor(i, j, k, color) {
 }
 
 function highlightCubes(indices, color) {
-  debugger
   for (var i = 0; i < indices.length; i++) {
     if (cubes[indices[i]["1"]][indices[i]["2"]][indices[i]["3"]].material.color.getHex() != BASE_COLOR) {
       setCubeColor(indices[i]["1"], indices[i]["2"], indices[i]["3"], OVERLAP_COLOR);
@@ -431,6 +430,12 @@ var node_select = new Vue({
       }
     })
 
+function showCubeColorLabel() {
+  document.getElementById("label_filter").style.display = "block";
+  document.getElementById("label_filter_merge").style.display = "block";
+}
+
+
 
 var clearValues = function () {
   node_info = [];
@@ -483,6 +488,7 @@ $(".select-dataset").dropdown({
         console.log("success");
         console.log("init respond");
         console.log(data);
+
         contrast_select.value = null; // reset contrast dropdown
         pattern_select.value = null; // reset pattern dropdown
 
@@ -531,6 +537,7 @@ $(".select-dataset").dropdown({
           }
         }
         clearScene();
+        showCubeColorLabel();
         initCube(cube_dim, dim_labels);
         animate();
 
