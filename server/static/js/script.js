@@ -18,6 +18,7 @@ function setCubeColor(i, j, k, color) {
 }
 
 function highlightCubes(indices, color) {
+  debugger
   for (var i = 0; i < indices.length; i++) {
     if (cubes[indices[i]["1"]][indices[i]["2"]][indices[i]["3"]].material.color.getHex() != BASE_COLOR) {
       setCubeColor(indices[i]["1"], indices[i]["2"], indices[i]["3"], OVERLAP_COLOR);
@@ -432,6 +433,13 @@ var node_select = new Vue({
 
 
 var clearValues = function () {
+  node_info = [];
+  label_info = [];
+
+  filter_select.options = [];
+  merge_select.options = [];
+  node_select.options = [];
+
   contrast_select.value = null;
   pattern_select.value = null;
 
@@ -662,7 +670,6 @@ function createPatternDivs(data) {
 }
 
 function clearPatternGraph() {
-  // TODO
   [...document.getElementsByClassName("subnetwork")].map(n => n && n.remove());
 }
 
