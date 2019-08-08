@@ -18,12 +18,17 @@ function setCubeColor(i, j, k, color) {
 }
 
 function highlightCubes(indices, color) {
+  if (indices.length == 0) {
+    return; 
+  }
+
+  dim_keys = [];
+  for(var j in indices[0]){
+      dim_keys.push(j);
+  }
+
   for (var i = 0; i < indices.length; i++) {
-    if (cubes[indices[i]["1"]][indices[i]["2"]][indices[i]["3"]].material.color.getHex() != BASE_COLOR) {
-      setCubeColor(indices[i]["1"], indices[i]["2"], indices[i]["3"], OVERLAP_COLOR);
-    } else {
-      setCubeColor(indices[i]["1"], indices[i]["2"], indices[i]["3"], color);
-    }
+    setCubeColor(indices[i][dim_keys[0]], indices[i][dim_keys[1]], indices[i][dim_keys[2]], color);
   }
 }
 
