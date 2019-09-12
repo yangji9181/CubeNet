@@ -3,7 +3,7 @@
 Please cite the following work if you find the code useful.
 
 ```
-@inproceedings{yang2019cube2net,
+@inproceedings{yang2019cubenet,
 	Author = {Yang, Carl and Teng, Dai and Liu, Siyang and Basu, Sayantani and Zhang, Jieyu and Shen, Jiaming and Zhang, Chao and Shang, Jingbo and Kaplan, Lance and Haratty, Timothy and Han, Jiawei},
 	Booktitle = {KDD demo},
 	Title = {CubeNet: multi-facet hierarchical heterogeneous network construction, analysis and mining},
