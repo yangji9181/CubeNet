@@ -4,7 +4,6 @@ from collections import defaultdict
 import networkx as nx
 from networkx.readwrite import json_graph
 
-
 def exploration(query, data):
     network = {}
     nodes = {}
@@ -119,6 +118,66 @@ def properties(dim):
     results['properties'] = prop
 
     return results
+
+def patterns2(dim):
+
+    # How the new pattern mining works. 
+    #
+    # 1) Generate distinctive frequent patterns for each label
+    #    - a) First, use exploration to construct graph for each label (use existing code)
+    #    - b) Then, convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find frequent patterns.
+    #    - c) Keep only patterns that are distinctive, aka their average weight is higher for this label than other labels.
+    # 2) Figure out which patterns are best using discriminative network metric
+    #    - a) Use size, cohesiveness, and loyalty to rank the patterns and return the top K patterns
+    #    - b) For each label, construct a graph consisting of all those patterns and any nodes with the given label 
+    #      that are linked to any of the patterns
+    #    - c) Return this graph
+
+    # 1a - First, use exploration to construct graph for each label (use existing code)
+    from server.process.config import args
+    query = json.load(open(args['query_json'], 'r'))
+    from server.process.dataset import Dataset
+    data = Dataset(args)
+    meta = data.meta
+
+    # add the contrasted node type to the subnetworks
+    if dim not in query['nodes']:
+        query['nodes'].append(dim)
+
+    # remove the contrasted node type from filters
+    if dim in query['filters']:
+        query['filters'].pop(dim)
+
+    counts = defaultdict(dict)
+    node_type = {}
+    node_name = {}
+    labelNetworks = {}
+    for i in meta['label'][dim]:
+        # retrieve network connected to the contrasted node
+        query['filters'][dim] = [i]
+        query['merges'][dim] = [i]
+        labelNetworks[i] = exploration(query, data)
+
+    print (labelNetworks)
+
+    # 1b - Convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find frequent patterns.
+    import numpy as np
+    from algorithms import g_span as gSpan
+    from algorithms import load_graphs
+    
+    # 1c - For each label, only keep patterns whose average weight is higher for this label than in other labels
+    # TODO
+
+    # 2a - For each label, use significance score to rank the patterns. Return top K patterns.
+    for i in meta['label'][dim]:
+
+
+    # 2b - For each label, construct graph with all nodes and links in patterns, plus all nodes/links of the given dimension, connected to this pattern
+
+    return networks
+
+
+
 
 def patterns(dim):
     THRESH_POP = 0.3
