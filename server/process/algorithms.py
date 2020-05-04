@@ -337,12 +337,16 @@ def tuple_is_smaller(t1,t2):
     a1,b1,c1 = t1[2], t1[3], t1[4]
     a2,b2,c2 = t2[2], t2[3], t2[4]
 
+    
     if not a1.isdigit():
         a1,b1,c1 = ord(a1),ord(b1),ord(c1)
         a2,b2,c2 = ord(a2),ord(b2),ord(c2)
     else:
+        #print(a1,b1,c1)
+        #print(a2,b2,c2)
         a1,b1,c1 = int(a1),int(b1),int(c1)
         a2,b2,c2 = int(a2),int(b2),int(c2)
+    
 
     if a1 < a2:
         return True
@@ -599,6 +603,7 @@ def is_canonical(C):
     return True # no smaller code exists -> C is canonical
 
 def g_span(C, D, min_sup, extensions):
+    BREAKPOINT = 15
     """
         Finds possible frequent and canonical extensions of C in D, using
         min_sup as lowest allowed support value.
@@ -615,4 +620,9 @@ def g_span(C, D, min_sup, extensions):
         # recursively call gSpan if code is frequent and canonical
         if (sup_C_prime >= min_sup) and is_canonical(C_prime):
             extensions.append(C_prime)
+            print(len(extensions))
+            # If we have a bunch of frequent patterns, lets just show the good ones.
+            if(len(extensions) > BREAKPOINT):
+                break
+            #print(C_prime)
             g_span(C_prime, D, min_sup, extensions)

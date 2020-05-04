@@ -1,5 +1,14 @@
-import math
+
 from collections import defaultdict
+
+import operator as op
+from functools import reduce
+
+def ncr(n, r):
+    r = min(r, n-r)
+    numer = reduce(op.mul, range(n, n-r, -1), 1)
+    denom = reduce(op.mul, range(1, r+1), 1)
+    return numer / denom
 
 # For now, assume that "patterns" is a list [] that contains the patterns to score.
 # Each pattern is simply an undirected graph in the form of a dictionary {}
@@ -12,28 +21,38 @@ from collections import defaultdict
 #          /1     
 #         -       
 #        D                 
-def choose_best_patterns(patterns):
-	K = 3
+def choose_best_patterns(patterns, K):
 
-	SIZE_WEIGHT = 0.6
-	COHESIVENESS_WEIGHT = 0.3
-	LOYALTY_WEIGHT = 0.1
+	if not patterns:
+		return []
 
-	# For each pattern in patterns, calculate size score, cohesiveness score, and loyalty score
+	SIZE_WEIGHT = 0.8
+	COHESIVENESS_WEIGHT = 4
+	STRENGTH_WEIGHT = 0.3
+
+	# For each pattern in patterns, calculate size score, cohesiveness score, and strength score
 	ranked_patterns = []
 	sizeScores = score_size(patterns)
 	cohesivenessScores = score_cohesiveness(patterns)
-	loyaltyScores = score_loyalty(patterns)
+	strengthScores = score_strength(patterns)
 
 	# Now we have sub metrics for each pattern. Time to score each one.
 	for i in range(len(patterns)):
-		score = sizeScores[i] * SIZE_WEIGHT + cohesivenessScores[i] * COHESIVENESS_WEIGHT + loyaltyScores[i] * LOYALTY_WEIGHT
-		ranked_patterns.append([score,patterns[i]])
 
+		score = sizeScores[i] * SIZE_WEIGHT + cohesivenessScores[i] * COHESIVENESS_WEIGHT + strengthScores[i] * STRENGTH_WEIGHT
+
+		# Add i to prevent ties in sorting
+		ranked_patterns.append([score,i,patterns[i]])
+
+	
 	ranked_patterns.sort()
 	ranked_patterns.reverse()
+	print(ranked_patterns)
 
-	return ranked_patterns[0:K]
+	if (K > len(ranked_patterns)):
+		return [ranked_patterns[i][2] for i in range(len(ranked_patterns))]
+	else:
+		return [ranked_patterns[i][2] for i in range(K)]
 
 
 
@@ -46,27 +65,27 @@ def score_size(patterns):
 		nodes = set()
 		for node1 in pattern:
 			if node1 not in nodes:
-				nodes.append(node1)
+				nodes.add(node1)
 
 			if pattern[node1]:
 				for node2 in pattern[node1]:
 					if node2 not in nodes:
-						nodes.append(node2)
+						nodes.add(node2)
 
 		sizes.append(len(nodes))
 
-	print(sizes)
+	#print(sizes)
 
 	maxSize = max(sizes)
 	scores = [(size**2)/(maxSize**2) for size in sizes]
 
-	print(scores)
+	#print(scores)
 
 	return scores
 
 
 def score_cohesiveness(patterns):
-
+	import math
 	# For each pattern, compute normalized gini index
 	giniIndices = []
 	for pattern in patterns:
@@ -94,49 +113,36 @@ def score_cohesiveness(patterns):
 
 		# convert gini into value between [0,1]
 		patternSize = len(nodes)
-		giniIndex = giniIndex / (1.0-1.0/math.comb(patternSize,2))
+		#print(pattern, giniIndex, patternSize)
+		if(not patternSize == 2):
+			giniIndex = giniIndex / (1.0-1.0/ncr(patternSize,2))
+		else:
+			giniIndex = 1
 
 		giniIndices.append(giniIndex)
 
 	return giniIndices
 
 
-def score_loyalty(patterns):
+def score_strength(patterns):
 
-	loyaltyScores = []
-
-	# Map nodes to their total link strength across all patterns
-	totalLinkStrengths = defaultdict(int)
+	patternStrength = []
 	for pattern in patterns:
+		strength = 0
+		numLinks = 0
 		for node1 in pattern:
 			if pattern[node1]:
 				for node2 in pattern[node1]:
-					totalLinkStrengths[node1] += pattern[node1][node2]
-					totalLinkStrengths[node2] += pattern[node1][node2]
+					strength += pattern[node1][node2]
+					numLinks += 1
 
+		patternStrength.append(strength/numLinks)
 
-	# Now, to compute loyalty of each pattern, we compute the loyalty of each node and take the average
-	for pattern in patterns:
-		localLinkStrengths = defaultdict(int)
-		nodesInThisPattern = set()
-		for node1 in pattern:
-			if node1 not in nodesInThisPattern:
-				nodesInThisPattern.add(node1)
-			if pattern[node1]:
-				for node2 in pattern[node1]:
-					if node2 not in nodesInThisPattern:
-						nodesInThisPattern.add(node2)
-					localLinkStrengths[node1] += pattern[node1][node2]
-					localLinkStrengths[node2] += pattern[node1][node2]
+	maxPatternStrength = max(patternStrength)
 
-		averageLoyalty = 0
-		for node in nodesInThisPattern:
-			averageLoyalty += localLinkStrengths[node] / totalLinkStrengths[node]
-		averageLoyalty /= len(nodesInThisPattern)
+	patternStrengthNormalized = [(p**2)/(maxPatternStrength**2) for p in patternStrength]
 
-		loyaltyScores.append(averageLoyalty)
-
-	return loyaltyScores
+	return patternStrengthNormalized
 
 
 

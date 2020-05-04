@@ -119,18 +119,17 @@ def properties(dim):
 
     return results
 
-def patterns2(dim):
+def patterns(dim):
 
     # How the new pattern mining works. 
     #
     # 1) Generate distinctive frequent patterns for each label
     #    - a) First, use exploration to construct graph for each label (use existing code)
-    #    - b) Then, convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find frequent patterns.
+    #    - b) Then, convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find some frequent patterns.
     #    - c) Keep only patterns that are distinctive, aka their average weight is higher for this label than other labels.
     # 2) Figure out which patterns are best using discriminative network metric
-    #    - a) Use size, cohesiveness, and loyalty to rank the patterns and return the top K patterns
-    #    - b) For each label, construct a graph consisting of all those patterns and any nodes with the given label 
-    #      that are linked to any of the patterns
+    #    - a) Use size, cohesiveness, and strength to rank the patterns and return the top K patterns
+    #    - b) For each label, construct a graph consisting of all those patterns and any nodes with the given label.
     #    - c) Return this graph
 
     # 1a - First, use exploration to construct graph for each label (use existing code)
@@ -158,28 +157,220 @@ def patterns2(dim):
         query['merges'][dim] = [i]
         labelNetworks[i] = exploration(query, data)
 
-    print (labelNetworks)
+    #print (labelNetworks)
 
     # 1b - Convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find frequent patterns.
+
+    # Convert CubeNet graph structure to gSpan/CloseGraph format 
+    filename='./process/test.txt'
+    vertexID = 10
+    nodeIdToVertexId = {}
+
+    # Supernodes have a different ID structure "ex. s/1/0" so they have to be converted into numbers for gSpan to work.
+    # This dictionary stores the mapping two ways
+    superNodeToNodeId = {}
+
+    # Find the maximum node ID
+    nodeIDs = []
+    for i in meta['label'][dim]:
+        for node in labelNetworks[i]['nodes']:
+            if node['id'].isdigit():
+                nodeIDs.append(int(node['id']))
+    maxNodeID = max(nodeIDs)
+
+    # Start with maxNodeID + 1 for the first supernode, then +2 for the second, etc.
+    maxNodeID += 1
+    print(maxNodeID)
+    with open(filename,'w') as f:
+        f.truncate()
+        for i in meta['label'][dim]:
+            f.write(str("t # "+i))
+            f.write('\n')
+            for node in labelNetworks[i]['nodes']:
+                if not node['id'].isdigit():
+                    if not node['id'] in superNodeToNodeId:
+                        superNodeToNodeId[str(maxNodeID)] = node['id']
+                        superNodeToNodeId[node['id']] = str(maxNodeID)
+                        maxNodeID += 1
+                    f.write(str("v " + str(vertexID) + " " +str(superNodeToNodeId[node['id']])))
+                else:
+                    f.write(str("v " + str(vertexID) + " " +str(node['id'])))
+                f.write('\n')
+                nodeIdToVertexId[node['id']] = vertexID
+                vertexID += 10
+            for link in labelNetworks[i]['links']:
+                source = link['source']
+                target = link['target']
+                if(not source == target):
+                    f.write(str("e " + str(nodeIdToVertexId[source]) + " " + str(nodeIdToVertexId[target]) + " 0"))
+                    f.write('\n')
+
+        f.close()
+
+    print(superNodeToNodeId)
+
+
     import numpy as np
-    from algorithms import g_span as gSpan
-    from algorithms import load_graphs
+    from server.process.algorithms import g_span as gSpan
+    from server.process.algorithms import load_graphs
+
+
+
+    print("STarting gspan")
+    MIN_SUP = int(len(meta['label'][dim])/2 + 0.5)
+    graphs = load_graphs(filename)
+    n = len(graphs)
+    extensions = []
+    gSpan([], graphs, min_sup=MIN_SUP, extensions=extensions)
+    for i, ext in enumerate(extensions):
+        print('Pattern %d' % (i+1))
+        for _c in ext:
+            print(_c)
+        print('')
     
+
     # 1c - For each label, only keep patterns whose average weight is higher for this label than in other labels
-    # TODO
+
+    # The variable 'extensions' now contains the different frequent patterns. Each frequent pattern is a list of edges of the form:
+    # (v1, v2, nodeID1, nodeID2, edgeID). We need to extract those into a format that can be used by the discriminative network metric.
+
+    # First, for each pattern, calculate weight of each pattern in each label
+    # patternWeights is a list of dictionaries, where each dictionary gives the avg link weight of the pattern for each label
+    # patternWeights[2][1] gives the avg link weight of pattern 2 in label 1
+    patternWeights = []
+    for i in range(len(extensions)):
+        patternWeights.append({})
+        for label in meta['label'][dim]:
+            patternWeights[i][label] = 0
+        for edge in extensions[i]:
+            source = edge[2]
+            target = edge[3]
+            if(source in superNodeToNodeId):
+                source = superNodeToNodeId[source]
+            if(target in superNodeToNodeId):
+                target = superNodeToNodeId[target]
+
+            # Check each label graph for this edge
+            for label in meta['label'][dim]:
+                for link in labelNetworks[label]['links']:
+                    if link['source'] == source and link['target'] == target \
+                        or link['source'] == target and link['target'] == source:
+
+                        patternWeights[i][label] += link['weight']
+        print (patternWeights[i])
+        for label in meta['label'][dim]:
+            patternWeights[i][label] /= len(extensions[i])
+
+    print (patternWeights)
+
+
+    # Find the distinctive patterns
+    THRESHOLD_DISTINCT = 1 / len(meta['label'][dim])
+
+    # Store a list of frequent patterns for each label
+    distinctiveFrequentPatterns = {}
+    for label in meta['label'][dim]:
+        distinctiveFrequentPatterns[label] = []
+
+    for i in range(len(extensions)):
+        patternWeightSum = 0
+        for label in patternWeights[i]:
+            patternWeightSum += patternWeights[i][label]
+        for label in patternWeights[i]:
+            if patternWeights[i][label] > (THRESHOLD_DISTINCT * patternWeightSum):
+                # This pattern is found distinctly in this label's network. Add it to the list of distinctive patterns!
+                # We need to convert it from the form returned by gSpan to the form used by discriminative network metric
+                pattern = {}
+                for edge in extensions[i]:
+                    source = edge[2]
+                    target = edge[3]
+                    if(source in superNodeToNodeId):
+                        source = superNodeToNodeId[source]
+                    if(target in superNodeToNodeId):
+                        target = superNodeToNodeId[target]
+
+                    for link in labelNetworks[label]['links']:
+                        if link['source'] == source and link['target'] == target:
+                            if(source not in pattern):
+                                pattern[source] = {}
+                            pattern[source][target] = link['weight']
+
+                distinctiveFrequentPatterns[label].append(pattern)
+
+    #print(distinctiveFrequentPatterns)
+
 
     # 2a - For each label, use significance score to rank the patterns. Return top K patterns.
+    K = 1
+    from server.process.metrics import choose_best_patterns, score_size, score_cohesiveness, score_strength
+    bestPatterns = {}
     for i in meta['label'][dim]:
+        bestPatterns[i] = choose_best_patterns(distinctiveFrequentPatterns[i], K)
+        print("i", i , "Patterns: ", bestPatterns[i])
+
+    # 2b - For each label, construct graph with all nodes and links in patterns, plus all nodes/links of the given label, connected to this pattern
+
+    # The easiest way to do this is to start with the labelNetwork we constructed before and only choose nodes/links that we want
+    finalLabelNetworks = {}
+    for i in meta['label'][dim]:
+        finalLabelNetworks[meta['label'][dim][i][0]] = {'nodes':[], 'links':[]}
+
+        nodesOfThisLabel = set()
+        # Populate nodes. Only choose nodes of this label and those that appear in the best patterns
+        for node in labelNetworks[i]['nodes']:
+            if node['type'] == meta['node'][dim]['name']:
+                finalLabelNetworks[meta['label'][dim][i][0]]['nodes'].append(node)
+                nodesOfThisLabel.add(node['id'])
+            else:
+                # If node is in one of the best patterns, add it. Note the node could either be a source or a target
+                addNode = False
+                for pattern in bestPatterns[i]:
+                    if node['id'] in pattern.keys():
+                        addNode = True
+                    else:
+                        targets = set()
+                        for node1 in pattern:
+                            for node2 in pattern[node1]:
+                                targets.add(node2)
+                        if node['id'] in targets:
+                            addNode = True
+                if(addNode):
+                    finalLabelNetworks[meta['label'][dim][i][0]]['nodes'].append(node)
+
+        # Populate links. Only choose links in our best patterns and those connecting this label's nodes to the best patterns
+        for link in labelNetworks[i]['links']:
+            source = link['source']
+            target = link['target']
+            addLink = False
 
 
-    # 2b - For each label, construct graph with all nodes and links in patterns, plus all nodes/links of the given dimension, connected to this pattern
+            nodesInBestPatterns = set()
+            # Is this link in our best patterns?
+            for pattern in bestPatterns[i]:
+                for node1 in pattern:
+                    for node2 in pattern[node1]:
+                        nodesInBestPatterns.add(node1)
+                        nodesInBestPatterns.add(node2)
+                        if node1 == source and node2 == target:
+                            addLink = True
+            # Is this link connecting two nodes of this label?
+            if source in nodesOfThisLabel and target in nodesOfThisLabel:
+                addLink = True
 
-    return networks
+            # Is this link connecting a node of this label to a node in the best patterns?
+            if source in nodesInBestPatterns and target in nodesOfThisLabel \
+                or target in nodesInBestPatterns and source in nodesOfThisLabel:
+                addLink = True
+
+            if addLink:
+                finalLabelNetworks[meta['label'][dim][i][0]]['links'].append(link)
+
+    return finalLabelNetworks
 
 
 
 
-def patterns(dim):
+def patterns2(dim):
     THRESH_POP = 0.3
     THRESH_DIS = 0.2
     THRESH_INT = 10
