@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, request, json, render_template, jsonify
 from server.process.dataset import Dataset, initialization
-from server.process.analysis import exploration, properties, patterns, cell_color
+from server.process.analysis import exploration, properties, patterns, patterns_dnm, cell_color
 
 
 app = Flask(__name__)
@@ -46,6 +46,12 @@ def contrast():
 def pattern():
     req_data = request.get_json()
     results = patterns(req_data['node'])
+    return jsonify(results)
+
+@app.route('/pattern_dnm', methods=['POST'])
+def pattern_dnm():
+    req_data = request.get_json()
+    results = patterns_dnm(req_data['node'])
     return jsonify(results)
 
 if __name__ == '__main__':

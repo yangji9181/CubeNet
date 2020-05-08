@@ -661,6 +661,34 @@ $("#pattern_btn").click(function(){
 
 });
 
+const pattern_button_dnm = document.getElementById('pattern_btn_dnm');
+$("#pattern_btn_dnm").click(function(){
+  if (!graphConstructed) {
+    alert("Please construct graph first.");
+
+  } else if (pattern_json.node == null) {
+    alert("Please select node type to do pattern mining.");
+  } else {
+    $.ajax({
+       type: "POST",
+       url: "/pattern_dnm",
+       data: JSON.stringify(pattern_json),
+       dataType: "json",
+       contentType : "application/json"
+     }).done(function(data)  {
+      console.log("pattern_dnm button clicked success");
+      console.log(data);
+      clearPatternGraph();
+      createPatternDivs(data);
+      createPatternSubnetwork(data);
+     }).fail(function()  {
+       alert("Sorry. Server unavailable. ");
+     });
+  }
+  console.log("click pattern");
+
+});
+
 function createPatternDivs(data) {
   for (var key in data) {
     var div = document.createElement("div");
