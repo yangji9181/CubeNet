@@ -119,7 +119,7 @@ def properties(dim):
 
     return results
 
-def patterns(dim):
+def patterns_dnm(dim):
 
     # How the new pattern mining works. 
     #
@@ -370,7 +370,7 @@ def patterns(dim):
 
 
 
-def patterns2(dim):
+def patterns(dim):
     THRESH_POP = 0.3
     THRESH_DIS = 0.2
     THRESH_INT = 10
