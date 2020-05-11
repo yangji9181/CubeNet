@@ -125,7 +125,7 @@ def patterns_dnm(dim):
     #
     # 1) Generate distinctive frequent patterns for each label
     #    - a) First, use exploration to construct graph for each label (use existing code)
-    #    - b) Then, convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find some frequent patterns.
+    #    - b) Then, convert graphs to gSpan/CloseGraph format, only keeping links above a certain weight. Run gSpan/CloseGraph and find some frequent patterns.
     #    - c) Keep only patterns that are distinctive, aka their average weight is higher for this label than other labels.
     # 2) Figure out which patterns are best using discriminative network metric
     #    - a) Use size, cohesiveness, and strength to rank the patterns and return the top K patterns
@@ -160,9 +160,8 @@ def patterns_dnm(dim):
     #print (labelNetworks)
 
     # 1b - Convert graphs to gSpan/CloseGraph format. Run gSpan/CloseGraph and find frequent patterns.
-
-    # Convert CubeNet graph structure to gSpan/CloseGraph format 
-    filename='./process/test.txt'
+ 
+    filename='./process/graph_list.txt'
     vertexID = 10
     nodeIdToVertexId = {}
 
@@ -170,13 +169,17 @@ def patterns_dnm(dim):
     # This dictionary stores the mapping two ways
     superNodeToNodeId = {}
 
-    # Find the maximum node ID
+    # Find the maximum node ID. We will convert supernodes to integers using maxNodeID
     nodeIDs = []
     for i in meta['label'][dim]:
         for node in labelNetworks[i]['nodes']:
             if node['id'].isdigit():
                 nodeIDs.append(int(node['id']))
     maxNodeID = max(nodeIDs)
+
+
+    # Prune the number of links based on a link weight threshold.
+    LINK_WEIGHT_THRESHOLD = 6
 
     # Start with maxNodeID + 1 for the first supernode, then +2 for the second, etc.
     maxNodeID += 1
@@ -201,27 +204,28 @@ def patterns_dnm(dim):
             for link in labelNetworks[i]['links']:
                 source = link['source']
                 target = link['target']
-                if(not source == target):
+                if(not source == target and link['weight'] > LINK_WEIGHT_THRESHOLD):
                     f.write(str("e " + str(nodeIdToVertexId[source]) + " " + str(nodeIdToVertexId[target]) + " 0"))
                     f.write('\n')
 
         f.close()
 
-    print(superNodeToNodeId)
+    #print(superNodeToNodeId)
 
 
     import numpy as np
-    from server.process.algorithms import g_span as gSpan
-    from server.process.algorithms import load_graphs
+    import server.process.gspan as gSpan
+    import server.process.graph_reader as graph_reader
 
 
+    # Start CloseGraph
 
-    print("STarting gspan")
+    print("STarting CloseGraph")
     MIN_SUP = int(len(meta['label'][dim])/2 + 0.5)
-    graphs = load_graphs(filename)
+    graphs = graph_reader.graph_reader(filename)
     n = len(graphs)
-    extensions = []
-    gSpan([], graphs, min_sup=MIN_SUP, extensions=extensions)
+    #gSpan([], graphs, min_sup=MIN_SUP, extensions=extensions)
+    extensions = gSpan.close_mining(graphs, MIN_SUP)
     for i, ext in enumerate(extensions):
         print('Pattern %d' % (i+1))
         for _c in ext:
@@ -261,7 +265,7 @@ def patterns_dnm(dim):
         for label in meta['label'][dim]:
             patternWeights[i][label] /= len(extensions[i])
 
-    print (patternWeights)
+    #print (patternWeights)
 
 
     # Find the distinctive patterns
@@ -300,8 +304,10 @@ def patterns_dnm(dim):
     #print(distinctiveFrequentPatterns)
 
 
+    # DISCRIMINATIVE NETWORK METRIC QUALIFICATION
+
     # 2a - For each label, use significance score to rank the patterns. Return top K patterns.
-    K = 1
+    K = 2
     from server.process.metrics import choose_best_patterns, score_size, score_cohesiveness, score_strength
     bestPatterns = {}
     for i in meta['label'][dim]:

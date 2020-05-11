@@ -26,8 +26,8 @@ def choose_best_patterns(patterns, K):
 	if not patterns:
 		return []
 
-	SIZE_WEIGHT = 0.8
-	COHESIVENESS_WEIGHT = 4
+	SIZE_WEIGHT = 0.3
+	COHESIVENESS_WEIGHT = 0.4
 	STRENGTH_WEIGHT = 0.3
 
 	# For each pattern in patterns, calculate size score, cohesiveness score, and strength score
@@ -47,7 +47,7 @@ def choose_best_patterns(patterns, K):
 	
 	ranked_patterns.sort()
 	ranked_patterns.reverse()
-	print(ranked_patterns)
+	print("All ranked patterns: " , ranked_patterns)
 
 	if (K > len(ranked_patterns)):
 		return [ranked_patterns[i][2] for i in range(len(ranked_patterns))]
