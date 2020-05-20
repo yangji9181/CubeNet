@@ -12,7 +12,7 @@ cryptography==2.1.4
 decorator==4.4.0
 Flask==1.0.3
 gunicorn==19.7.1
-httplib2==0.9.2
+httplib2==0.18.0
 hyperlink==17.3.1
 idna==2.6
 incremental==16.10.1
