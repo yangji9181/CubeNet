@@ -42,6 +42,6 @@ SecretStorage==2.3.1
 service-identity==16.0.0
 six==1.11.0
 Twisted==17.9.0
-urllib3==1.22
+urllib3==1.26.5
 Werkzeug==0.15.4
 zope.interface==4.3.2
