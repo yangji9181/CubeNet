@@ -30,7 +30,7 @@ oauthlib==2.0.6
 pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycrypto==2.6.1
-PyJWT==1.5.3
+PyJWT==2.4.0
 pyOpenSSL==17.5.0
 pyserial==3.4
 python-debian==0.1.32
