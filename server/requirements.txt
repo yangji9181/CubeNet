@@ -2,7 +2,7 @@ asn1crypto==0.24.0
 attrs==17.4.0
 Automat==0.6.0
 blinker==1.4
-certifi==2018.1.18
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 colorama==0.3.7
